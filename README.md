@@ -1,8 +1,8 @@
 Demo Project - Cloud Adoption
 
 ## Environments
-- Preview: https://main--demo--scdemos.aem.page/
-- Live: https://main--demo--scdemos.aem.live/
+- Preview: https://main--jll-ai--dzepeda601.aem.page/
+- Live: https://main--jll-ai--dzepeda601.aem.live/
 - CDN (production): https://demo.bbird.live/
 - Authoring (DA): https://da.live/#/scdemos/demo
 
