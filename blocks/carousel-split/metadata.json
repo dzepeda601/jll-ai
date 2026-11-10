@@ -1,0 +1,18 @@
+{
+  "variantName": "carousel-split",
+  "baseBlock": "carousel",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "News/feature slider: one slide at a time with media on one side and a text panel (eyebrow, heading, description, CTA) on the other",
+    "layout": "Each slide: image left, light-grey text panel right (eyebrow, H3, description, small grey CTA bottom-right); arrows beside the section heading."
+  },
+  "contentPattern": {
+    "description": "5-slide news/feature carousel: image or video, optional eyebrow, H3, description, CTA.",
+    "structure": "One row per slide: cell 1 image (or a link to an .mp4 with an optional poster image); cell 2 optional eyebrow paragraph, H3, description, CTA link"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "News/feature slider: one slide at a time with media on one side and a text panel (eyebrow, heading, description, CTA) on the other.",
+  "reuseGuidance": "Use for sliders of split image/text slides. Use carousel-hero for full-bleed photo slides.",
+  "labels": "Screen-reader labels can be overridden with page metadata keys carousel-label-role-description, carousel-label-previous, carousel-label-next."
+}

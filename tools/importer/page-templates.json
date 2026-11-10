@@ -1,0 +1,129 @@
+{
+  "metadata": {
+    "projectType": "da"
+  },
+  "templates": [
+    {
+      "name": "home",
+      "urls": [
+        "https://www.jll.com/en-us/"
+      ],
+      "representativeUrl": "https://www.jll.com/en-us/",
+      "description": "JLL homepage: spotlight hero carousel, expandable 'Explore a brighter way' panels with card sliders, alternating featured rows, 'More to explore' news carousel and a contact banner.",
+      "urlPattern": "/*",
+      "blocks": [
+        {
+          "name": "carousel-hero",
+          "instances": [
+            "div.carouselpanel",
+            ".carousel-panel"
+          ]
+        },
+        {
+          "name": "tabs-stacked",
+          "instances": [
+            "div.accordion-carousel",
+            "react-component[data-component=\"accordion-carousel\"]"
+          ]
+        },
+        {
+          "name": "cards-eyebrow",
+          "instances": [
+            "div.accordion-carousel .carousel-accordion-slide"
+          ]
+        },
+        {
+          "name": "columns-alternating",
+          "instances": [
+            "div.featuredcardlist",
+            ".featured-card-list"
+          ]
+        },
+        {
+          "name": "carousel-split",
+          "instances": [
+            "div.carouselsingledouble .swiper",
+            "div.carouselsingledouble"
+          ]
+        },
+        {
+          "name": "hero-banner",
+          "instances": [
+            "div.banner.aem-GridColumn"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1-hero-carousel",
+          "name": "Spotlight stories hero carousel",
+          "selector": [
+            "div.carouselpanel"
+          ],
+          "style": null,
+          "blocks": [
+            "carousel-hero"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2-explore",
+          "name": "Explore a brighter way",
+          "selector": [
+            "div.bg-container div.accordion-carousel",
+            "div.accordion-carousel"
+          ],
+          "style": "split",
+          "blocks": [
+            "tabs-stacked",
+            "cards-eyebrow"
+          ],
+          "defaultContent": [
+            "div.accordion-carousel h2",
+            "div.accordion-carousel h2 + p"
+          ]
+        },
+        {
+          "id": "section-3-featured",
+          "name": "Featured offerings",
+          "selector": [
+            "div.bg-container div.featuredcardlist",
+            "div.featuredcardlist"
+          ],
+          "style": "beige",
+          "blocks": [
+            "columns-alternating"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-4-more-to-explore",
+          "name": "More to explore",
+          "selector": [
+            "div.bg-container div.carouselsingledouble",
+            "div.carouselsingledouble"
+          ],
+          "style": "beige-gradient",
+          "blocks": [
+            "carousel-split"
+          ],
+          "defaultContent": [
+            "div.carouselsingledouble h2"
+          ]
+        },
+        {
+          "id": "section-5-contact-banner",
+          "name": "Contact us today banner",
+          "selector": [
+            "div.banner.aem-GridColumn"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-banner"
+          ],
+          "defaultContent": []
+        }
+      ]
+    }
+  ]
+}

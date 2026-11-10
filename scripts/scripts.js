@@ -170,7 +170,30 @@ async function inlineColorIcons(scope) {
   });
 }
 
+/**
+ * Applies Section Metadata tables still present in the markup (style → section classes, other
+ * keys → data attributes). The Edge Delivery pipeline normally does this server-side, so this is
+ * a no-op on delivered pages; it only acts on raw HTML such as local html-folder previews.
+ * @param {Element} main The main element
+ */
+function applySectionMetadata(main) {
+  main.querySelectorAll(':scope > div > div.section-metadata').forEach((sectionMeta) => {
+    const section = sectionMeta.parentElement;
+    const meta = readBlockConfig(sectionMeta);
+    Object.keys(meta).forEach((key) => {
+      if (key === 'style') {
+        meta.style.split(',').map((s) => toClassName(s.trim())).filter(Boolean)
+          .forEach((s) => section.classList.add(s));
+      } else {
+        section.dataset[toCamelCase(key)] = meta[key];
+      }
+    });
+    sectionMeta.remove();
+  });
+}
+
 export function decorateMain(main) {
+  applySectionMetadata(main);
   decorateButtons(main);
   decorateIcons(main);
   inlineColorIcons(main);

@@ -1,0 +1,18 @@
+{
+  "variantName": "tabs-stacked",
+  "baseBlock": "tabs",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Expandable labelled panels laid out as a grid of full-width triggers that open one panel below. Place in the section before the panel sections; each panel section needs Tab ID and Tab Title section metadata",
+    "layout": "Triggers laid out as a 2x2 grid of full-width rows with arrow icons and rules, opening the panel below (accordion-like) instead of a horizontal tab strip."
+  },
+  "contentPattern": {
+    "description": "4 expandable labelled panels, each with an optional subtitle and 3 image cards.",
+    "structure": "Block table with only the block name (no rows needed). The following sections each carry section metadata Tab ID and Tab Title and hold the panel content (default content, cards-eyebrow)",
+    "notes": "Panel content only enters the DOM after a trigger is clicked (absent from cleaned.html); the import must expand each trigger or read the rendered panels. Only 'Our latest insights' has a subtitle."
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Expandable labelled panels laid out as a grid of full-width triggers that open one panel below. Place in the section before the panel sections; each panel section needs Tab ID and Tab Title section metadata.",
+  "reuseGuidance": "Use instead of tabs when the triggers should be a stacked grid that expands panels below rather than a horizontal tab strip."
+}

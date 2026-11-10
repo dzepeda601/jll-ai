@@ -1,0 +1,19 @@
+{
+  "variantName": "carousel-hero",
+  "baseBlock": "carousel",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Page-top rotating spotlight carousel: full-bleed photo slides with an overlaid heading and CTA, plus a title navigator built from the slides",
+    "layout": "Full-bleed photo slides with overlaid white heading/CTA and an overlapping white title-list navigator (red active bar), unlike a standard image+text carousel."
+  },
+  "contentPattern": {
+    "description": "4 rotating photo-background slides with heading + CTA and a 'Spotlight stories' slide navigator.",
+    "structure": "Optional single-cell row: navigator title (e.g. Spotlight stories). Each following row is a slide: cell 1 image; cell 2 optional short nav label paragraph, heading, description, CTA link",
+    "notes": "Slide 2's navigator label differs from its heading; author it as a short paragraph before the heading in the text cell so the block can use it as the nav label (falls back to the heading)."
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Page-top rotating spotlight carousel: full-bleed photo slides with an overlaid heading and CTA, plus a title navigator built from the slides.",
+  "reuseGuidance": "Use for rotating photo heroes with 2+ slides. Use hero for a single static banner.",
+  "labels": "Screen-reader labels can be overridden with page metadata keys carousel-label-role-description, carousel-label-previous, carousel-label-next, carousel-label-controls, carousel-label-show-slide (use {index} and {total})."
+}

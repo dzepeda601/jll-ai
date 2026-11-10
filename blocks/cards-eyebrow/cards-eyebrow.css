@@ -1,0 +1,212 @@
+/* Cards eyebrow – mobile-first.
+   Each card is two tiles: a white text card and a separate rounded image.
+   Mobile: stacked (text card above the image).
+   >= 600px: one row per card, text and image side by side, alternating sides.
+   >= 1200px: three columns, text above image, the even column flipped. */
+
+.cards-eyebrow {
+  padding-block-start: var(--jll-space-8);
+}
+
+.cards-eyebrow > ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--jll-space-6);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cards-eyebrow > ul > li {
+  display: flex;
+  min-width: 0;
+}
+
+.cards-eyebrow .cards-eyebrow-card {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column-reverse;
+  gap: var(--jll-space-6);
+  min-width: 0;
+}
+
+/* image tile */
+.cards-eyebrow .cards-eyebrow-card-image {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  min-width: 0;
+}
+
+.cards-eyebrow .cards-eyebrow-card-image picture {
+  display: contents;
+}
+
+.cards-eyebrow .cards-eyebrow-card-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* text card */
+.cards-eyebrow .cards-eyebrow-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-width: 0;
+  padding-block: var(--jll-space-8);
+  border-radius: var(--jll-radius-xl);
+  background-color: var(--jll-surface-default);
+  color: var(--jll-text-default);
+  transition: border-color 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.cards-eyebrow .cards-eyebrow-card-body > * {
+  margin: 0;
+  padding-inline: var(--jll-space-8);
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.cards-eyebrow .cards-eyebrow-card-body > p {
+  font-size: var(--jll-body-size);
+  line-height: var(--jll-body-line-height);
+  font-weight: var(--jll-font-weight-normal);
+  color: var(--jll-text-subdued);
+}
+
+.cards-eyebrow .cards-eyebrow-card-body > p.cards-eyebrow-card-eyebrow {
+  font-size: var(--jll-body-small-size);
+  line-height: var(--jll-body-small-line-height);
+}
+
+.cards-eyebrow .cards-eyebrow-card-body > :is(h2, h3, h4) {
+  font-family: var(--jll-font-family);
+  font-size: var(--jll-title-2-size);
+  line-height: var(--jll-title-2-line-height);
+  font-weight: var(--jll-font-weight-normal);
+  letter-spacing: normal;
+  color: var(--jll-text-default);
+}
+
+/* Icon-only CTA pinned to the bottom right; the authored text stays for screen readers */
+.cards-eyebrow .cards-eyebrow-card-body > p.cards-eyebrow-card-cta {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: auto;
+  padding-block-start: var(--jll-space-6);
+  padding-inline: 20px;
+  line-height: 0;
+}
+
+.cards-eyebrow a.cards-eyebrow-card-cta-link:any-link {
+  position: relative;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: var(--jll-control-height);
+  height: var(--jll-control-height);
+  border-radius: var(--jll-radius-md);
+  background-color: var(--jll-overlay-2);
+  color: var(--jll-icon-subdued);
+  text-decoration: none;
+  transition: all var(--jll-duration) var(--jll-ease);
+}
+
+.cards-eyebrow a.cards-eyebrow-card-cta-link:hover {
+  opacity: 0.8;
+  color: var(--jll-icon-subdued);
+}
+
+.cards-eyebrow a.cards-eyebrow-card-cta-link:active {
+  transform: scale(0.98);
+}
+
+.cards-eyebrow a.cards-eyebrow-card-cta-link:focus-visible {
+  outline: 3px solid var(--jll-stroke-interaction);
+  outline-offset: 2px;
+  border-radius: var(--jll-radius-md);
+}
+
+.cards-eyebrow .cards-eyebrow-card-cta-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Material Symbols "arrow_forward" (internal) / "open_in_new" (external), 20px */
+.cards-eyebrow .cards-eyebrow-card-cta-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: currentcolor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960'%3E%3Cpath d='M686.15-460H180v-40h506.15L448.46-737.69 480-760l280 280-280 280-31.54-22.31L686.15-460Z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+.cards-eyebrow .cards-eyebrow-card-cta-link.is-external .cards-eyebrow-card-cta-icon {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960'%3E%3Cpath d='M224.62-160q-27.62 0-46.12-18.5Q160-197 160-224.62v-510.76q0-27.62 18.5-46.12Q197-800 224.62-800h224.61v40H224.62q-9.24 0-16.93 7.69-7.69 7.69-7.69 16.93v510.76q0 9.24 7.69 16.93 7.69 7.69 16.93 7.69h510.76q9.24 0 16.93-7.69 7.69-7.69 7.69-16.93v-224.61h40v224.61q0 27.62-18.5 46.12Q763-160 735.38-160H224.62Zm164.92-201.23-28.31-28.31L731.69-760H560v-40h240v240h-40v-171.69L389.54-361.23Z'/%3E%3C/svg%3E");
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cards-eyebrow a.cards-eyebrow-card-cta-link:any-link,
+  .cards-eyebrow .cards-eyebrow-card-body {
+    transition: none;
+  }
+}
+
+/* side-by-side rows, alternating text/image sides */
+@media (width >= 600px) {
+  .cards-eyebrow {
+    padding-block-start: 36px;
+  }
+
+  .cards-eyebrow .cards-eyebrow-card {
+    flex-direction: row-reverse;
+  }
+
+  .cards-eyebrow > ul > li:nth-child(even) .cards-eyebrow-card {
+    flex-direction: row;
+  }
+
+  .cards-eyebrow .cards-eyebrow-card-image,
+  .cards-eyebrow .cards-eyebrow-card-body {
+    flex: 1 1 0;
+  }
+
+  .cards-eyebrow .cards-eyebrow-card-image {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+@media (width >= 900px) {
+  .cards-eyebrow {
+    padding-block-start: var(--jll-space-10);
+  }
+
+  .cards-eyebrow > ul,
+  .cards-eyebrow .cards-eyebrow-card {
+    gap: var(--jll-space-8);
+  }
+
+  .cards-eyebrow .cards-eyebrow-card-body > p.cards-eyebrow-card-eyebrow {
+    font-size: var(--jll-eyebrow-size);
+    line-height: 24px;
+  }
+}
+
+/* desktop keeps the alternating rows: the source only switches to a staggered
+   three-column grid above 1440px, which has no matching project breakpoint */
+@media (width >= 1200px) {
+  .cards-eyebrow {
+    padding-block-start: 56px;
+  }
+}

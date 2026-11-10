@@ -1,0 +1,369 @@
+/*
+ * Carousel hero – mobile-first.
+ * Source (jll.com carouselpanel): stacked below 1280px (text, then a rounded 16:9 image),
+ * full-bleed 16:9 photo with an overlapping "spotlight" navigator from 1280px (mapped to 1200px).
+ */
+
+/* the hero runs edge to edge; the block sets its own inline padding */
+main > .section > .carousel-hero-wrapper {
+  max-width: none;
+  padding: 0;
+}
+
+/* the hero sits flush with the next section, as on the source */
+main > .section.carousel-hero-container {
+  padding-block-end: 0;
+}
+
+.carousel-hero {
+  --carousel-hero-inline: var(--jll-space-8);
+  --carousel-hero-gap: var(--jll-space-6);
+
+  position: relative;
+}
+
+.carousel-hero .carousel-hero-slides-container {
+  position: relative;
+}
+
+.carousel-hero button:focus-visible {
+  outline: 2px solid var(--jll-stroke-interaction);
+  outline-offset: 2px;
+}
+
+.carousel-hero .carousel-hero-slides,
+.carousel-hero .carousel-hero-nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-hero .carousel-hero-slides {
+  display: flex;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  overflow: scroll clip;
+  scrollbar-width: none;
+}
+
+.carousel-hero .carousel-hero-slides::-webkit-scrollbar {
+  display: none;
+}
+
+/* stacked slide: text on top, 16:9 image below (bottom-aligned so the CTA row lines up across slides) */
+.carousel-hero .carousel-hero-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: var(--carousel-hero-gap);
+  box-sizing: border-box;
+  width: 100%;
+  padding-inline: var(--carousel-hero-inline);
+}
+
+.carousel-hero .carousel-hero-slide-image {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: var(--jll-radius-xl);
+  line-height: 0;
+}
+
+.carousel-hero .carousel-hero-slide-image picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-hero .carousel-hero-slide-image img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  object-fit: cover;
+}
+
+.carousel-hero .carousel-hero-slide-content {
+  order: -1;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--carousel-hero-gap);
+  padding-block-start: var(--jll-space-8);
+  color: var(--color-text);
+}
+
+.carousel-hero .carousel-hero-slide-content > * {
+  margin: 0;
+}
+
+/* every slide title uses the title-1 scale, whatever its heading level */
+.carousel-hero .carousel-hero-slide-content :is(h1, h2, h3, h4, h5, h6) {
+  color: inherit;
+  font-size: var(--jll-title-1-size);
+  font-weight: var(--jll-font-weight-normal);
+  line-height: var(--jll-title-1-line-height);
+  letter-spacing: var(--jll-title-1-tracking);
+}
+
+/* leave room for the prev/next buttons that share the CTA row */
+.carousel-hero .carousel-hero-slide-content .button-container {
+  max-width: calc(100% - 2 * var(--jll-control-height) - 2 * var(--jll-space-2));
+}
+
+/* CTA – stacked: dark solid with an arrow */
+main .carousel-hero a.button:any-link {
+  gap: var(--jll-space-2);
+  min-height: var(--jll-control-height);
+  padding: 8.5px var(--jll-space-4);
+  border-radius: var(--jll-radius-md);
+  background-color: var(--jll-surface-primary);
+  color: var(--jll-text-reversed);
+  font-size: 16px;
+  line-height: 16px;
+}
+
+main .carousel-hero a.button:any-link:hover,
+main .carousel-hero a.button:any-link:focus-visible {
+  background-color: #283d45;
+  color: var(--jll-text-reversed);
+}
+
+main .carousel-hero a.button:any-link::after {
+  content: '';
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  background-color: var(--jll-stroke-interaction);
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960'%3E%3Cpath d='M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+/* Prev / next – sit on the CTA row, right-aligned, just above the image.
+   padding-bottom % resolves against the container width: image height + gap. */
+.carousel-hero .carousel-hero-navigation-buttons {
+  position: absolute;
+  right: var(--carousel-hero-inline);
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+  gap: var(--jll-space-2);
+  padding-bottom: calc(56.25% - 1.125 * var(--carousel-hero-inline) + var(--carousel-hero-gap));
+  pointer-events: none;
+}
+
+.carousel-hero .carousel-hero-navigation-buttons button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--jll-control-height);
+  height: var(--jll-control-height);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: var(--jll-radius-md);
+  background-color: var(--jll-overlay-2);
+  color: var(--jll-icon-subdued);
+  cursor: pointer;
+  pointer-events: auto;
+  transition: background-color var(--jll-duration) var(--jll-ease);
+}
+
+.carousel-hero .carousel-hero-navigation-buttons button:hover {
+  background-color: var(--jll-overlay-3);
+}
+
+.carousel-hero .carousel-hero-navigation-buttons button:active {
+  transform: scale(0.98);
+}
+
+.carousel-hero .carousel-hero-navigation-buttons button::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: currentcolor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960'%3E%3Cpath d='M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+.carousel-hero .carousel-hero-navigation-buttons .carousel-hero-next::after {
+  transform: scaleX(-1);
+}
+
+/* Spotlight navigator – full-bleed layout only (hidden in the stacked layout, as on the source) */
+.carousel-hero .carousel-hero-nav {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel-hero .carousel-hero-slides {
+    scroll-behavior: auto;
+  }
+}
+
+@media (width >= 600px) {
+  .carousel-hero {
+    --carousel-hero-gap: var(--jll-space-8);
+  }
+
+  .carousel-hero .carousel-hero-slide-content {
+    padding-block-start: var(--jll-space-10);
+  }
+}
+
+@media (width >= 900px) {
+  .carousel-hero {
+    --carousel-hero-inline: 56px;
+  }
+
+  .carousel-hero .carousel-hero-slide {
+    gap: var(--jll-space-10);
+  }
+
+  .carousel-hero .carousel-hero-navigation-buttons {
+    padding-bottom: calc(56.25% - 1.125 * var(--carousel-hero-inline) + var(--jll-space-10));
+  }
+}
+
+@media (width >= 1200px) {
+  /* full-bleed 16:9 photo slide */
+  .carousel-hero .carousel-hero-slide {
+    justify-content: flex-start;
+    aspect-ratio: 16 / 9;
+    padding: 0;
+  }
+
+  .carousel-hero .carousel-hero-slide-image {
+    position: absolute;
+    inset: 0;
+    aspect-ratio: auto;
+    border-radius: 0;
+  }
+
+  .carousel-hero .carousel-hero-slide-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(180deg, rgb(0 0 0 / 55%) 0%, rgb(0 0 0 / 25%) 45%, rgb(0 0 0 / 0%) 75%);
+    pointer-events: none;
+  }
+
+  .carousel-hero .carousel-hero-slide-content {
+    gap: var(--jll-space-10);
+    padding: 128px 128px 0;
+    color: var(--jll-text-reversed);
+  }
+
+  .carousel-hero .carousel-hero-slide-content > * {
+    max-width: calc(50% - var(--jll-space-10) / 2);
+  }
+
+  /* CTA – on the photo: white with subdued text */
+  main .carousel-hero a.button:any-link {
+    gap: var(--jll-space-3);
+    min-height: var(--jll-space-12);
+    padding: 0 var(--jll-space-6);
+    background-color: var(--jll-surface-default);
+    color: var(--jll-text-subdued);
+    font-size: 18px;
+    line-height: 18px;
+    transition: opacity var(--jll-duration) var(--jll-ease);
+  }
+
+  main .carousel-hero a.button:any-link:hover,
+  main .carousel-hero a.button:any-link:focus-visible {
+    background-color: var(--jll-surface-default);
+    color: var(--jll-text-subdued);
+    opacity: 0.8;
+  }
+
+  main .carousel-hero a.button:any-link::after {
+    width: 24px;
+    height: 24px;
+    background-color: var(--jll-icon-subdued);
+  }
+
+  .carousel-hero .carousel-hero-slide-content .button-container {
+    max-width: none;
+  }
+
+  .carousel-hero .carousel-hero-navigation-buttons {
+    display: none;
+  }
+
+  /* navigator overlaps the bottom of the photo */
+  .carousel-hero .carousel-hero-nav {
+    position: absolute;
+    inset-inline: 128px;
+    bottom: var(--jll-space-6);
+    z-index: 2;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: var(--jll-space-6);
+    padding: var(--jll-space-3) var(--jll-space-6);
+    border-radius: var(--jll-radius-xl);
+    background-color: var(--jll-surface-default);
+    color: var(--jll-text-default);
+  }
+
+  .carousel-hero .carousel-hero-nav-title {
+    margin: 0;
+    color: var(--jll-red);
+    font-size: var(--jll-title-3-size);
+    line-height: var(--jll-title-3-line-height);
+  }
+
+  .carousel-hero .carousel-hero-nav-list {
+    display: grid;
+    grid-auto-columns: minmax(0, 1fr);
+    grid-auto-flow: column;
+    gap: var(--jll-space-6);
+  }
+
+  .carousel-hero .carousel-hero-nav-item button {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: var(--jll-space-4) var(--jll-space-4) var(--jll-space-4) var(--jll-space-8);
+    border: 0;
+    border-radius: var(--jll-radius-xl);
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    font-size: var(--jll-body-size);
+    line-height: var(--jll-body-line-height);
+    text-align: start;
+    cursor: pointer;
+  }
+
+  .carousel-hero .carousel-hero-nav-item button::before {
+    content: '';
+    position: absolute;
+    inset-block: var(--jll-space-4);
+    inset-inline-start: var(--jll-space-4);
+    width: 8px;
+    border-radius: 3px;
+    background-color: var(--jll-stroke-subdued);
+  }
+
+  .carousel-hero .carousel-hero-nav-item button:hover {
+    background-color: rgb(29 104 129 / 4%);
+  }
+
+  .carousel-hero .carousel-hero-nav-item button:hover::before {
+    background-color: #eaeff1;
+  }
+
+  .carousel-hero .carousel-hero-nav-item button[aria-current='true'] {
+    background-color: #eaeff1;
+  }
+
+  .carousel-hero .carousel-hero-nav-item button[aria-current='true']::before {
+    background-color: var(--jll-red);
+  }
+}

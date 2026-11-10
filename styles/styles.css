@@ -10,6 +10,8 @@
  * governing permissions and limitations under the License.
  */
 
+@import url('brand.css');
+
 /* ==========================================================================
    Design tokens – use these variables across blocks for consistent styling.
    ========================================================================== */
@@ -22,7 +24,7 @@
   --bp-wide: 1200px;
 
   /* grid */
-  --grid-container-width: 83.4%;
+  --grid-container-width: 100%;
   --grid-column-width: calc(var(--grid-container-width) / 12);
   --grid-gutter-width: 8.3%;
 
@@ -37,9 +39,9 @@
   --space-4xl: 96px;
 
   /* global layout rhythm */
-  --content-padding-inline: var(--space-m);
+  --content-padding-inline: var(--jll-space-8);
   --main-block-space: var(--space-l);
-  --section-block-space: var(--space-l);
+  --section-block-space: var(--jll-space-10);
 
   /* color scheme */
   color-scheme: light dark;
@@ -108,46 +110,47 @@
   /* semantic / named colors */
   --color-light: rgb(255 255 255);
   --color-dark: rgb(0 0 0);
-  --color-text: light-dark(var(--color-ink), var(--color-parchment));
-  --color-link: light-dark(var(--color-ink), var(--color-parchment));
-  --color-link-hover: light-dark(var(--color-rust), var(--color-gold));
-  --color-brand: var(--color-rust);
-  --color-accent: var(--color-gold);
-  --color-shaded: light-dark(var(--color-parchment), var(--color-card-dark));
+  --color-text: light-dark(var(--jll-text-default), var(--jll-text-reversed));
+  --color-text-subdued: light-dark(var(--jll-text-subdued), var(--jll-stroke-default));
+  --color-link: light-dark(var(--jll-text-subdued), var(--jll-stroke-subdued));
+  --color-link-hover: light-dark(var(--jll-text-default), var(--jll-text-reversed));
+  --color-brand: var(--jll-red);
+  --color-accent: var(--jll-red);
+  --color-shaded: light-dark(var(--jll-surface-subdued), #1a2b2d);
 
   /* fonts */
-  --font-family: montserrat, "Trebuchet MS", sans-serif;
+  --font-family: var(--jll-font-family);
   --font-family-serif: "EB Garamond", georgia, serif;
-  --font-family-mono: "JetBrains Mono", "Courier New", monospace;
+  --font-family-mono: "JetBrains Mono", menlo, monospace;
   --body-font-family: var(--font-family);
-  --heading-font-family: var(--font-family-serif);
+  --heading-font-family: var(--font-family);
 
-  /* heading sizes */
-  --heading-font-size-xxl: 32.44px;
-  --heading-font-size-xl: 28.83px;
-  --heading-font-size-l: 25.63px;
-  --heading-font-size-m: 22.78px;
-  --heading-font-size-s: 20.25px;
-  --heading-font-size-xs: 18px;
-  --heading-font-size-xxs: 16px;
-  --heading-line-height: 1.15;
+  /* heading sizes (JLL type scale: display / title-1 / title-2 / title-3) */
+  --heading-font-size-xxl: var(--jll-title-1-size);
+  --heading-font-size-xl: var(--jll-title-2-size);
+  --heading-font-size-l: var(--jll-title-3-size);
+  --heading-font-size-m: var(--jll-title-3-size);
+  --heading-font-size-s: 18px;
+  --heading-font-size-xs: 16px;
+  --heading-font-size-xxs: 14px;
+  --heading-line-height: 1.2;
 
   /* body sizes */
-  --body-font-size-xxxl: 25px;
+  --body-font-size-xxxl: 24px;
   --body-font-size-xxl: 22px;
   --body-font-size-xl: 20px;
   --body-font-size-l: 18px;
-  --body-font-size-m: 16px;
-  --body-font-size-s: 14px;
-  --body-font-size-xs: 12px;
-  --body-line-height: 1.6;
+  --body-font-size-m: var(--jll-body-size);
+  --body-font-size-s: var(--jll-body-small-size);
+  --body-font-size-xs: var(--jll-caption-size);
+  --body-line-height: 1.5;
 
   /* nav / layout */
   --nav-height: 64px;
   --header-height: var(--nav-height);
 
   /* boilerplate compatibility – map to design tokens */
-  --background-color: light-dark(var(--color-parchment), var(--color-obsidian));
+  --background-color: light-dark(var(--jll-surface-default), var(--jll-surface-primary));
   --light-color: var(--color-shaded);
   --dark-color: var(--color-gray-500);
   --text-color: var(--color-text);
@@ -183,38 +186,31 @@
   color-scheme: dark;
 }
 
+/* layout rhythm – JLL side margins: 32px (mobile), 56px (tablet), 72px (laptop), 88px (desktop);
+   sections breathe ~40px (mobile) to 64px (desktop) */
 @media (width >= 600px) {
   :root,
   :host {
-    --heading-font-size-xxl: 44px;
-    --heading-font-size-xl: 36px;
-    --content-padding-inline: var(--space-l);
+    --content-padding-inline: 56px;
     --main-block-space: var(--space-xl);
-    --section-block-space: var(--space-xl);
   }
 }
 
 @media (width >= 900px) {
   :root,
   :host {
-    --body-font-size-m: 18px;
-    --body-font-size-s: 16px;
-    --body-font-size-xs: 14px;
-    --heading-font-size-xxl: 64px;
-    --heading-font-size-xl: 48px;
-    --heading-font-size-l: 32px;
-    --heading-font-size-m: 24px;
-    --heading-font-size-s: 20px;
-    --heading-font-size-xs: 18px;
-    --content-padding-inline: var(--space-xl);
-    --section-block-space: var(--space-3xl);
+    --content-padding-inline: 72px;
+    --section-block-space: var(--jll-space-16);
   }
 }
 
 @media (width >= 1200px) {
   :root,
   :host {
-    --grid-container-width: 1200px;
+    --content-padding-inline: 88px;
+
+    /* side margins grow with the viewport (88px at 1440 → 1264px content); content caps at 1600px */
+    --grid-container-width: calc(1600px + (2 * var(--content-padding-inline)));
   }
 }
 
@@ -262,7 +258,7 @@ html {
 }
 
 ::selection {
-  background: light-dark(rgb(161 79 43 / 20%), rgb(197 160 89 / 30%));
+  background: var(--jll-overlay-3);
   color: inherit;
 }
 
@@ -271,15 +267,10 @@ body {
   margin: 0;
   box-sizing: border-box;
   background-color: var(--background-color);
-  background-image:
-    radial-gradient(ellipse 80% 50% at 12% 8%,
-      light-dark(rgb(197 160 89 / 9%), rgb(197 160 89 / 4%)) 0%, transparent 60%),
-    radial-gradient(ellipse 55% 40% at 88% 82%,
-      light-dark(rgb(161 79 43 / 6%), rgb(161 79 43 / 3%)) 0%, transparent 50%);
   color: var(--text-color);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
-  line-height: var(--body-line-height);
+  line-height: var(--jll-body-line-height);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -316,30 +307,39 @@ h6 {
   margin-top: 0.8em;
   margin-bottom: 0.4em;
   font-family: var(--heading-font-family);
-  font-weight: 500;
+  font-weight: var(--jll-font-weight-normal);
   line-height: var(--heading-line-height);
   scroll-margin: 40px;
 }
 
+/* JLL title-1 */
 h1 {
-  font-size: var(--heading-font-size-xxl);
-  letter-spacing: -0.02em;
+  font-size: var(--jll-title-1-size);
+  line-height: var(--jll-title-1-line-height);
+  letter-spacing: var(--jll-title-1-tracking);
 }
 
+/* JLL title-2 */
 h2 {
-  font-size: var(--heading-font-size-xl);
-  letter-spacing: -0.015em;
+  font-size: var(--jll-title-2-size);
+  line-height: var(--jll-title-2-line-height);
+  letter-spacing: var(--jll-title-2-tracking);
 }
 
-h3 { font-size: var(--heading-font-size-m); }
+/* JLL title-3 */
+h3 {
+  font-size: var(--jll-title-3-size);
+  line-height: var(--jll-title-3-line-height);
+  letter-spacing: var(--jll-title-3-tracking);
+}
+
 h4 { font-size: var(--heading-font-size-s); }
 h5 { font-size: var(--heading-font-size-xs); }
 h6 { font-size: var(--heading-font-size-xxs); }
 
-@media (width >= 600px) {
-  h3 { font-size: var(--heading-font-size-l); }
-  h4 { font-size: var(--heading-font-size-m); }
-  h5 { font-size: var(--heading-font-size-s); }
+p {
+  font-size: var(--jll-body-size);
+  line-height: var(--jll-body-line-height);
 }
 
 
@@ -373,9 +373,9 @@ pre {
 
 :not(pre) > code {
   padding: 0.1em 0.35em;
-  background: rgb(161 79 43 / 10%);
-  border-radius: 4px;
-  color: var(--color-rust);
+  background: var(--jll-overlay-1);
+  border-radius: var(--jll-radius-sm);
+  color: var(--jll-text-default);
 }
 
 pre {
@@ -387,17 +387,18 @@ pre {
 }
 
 strong {
-  font-weight: 600;
+  font-weight: var(--jll-font-weight-semibold);
 }
 
-/* links */
+/* links – JLL subdued slate, darkens on hover */
 a:any-link {
   color: var(--link-color);
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.2em;
-  text-decoration-color: light-dark(rgb(26 26 26 / 30%), rgb(245 242 237 / 30%));
+  text-decoration-color: currentcolor;
   overflow-wrap: break-word;
+  transition: color var(--jll-duration) var(--jll-ease);
 }
 
 a:hover {
@@ -406,7 +407,15 @@ a:hover {
   text-decoration-color: var(--link-hover-color);
 }
 
-/* buttons (AEM default content: links in standalone paragraphs) */
+a:focus-visible {
+  outline: 2px solid var(--jll-stroke-interaction);
+  outline-offset: 2px;
+  border-radius: var(--jll-radius-sm);
+}
+
+/* buttons (AEM default content: links in standalone paragraphs)
+   JLL Sol buttons: 44px tall, 6px radius, regular weight, sentence case.
+   default/secondary = tonal (slate overlay), primary (bold link) = dark solid. */
 p.button-container {
   margin: var(--space-m) 0;
 }
@@ -417,39 +426,28 @@ button.button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--space-xs);
+  gap: var(--jll-space-2);
   max-width: 100%;
+  min-height: var(--jll-control-height);
   margin: 0;
-  border: 1px solid light-dark(var(--color-rust), var(--color-rust-bright));
-  border-radius: 4px;
-  padding: 20px 50px;
+  border: 0;
+  border-radius: var(--jll-radius-md);
+  padding: var(--jll-space-2) var(--jll-space-4);
   font: inherit;
-  font-weight: 700;
-  font-size: 0.85rem;
+  font-size: var(--jll-body-size);
+  font-weight: var(--jll-font-weight-normal);
   line-height: 1.2;
   text-align: center;
   text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  background-color: light-dark(var(--color-rust), var(--color-rust-bright));
-  background-image: linear-gradient(135deg, rgb(255 255 255 / 12%), rgb(0 0 0 / 8%));
-  color: var(--color-light);
+  text-transform: none;
+  letter-spacing: normal;
+  background-color: var(--jll-overlay-2);
+  color: var(--jll-text-default);
   cursor: pointer;
   overflow: hidden;
-  position: relative;
   text-overflow: ellipsis;
   white-space: nowrap;
-  transition: all 0.4s;
-}
-
-a.button:any-link::after,
-button.button::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(105deg, transparent 30%, rgb(255 255 255 / 22%) 50%, transparent 70%);
-  transform: translateX(-120%);
-  transition: transform 0.55s ease;
+  transition: background-color var(--jll-duration) var(--jll-ease), color var(--jll-duration) var(--jll-ease);
 }
 
 input,
@@ -459,46 +457,53 @@ button {
   font: inherit;
 }
 
-/* Primary variant */
-a.button.primary:any-link,
-button.button.primary {
-  border-color: var(--color-rust);
-  background-color: var(--color-rust);
-  color: var(--color-light);
-}
-
 a.button:any-link:hover,
-a.button:any-link:focus-visible,
-button.button:hover,
-button.button:focus-visible {
-  background-color: var(--color-gold);
-  border-color: var(--color-gold);
-  transform: translateY(-3px);
-  box-shadow: 0 14px 30px light-dark(rgb(161 79 43 / 30%), rgb(209 106 62 / 35%)), 0 0 0 1px var(--color-gold);
-  cursor: pointer;
+button.button:hover {
+  background-color: var(--jll-overlay-3);
+  color: var(--jll-text-default);
   text-decoration: none;
 }
 
-a.button:any-link:hover::after,
-a.button:any-link:focus-visible::after,
-button.button:hover::after,
-button.button:focus-visible::after {
-  transform: translateX(120%);
+a.button:any-link:active,
+button.button:active {
+  transform: scale(0.98);
+}
+
+a.button:any-link:focus-visible,
+button.button:focus-visible {
+  outline: 3px solid rgb(22 121 155 / 50%);
+  outline-offset: 0;
+  text-decoration: none;
+}
+
+/* Primary variant – dark solid (hero CTA style) */
+a.button.primary:any-link,
+button.button.primary {
+  background-color: var(--jll-surface-primary);
+  color: var(--jll-text-reversed);
 }
 
 a.button.primary:hover,
 a.button.primary:focus-visible,
 button.button.primary:hover,
 button.button.primary:focus-visible {
-  border-color: var(--color-gold);
-  background-color: var(--color-gold);
-  color: var(--color-light);
+  background-color: #283d45;
+  color: var(--jll-text-reversed);
 }
 
-a.button:any-link:focus-visible,
-button.button:focus-visible {
-  outline: 2px solid var(--link-color);
-  outline-offset: 2px;
+/* Secondary variant – tonal */
+a.button.secondary:any-link,
+button.button.secondary {
+  background-color: var(--jll-overlay-2);
+  color: var(--jll-text-default);
+}
+
+a.button.secondary:hover,
+a.button.secondary:focus-visible,
+button.button.secondary:hover,
+button.button.secondary:focus-visible {
+  background-color: var(--jll-overlay-3);
+  color: var(--jll-text-default);
 }
 
 a.button[aria-disabled='true'],
@@ -507,29 +512,9 @@ a.button[aria-disabled='true']:focus-visible,
 button.button:disabled,
 button.button:disabled:hover,
 button.button:disabled:focus-visible {
-  background-color: var(--light-color);
-  border-color: var(--light-color);
-  color: var(--dark-color);
+  opacity: 0.5;
   cursor: not-allowed;
   pointer-events: none;
-}
-
-a.button.secondary,
-button.button.secondary {
-  border: 1.5px solid var(--color-rust);
-  background-color: transparent;
-  color: var(--color-rust);
-}
-
-a.button.secondary:hover,
-a.button.secondary:focus-visible,
-button.button.secondary:hover,
-button.button.secondary:focus-visible {
-  border-color: var(--color-gold);
-  background-color: light-dark(rgb(197 160 89 / 8%), rgb(197 160 89 / 12%));
-  color: var(--color-gold);
-  transform: translateY(-3px);
-  box-shadow: 0 14px 30px light-dark(rgb(197 160 89 / 18%), rgb(197 160 89 / 22%));
 }
 
 /* main content area – use design tokens for rhythm */
@@ -558,7 +543,7 @@ main img {
 .icon.icon-logo {
   width: 200px;
   height: 45px;
-  color: light-dark(var(--color-rust), var(--color-rust-bright));
+  color: light-dark(var(--jll-red), var(--jll-white));
 }
 
 main .icon.icon-logo {
@@ -577,7 +562,7 @@ main img:not([width], [height]) {
 /* sections – boilerplate structure with design tokens */
 :is(main, article.article-body) > .section {
   margin: inherit;
-  padding-block: var(--space-xl);
+  padding-block: var(--section-block-space);
 }
 
 main > .section:first-child {
@@ -595,6 +580,7 @@ main > .section:has(.social-share) {
 
 main > .section > div,
 article.article-body > .section > div {
+  box-sizing: border-box;
   max-width: var(--grid-container-width);
   margin: auto;
   padding: 0 var(--content-padding-inline);
@@ -606,6 +592,32 @@ main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: var(--section-block-space) 0;
+}
+
+/* section-metadata style=beige: JLL sand band (featured offerings) */
+main > .section.beige {
+  background-color: var(--jll-surface-sand);
+  color: var(--jll-text-default);
+  margin: 0;
+  padding: var(--section-block-space) 0;
+}
+
+/* section-metadata style=beige-gradient: sand fading to white (continues a beige band) */
+main > .section.beige-gradient {
+  background-color: var(--jll-surface-default);
+  background-image: var(--jll-gradient-sand);
+  color: var(--jll-text-default);
+  margin: 0;
+  padding: var(--section-block-space) 0;
+}
+
+main > .section.beige + .section.beige-gradient {
+  padding-block-start: var(--jll-space-10);
+}
+
+/* section-metadata style=split: default content beside its block (layout owned by the block CSS) */
+main > .section.split {
+  margin: 0;
 }
 
 /* section-metadata style=divider: content-width (grid) border-bottom */

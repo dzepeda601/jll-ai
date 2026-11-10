@@ -1,0 +1,312 @@
+/* Tabs stacked – values from jll.com "accordion-carousel" (Explore a brighter way). Mobile-first. */
+
+/*
+ * Section layout (section-metadata style "split"): the intro default content sits
+ * beside the trigger grid on desktop, and the open panel spans the full width below.
+ * The block wrapper, block and layout element are flattened (display: contents) so the
+ * trigger list and panels become items of the section grid.
+ */
+main > .section.split.tabs-stacked-container {
+  --tabs-stacked-gutter: max(var(--content-padding-inline), calc((100% - var(--jll-content-max-width)) / 2));
+  --tabs-stacked-row-space: var(--jll-space-8);
+
+  display: grid;
+  grid-template-columns: var(--tabs-stacked-gutter) minmax(0, 1fr) var(--tabs-stacked-gutter);
+  padding-block: 0;
+}
+
+main > .section.split.tabs-stacked-container > .tabs-stacked-wrapper,
+main > .section.split.tabs-stacked-container .tabs-stacked,
+main > .section.split.tabs-stacked-container .tabs-stacked-layout {
+  display: contents;
+}
+
+main > .section.split.tabs-stacked-container > .default-content-wrapper {
+  grid-column: 2;
+  max-width: none;
+  margin: 0;
+  padding: var(--tabs-stacked-row-space) 0 var(--jll-space-6);
+}
+
+main > .section.split.tabs-stacked-container > .default-content-wrapper > h2 {
+  margin: 0;
+}
+
+/* the source intro heading has no decorative rule */
+main > .section.split.tabs-stacked-container > .default-content-wrapper > h2::after {
+  content: none;
+}
+
+main > .section.split.tabs-stacked-container > .default-content-wrapper > p {
+  margin: var(--jll-space-2) 0 0;
+  hyphens: auto;
+  overflow-wrap: break-word;
+  text-wrap: pretty;
+}
+
+/* trigger grid */
+.tabs-stacked .tabs-stacked-list {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--jll-space-4);
+  align-content: start;
+  padding-block-end: var(--tabs-stacked-row-space, var(--jll-space-8));
+  border-bottom: 1px solid var(--jll-stroke-default);
+}
+
+.tabs-stacked .tabs-stacked-trigger {
+  appearance: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--jll-space-3);
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: var(--jll-space-3) var(--jll-space-4);
+  border: 0;
+  border-radius: var(--jll-radius-md);
+  background: transparent;
+  color: var(--jll-text-subdued);
+  font: inherit;
+  text-align: start;
+  cursor: pointer;
+  transition: color var(--jll-duration) var(--jll-ease), background-color var(--jll-duration) var(--jll-ease);
+}
+
+.tabs-stacked .tabs-stacked-trigger:hover,
+.tabs-stacked .tabs-stacked-trigger[aria-expanded='true'] {
+  background-color: var(--jll-surface-subdued);
+}
+
+.tabs-stacked .tabs-stacked-trigger:active {
+  transform: scale(0.98);
+}
+
+.tabs-stacked .tabs-stacked-trigger:focus-visible {
+  outline: 2px solid var(--jll-stroke-interaction);
+  outline-offset: 2px;
+}
+
+.tabs-stacked .tabs-stacked-trigger-label {
+  min-width: 0;
+  color: var(--jll-text-default);
+  font-size: var(--jll-body-size);
+  line-height: var(--jll-body-line-height);
+}
+
+/* Material "arrow_downward" (20px, weight 300) drawn as a mask; flips to arrow_upward when open */
+.tabs-stacked .tabs-stacked-trigger-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  background-color: var(--jll-icon-subdued);
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M10 3.75v12.1M4.6 10.45 10 15.85l5.4-5.4' fill='none' stroke='%23000' stroke-width='1.25'/%3E%3C/svg%3E") center / 20px 20px no-repeat;
+  transition: transform 0.15s var(--jll-ease);
+}
+
+.tabs-stacked .tabs-stacked-trigger[aria-expanded='true'] .tabs-stacked-trigger-icon {
+  transform: rotate(180deg);
+}
+
+/* panels span the full section width */
+.tabs-stacked .tabs-stacked-panels {
+  grid-column: 1 / -1;
+  min-width: 0;
+}
+
+.tabs-stacked .tabs-stacked-panel[hidden] {
+  display: none;
+}
+
+.tabs-stacked .tabs-stacked-panel > .section {
+  margin: 0;
+  padding: 0;
+}
+
+.tabs-stacked .tabs-stacked-panel-header,
+main .tabs-stacked .tabs-stacked-panel > .section > .default-content-wrapper {
+  padding-inline: var(--tabs-stacked-gutter, var(--content-padding-inline));
+}
+
+.tabs-stacked .tabs-stacked-panel-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--jll-space-6);
+  padding-block-start: var(--jll-space-8);
+}
+
+.tabs-stacked .tabs-stacked-panel-title {
+  margin: 0;
+  color: var(--jll-text-default);
+  font-size: var(--jll-title-1-size);
+  line-height: var(--jll-title-1-line-height);
+  letter-spacing: var(--jll-title-1-tracking);
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+
+.tabs-stacked .tabs-stacked-panel-controls {
+  display: flex;
+  flex-shrink: 0;
+  gap: var(--jll-space-2);
+  order: -1;
+  align-self: flex-end;
+}
+
+.tabs-stacked .tabs-stacked-panel-controls button {
+  appearance: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--jll-control-height);
+  height: var(--jll-control-height);
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--jll-stroke-default);
+  border-radius: var(--jll-radius-md);
+  background: transparent;
+  color: var(--jll-text-subdued);
+  cursor: pointer;
+  transition: background-color var(--jll-duration) var(--jll-ease);
+}
+
+.tabs-stacked .tabs-stacked-panel-controls button:hover {
+  background-color: var(--jll-overlay-1);
+}
+
+.tabs-stacked .tabs-stacked-panel-controls button:focus-visible {
+  outline: 2px solid var(--jll-stroke-interaction);
+  outline-offset: 2px;
+}
+
+/* Material "chevron_left" / "chevron_right" (20px, weight 300) */
+.tabs-stacked .tabs-stacked-panel-controls button::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: var(--jll-icon-subdued);
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M11.9 6.1 8 10l3.9 3.9' fill='none' stroke='%23000' stroke-width='1.25'/%3E%3C/svg%3E") center / 20px 20px no-repeat;
+}
+
+.tabs-stacked .tabs-stacked-panel-controls .tabs-stacked-panel-next::before {
+  transform: scaleX(-1);
+}
+
+main .tabs-stacked .tabs-stacked-panel > .section > .default-content-wrapper {
+  margin-block: var(--jll-space-2) var(--jll-space-6);
+}
+
+main .tabs-stacked .tabs-stacked-panel > .section > .default-content-wrapper > * {
+  margin: 0;
+}
+
+main .tabs-stacked .tabs-stacked-panel > .section > .default-content-wrapper > * + * {
+  margin-block-start: var(--jll-space-2);
+}
+
+/* full-bleed sand band holding the panel's cards */
+.tabs-stacked .tabs-stacked-panel .cards-eyebrow-wrapper {
+  background-color: #f7ece3;
+  padding: var(--jll-space-8) var(--tabs-stacked-gutter, var(--content-padding-inline)) 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tabs-stacked .tabs-stacked-trigger,
+  .tabs-stacked .tabs-stacked-trigger-icon,
+  .tabs-stacked .tabs-stacked-panel-controls button {
+    transition: none;
+  }
+
+  .tabs-stacked .tabs-stacked-trigger:active {
+    transform: none;
+  }
+}
+
+@media (width >= 600px) {
+  main > .section.split.tabs-stacked-container {
+    --tabs-stacked-row-space: 36px;
+  }
+
+  main > .section.split.tabs-stacked-container > .default-content-wrapper {
+    padding-block-end: var(--jll-space-8);
+  }
+
+  .tabs-stacked .tabs-stacked-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .tabs-stacked .tabs-stacked-panel-header {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--jll-space-10);
+  }
+
+  .tabs-stacked .tabs-stacked-panel-controls {
+    order: 0;
+    align-self: auto;
+  }
+
+  .tabs-stacked .tabs-stacked-panel .cards-eyebrow-wrapper {
+    padding-block-start: 36px;
+  }
+}
+
+@media (width >= 900px) {
+  main > .section.split.tabs-stacked-container {
+    --tabs-stacked-row-space: var(--jll-space-10);
+  }
+
+  main > .section.split.tabs-stacked-container > .default-content-wrapper {
+    padding-block-end: var(--jll-space-10);
+  }
+
+  .tabs-stacked .tabs-stacked-panel-header {
+    padding-block-start: var(--jll-space-10);
+  }
+
+  main .tabs-stacked .tabs-stacked-panel > .section > .default-content-wrapper {
+    margin-block-end: var(--jll-space-8);
+  }
+
+  .tabs-stacked .tabs-stacked-panel .cards-eyebrow-wrapper {
+    padding-block-start: var(--jll-space-10);
+  }
+}
+
+/* desktop: intro (3 of 12 columns, 40px gutters) beside the 2x2 trigger grid */
+@media (width >= 1200px) {
+  main > .section.split.tabs-stacked-container {
+    --tabs-stacked-row-space: 56px;
+
+    grid-template-columns:
+      var(--tabs-stacked-gutter)
+      calc((100% - (2 * var(--tabs-stacked-gutter))) / 4 - 30px)
+      minmax(0, 1fr)
+      var(--tabs-stacked-gutter);
+  }
+
+  main > .section.split.tabs-stacked-container > .default-content-wrapper {
+    grid-row: 1;
+    padding-block: var(--tabs-stacked-row-space);
+    border-bottom: 1px solid var(--jll-stroke-default);
+  }
+
+  .tabs-stacked .tabs-stacked-list {
+    grid-column: 3;
+    grid-row: 1;
+    gap: var(--jll-space-6);
+    padding: var(--tabs-stacked-row-space) 0 var(--tabs-stacked-row-space) var(--jll-space-10);
+  }
+
+  .tabs-stacked .tabs-stacked-trigger {
+    padding: 18px var(--jll-space-6);
+  }
+
+  .tabs-stacked .tabs-stacked-panel .cards-eyebrow-wrapper {
+    padding-block-start: 56px;
+  }
+}

@@ -1,0 +1,237 @@
+/*
+ * Carousel split – "More to explore" (source .carouselsingledouble).
+ * Values from source computed styles at 390 / 768 / 1440 (migration-work/carousel-split-*).
+ * Mobile first: stacked header (H2, arrows below on the right), stacked slide.
+ * >= 900px: arrows beside the section H2, image left + text panel right.
+ */
+
+.carousel-split {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--jll-space-6);
+}
+
+/* Prev / next: 36px tonal squares (44px at desktop), right aligned */
+.carousel-split .carousel-split-navigation-buttons {
+  display: flex;
+  align-items: center;
+  align-self: flex-end;
+  gap: var(--jll-space-2);
+}
+
+.carousel-split .carousel-split-navigation-buttons button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 36px;
+  height: 36px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: var(--jll-radius-md);
+  background-color: var(--jll-overlay-2);
+  color: var(--jll-icon-subdued);
+  cursor: pointer;
+  transition: opacity var(--jll-duration) var(--jll-ease), transform var(--jll-duration) var(--jll-ease);
+}
+
+.carousel-split .carousel-split-navigation-buttons button:hover {
+  opacity: 0.8;
+}
+
+.carousel-split .carousel-split-navigation-buttons button:active {
+  transform: scale(0.98);
+}
+
+/* Material Symbols chevron_left / chevron_right (weight 300), 20px */
+.carousel-split .carousel-split-navigation-buttons button::after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: currentcolor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960'%3E%3Cpath d='M584-267.69 371.69-480 584-692.31 612.31-664l-184 184 184 184L584-267.69Z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+.carousel-split .carousel-split-navigation-buttons .carousel-split-next::after {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960'%3E%3Cpath d='M376-267.69 347.69-296l184-184-184-184L376-692.31 588.31-480 376-267.69Z'/%3E%3C/svg%3E");
+}
+
+.carousel-split .carousel-split-navigation-buttons button:focus-visible {
+  outline: 3px solid rgb(22 121 155 / 50%);
+  outline-offset: 0;
+}
+
+/* Slides track */
+.carousel-split .carousel-split-slides {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: scroll clip;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.carousel-split .carousel-split-slides::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-split .carousel-split-slide {
+  display: flex;
+  flex: 0 0 100%;
+  flex-direction: column;
+  gap: var(--jll-space-6);
+  width: 100%;
+  scroll-snap-align: start;
+}
+
+/* Media: 16:9, 10px radius */
+.carousel-split .carousel-split-slide-media {
+  flex: 0 0 auto;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 10px;
+  line-height: 0;
+}
+
+.carousel-split .carousel-split-slide-media picture,
+.carousel-split .carousel-split-slide-media img,
+.carousel-split .carousel-split-slide-media video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Slide authored without media (video on the source): text panel takes the full slide */
+.carousel-split .carousel-split-slide-media:not(:has(picture, img, video)) {
+  display: none;
+}
+
+/* Text panel */
+.carousel-split .carousel-split-slide-content {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+  padding: var(--jll-space-6);
+  border-radius: var(--jll-radius-xl);
+  background-color: var(--jll-surface-subdued);
+  color: var(--jll-text-default);
+}
+
+.carousel-split .carousel-split-slide-content > * {
+  margin: 0;
+}
+
+.carousel-split .carousel-split-slide-eyebrow {
+  font-size: var(--jll-eyebrow-size);
+  font-variant: small-caps;
+  line-height: var(--jll-eyebrow-line-height);
+  letter-spacing: var(--jll-eyebrow-tracking);
+}
+
+.carousel-split .carousel-split-slide-content h3 {
+  font-weight: var(--jll-font-weight-normal);
+}
+
+/* CTA: bottom right of the panel (full width on small phones) */
+.carousel-split .carousel-split-slide-content > .carousel-split-slide-cta {
+  display: flex;
+  justify-content: flex-end;
+  align-self: stretch;
+  margin-top: auto;
+  padding-top: 28px;
+}
+
+main .carousel-split .carousel-split-slide-cta a.button:any-link {
+  width: 100%;
+  min-height: var(--jll-control-height);
+  padding: 0 var(--jll-space-3);
+  border-radius: var(--jll-radius-md);
+  background-color: var(--jll-overlay-2);
+  color: var(--jll-text-subdued);
+  font-size: 16px;
+  line-height: var(--jll-body-line-height);
+  transition: color 0.3s;
+}
+
+main .carousel-split .carousel-split-slide-cta a.button:any-link:hover {
+  background-color: var(--jll-overlay-2);
+  color: var(--jll-text-default);
+}
+
+/* Material Symbols arrow_forward (internal) / open_in_new (external), weight 300, 20px */
+main .carousel-split .carousel-split-slide-cta a.button:any-link::after {
+  content: '';
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  background-color: var(--jll-icon-subdued);
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960'%3E%3Cpath d='M686.15-460H180v-40h506.15L448.46-737.69 480-760l280 280-280 280-31.54-22.31L686.15-460Z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+main .carousel-split .carousel-split-slide-cta a.button.is-external:any-link::after {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960'%3E%3Cpath d='M224.62-160q-27.62 0-46.12-18.5Q160-197 160-224.62v-510.76q0-27.62 18.5-46.12Q197-800 224.62-800h224.61v40H224.62q-9.24 0-16.93 7.69-7.69 7.69-7.69 16.93v510.76q0 9.24 7.69 16.93 7.69 7.69 16.93 7.69h510.76q9.24 0 16.93-7.69 7.69-7.69 7.69-16.93v-224.61h40v224.61q0 27.62-18.5 46.12Q763-160 735.38-160H224.62Zm164.92-201.23-28.31-28.31L731.69-760H560v-40h240v240h-40v-171.69L389.54-361.23Z'/%3E%3C/svg%3E");
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel-split .carousel-split-slides {
+    scroll-behavior: auto;
+  }
+}
+
+@media (width >= 600px) {
+  .carousel-split,
+  .carousel-split .carousel-split-slide {
+    gap: var(--jll-space-8);
+  }
+
+  .carousel-split .carousel-split-slide-content {
+    padding: var(--jll-space-12) var(--jll-space-12) var(--jll-space-6);
+  }
+
+  main .carousel-split .carousel-split-slide-cta a.button:any-link {
+    width: auto;
+  }
+}
+
+@media (width >= 900px) {
+  .carousel-split {
+    gap: var(--jll-space-16);
+  }
+
+  /* Pull the arrows up beside the section H2 (title-2: 36px line, 0.4em bottom margin), centred on it */
+  .carousel-split .carousel-split-navigation-buttons {
+    margin-top: calc(-0.4 * var(--jll-title-2-size) - (var(--jll-title-2-line-height) / 2) - (var(--jll-control-height) / 2));
+  }
+
+  .carousel-split .carousel-split-navigation-buttons button {
+    width: var(--jll-control-height);
+    height: var(--jll-control-height);
+  }
+
+  .carousel-split .carousel-split-slide {
+    flex-direction: row;
+    gap: var(--jll-space-10);
+  }
+
+  /* two equal columns; a slide without media gives the panel the full width */
+  .carousel-split .carousel-split-slide-media {
+    flex: 0 0 calc((100% - var(--jll-space-10)) / 2);
+  }
+
+  .carousel-split .carousel-split-slide-content {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  main .carousel-split .carousel-split-slide-cta a.button:any-link {
+    padding: 0 var(--jll-space-4);
+  }
+}

@@ -1,0 +1,133 @@
+/*
+ * Hero banner – contained, rounded promo tile (source: jll.com "Contact us today").
+ * Values from source computed styles; mobile first, desktop type scale at 900px.
+ */
+
+.hero-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: var(--jll-radius-xl);
+  color: var(--jll-text-reversed);
+  isolation: isolate;
+}
+
+/* Background photo fills the tile behind the content */
+.hero-banner .hero-banner-image {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  line-height: 0;
+}
+
+.hero-banner .hero-banner-image > div,
+.hero-banner .hero-banner-image picture,
+.hero-banner .hero-banner-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-banner .hero-banner-image img {
+  aspect-ratio: auto;
+  object-fit: cover;
+}
+
+/* Source scrim: linear-gradient(292deg, transparent 13.26%, rgb(0 0 0 / 60%) 89.81%) */
+.hero-banner .hero-banner-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--jll-gradient-image-side);
+  pointer-events: none;
+}
+
+.hero-banner .hero-banner-content {
+  text-align: center;
+  transition: opacity var(--jll-duration) var(--jll-ease);
+}
+
+.hero-banner .hero-banner-content > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--jll-space-6);
+}
+
+.hero-banner .hero-banner-content :is(h1, h2, h3, h4, h5, h6, p) {
+  margin: 0;
+}
+
+/* Source display heading, mobile override: 24px / 36px */
+.hero-banner .hero-banner-content :is(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--jll-font-family);
+  font-size: 24px;
+  font-weight: var(--jll-font-weight-light);
+  line-height: 36px;
+  letter-spacing: var(--jll-display-tracking);
+  color: var(--jll-text-reversed);
+}
+
+.hero-banner .hero-banner-cta-link {
+  display: block;
+  width: 32px;
+  height: 32px;
+  color: var(--jll-text-reversed);
+}
+
+/* Stretch the CTA's hit area over the whole banner */
+.hero-banner.is-linked .hero-banner-cta-link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.hero-banner.is-linked:hover .hero-banner-content {
+  opacity: 0.9;
+}
+
+.hero-banner .hero-banner-cta-link:focus-visible {
+  outline: none;
+}
+
+.hero-banner .hero-banner-cta-link:focus-visible::after {
+  box-shadow: inset 0 0 0 3px var(--jll-stroke-interaction);
+}
+
+.hero-banner .hero-banner-cta-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Material "arrow_forward" (weight 300), drawn with a mask so it follows currentcolor */
+.hero-banner .hero-banner-cta-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: currentcolor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M16.65 12.75H4.5v-1.5h12.15l-5.7-5.7L12 4.5l7.5 7.5-7.5 7.5-1.05-1.05Z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+@media (width >= 900px) {
+  .hero-banner .hero-banner-content > div {
+    gap: var(--jll-space-8);
+  }
+
+  .hero-banner .hero-banner-content :is(h1, h2, h3, h4, h5, h6) {
+    font-size: var(--jll-display-size);
+    line-height: var(--jll-display-line-height);
+  }
+
+  .hero-banner .hero-banner-cta-link {
+    width: 40px;
+    height: 40px;
+  }
+}

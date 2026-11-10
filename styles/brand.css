@@ -1,0 +1,123 @@
+/*
+ * JLL brand tokens, extracted from https://www.jll.com/en-us/ (Sol design system).
+ * Raw extraction: migration-work/brand.json and migration-work/source-tokens.json.
+ * Imported first by styles.css; the project's semantic tokens map onto these.
+ */
+
+:root,
+:host {
+  /* brand */
+  --jll-red: #de0614;
+  --jll-black: #000;
+  --jll-white: #fff;
+
+  /* text */
+  --jll-text-default: #0e1d23;
+  --jll-text-subdued: #3c535c;
+  --jll-text-reversed: #fff;
+  --jll-text-interaction: #0a6484;
+
+  /* surfaces */
+  --jll-surface-default: #fff;
+  --jll-surface-primary: #0e1d23;
+  --jll-surface-subdued: #eff3f4;
+  --jll-surface-whisper: #f2f6f7;
+  --jll-surface-sand: #f9f2ec;
+  --jll-surface-sand-strong: #e5cdb8;
+  --jll-surface-interaction: #16799b;
+  --jll-surface-interaction-subdued: #e7f4f9;
+  --jll-overlay-1: rgb(62 119 139 / 6%);
+  --jll-overlay-2: rgb(62 119 139 / 16%);
+  --jll-overlay-3: rgb(62 119 139 / 25%);
+
+  /* strokes */
+  --jll-stroke-default: #cad1d5;
+  --jll-stroke-subdued: #dce2e5;
+  --jll-stroke-strong: #919da2;
+  --jll-stroke-interaction: #40a4c8;
+
+  /* icons */
+  --jll-icon-default: #0e1d23;
+  --jll-icon-subdued: #5d7078;
+
+  /* gradients */
+  --jll-gradient-sand: linear-gradient(180deg, var(--jll-surface-sand) 0%, var(--jll-surface-default) 100%);
+  --jll-gradient-image-top: linear-gradient(180deg, rgb(0 0 0 / 55%) 0%, rgb(0 0 0 / 25%) 45%, rgb(0 0 0 / 0%) 70%);
+  --jll-gradient-image-side: linear-gradient(292deg, rgb(0 0 0 / 0%) 13.26%, rgb(0 0 0 / 60%) 89.81%);
+
+  /* typography */
+  --jll-font-family: "Source Sans 3", "Source Han Sans SC", "Helvetica Neue", arial, sans-serif;
+  --jll-font-weight-light: 300;
+  --jll-font-weight-normal: 400;
+  --jll-font-weight-medium: 500;
+  --jll-font-weight-semibold: 600;
+
+  /* type scale – mobile (source < 1024px) */
+  --jll-display-size: 48px;
+  --jll-display-line-height: 48px;
+  --jll-display-tracking: -1.5px;
+  --jll-title-1-size: 36px;
+  --jll-title-1-line-height: 40px;
+  --jll-title-1-tracking: -0.8px;
+  --jll-title-2-size: 24px;
+  --jll-title-2-line-height: 32px;
+  --jll-title-2-tracking: -0.4px;
+  --jll-title-3-size: 20px;
+  --jll-title-3-line-height: 28px;
+  --jll-title-3-tracking: 0;
+  --jll-body-size: 16px;
+  --jll-body-line-height: 24px;
+  --jll-body-small-size: 14px;
+  --jll-body-small-line-height: 20px;
+  --jll-eyebrow-size: 16px;
+  --jll-eyebrow-line-height: 16px;
+  --jll-eyebrow-tracking: 0.4px;
+  --jll-caption-size: 12px;
+  --jll-caption-line-height: 16px;
+
+  /* radius */
+  --jll-radius-sm: 4px;
+  --jll-radius-md: 6px;
+  --jll-radius-lg: 8px;
+  --jll-radius-xl: 12px;
+  --jll-radius-2xl: 16px;
+  --jll-radius-full: 9999px;
+
+  /* spacing (Sol scale) */
+  --jll-space-1: 4px;
+  --jll-space-2: 8px;
+  --jll-space-3: 12px;
+  --jll-space-4: 16px;
+  --jll-space-6: 24px;
+  --jll-space-8: 32px;
+  --jll-space-10: 40px;
+  --jll-space-11: 44px;
+  --jll-space-12: 48px;
+  --jll-space-16: 64px;
+  --jll-space-20: 80px;
+
+  /* layout */
+  --jll-content-max-width: 1264px;
+  --jll-control-height: 44px;
+
+  /* motion */
+  --jll-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --jll-duration: 0.2s;
+}
+
+/* source switches to its desktop type scale at 1024px; the project's nearest breakpoint is 900px */
+@media (width >= 900px) {
+  :root,
+  :host {
+    --jll-display-size: 60px;
+    --jll-display-line-height: 60px;
+    --jll-title-1-size: 48px;
+    --jll-title-1-line-height: 60px;
+    --jll-title-2-size: 30px;
+    --jll-title-2-line-height: 36px;
+    --jll-title-3-size: 24px;
+    --jll-title-3-line-height: 32px;
+    --jll-body-size: 18px;
+    --jll-body-line-height: 28px;
+  }
+}
