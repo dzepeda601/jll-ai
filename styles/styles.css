@@ -146,8 +146,8 @@
   --body-font-size-xs: var(--jll-caption-size);
   --body-line-height: 1.5; /* JLL body: 16/24 mobile, 18/28 desktop */
 
-  /* nav / layout */
-  --nav-height: 64px;
+  /* nav / layout – fixed JLL header: 84px bar + 1px border (mobile), 213px two-row header (desktop) */
+  --nav-height: 85px;
   --header-height: var(--nav-height);
 
   /* boilerplate compatibility – map to design tokens */
@@ -200,6 +200,7 @@
 @media (width >= 900px) {
   :root,
   :host {
+    --nav-height: 213px;
     --content-padding-inline: 72px;
     --section-block-space: var(--jll-space-16);
   }
@@ -208,6 +209,7 @@
 @media (width >= 1200px) {
   :root,
   :host {
+    --nav-height: 213px;
     --content-padding-inline: 88px;
 
     /* side margins grow with the viewport (88px at 1440 → 1264px content); content caps at 1600px */
