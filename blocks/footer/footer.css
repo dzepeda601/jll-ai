@@ -1,13 +1,14 @@
 footer {
   width: 100%;
-  background-color: light-dark(var(--color-rust), #080d0d);
-  color: var(--color-parchment);
-  border-top: light-dark(none, var(--border-heritage));
+  background-color: light-dark(var(--jll-surface-default), var(--jll-surface-primary));
+  color: light-dark(var(--jll-text-subdued), var(--jll-text-reversed));
+  border-top: 1px solid light-dark(var(--jll-stroke-subdued), rgb(255 255 255 / 15%));
   font-size: var(--body-font-size-xs);
 }
 
 footer .footer > div {
-  max-width: 1100px;
+  box-sizing: border-box;
+  max-width: var(--grid-container-width);
   margin: 0 auto;
   padding: 40px var(--content-padding-inline);
   text-align: center;
@@ -37,7 +38,7 @@ footer .footer .section:nth-child(2) p {
 /* Row 3: Copyright + social icons (merged) */
 footer .footer .section:nth-child(3) {
   margin-top: var(--space-m);
-  border-top: 1px solid rgb(255 255 255 / 15%);
+  border-top: 1px solid light-dark(var(--jll-stroke-subdued), rgb(255 255 255 / 15%));
   padding-top: var(--space-m);
 }
 
@@ -68,14 +69,14 @@ footer .footer .section:nth-child(3) li {
 }
 
 footer .footer a:any-link {
-  color: var(--color-parchment);
-  text-decoration-color: rgb(245 242 237 / 30%);
+  color: light-dark(var(--jll-text-subdued), var(--jll-text-reversed));
+  text-decoration-color: currentcolor;
   transition: color 0.25s, text-decoration-color 0.25s, opacity 0.25s;
 }
 
 footer .footer a:any-link:hover {
-  text-decoration-color: var(--color-gold);
-  color: var(--color-gold);
+  text-decoration-color: currentcolor;
+  color: light-dark(var(--jll-text-default), var(--jll-text-reversed));
 }
 
 footer .footer .section:nth-child(3) ul a {
@@ -93,8 +94,13 @@ footer .footer .section:nth-child(3) ul a:hover {
 footer .footer .icon {
   width: 18px;
   height: 18px;
-  filter: brightness(0) invert(1);
   transition: transform 0.25s var(--ease-out-expo, cubic-bezier(0.16, 1, 0.3, 1));
+}
+
+/* white icons on the dark footer in dark mode */
+.dark-scheme footer .footer .icon:not(.icon-logo),
+:root[data-theme='dark'] footer .footer .icon:not(.icon-logo) {
+  filter: brightness(0) invert(1);
 }
 
 footer .footer .icon.icon-logo {
@@ -105,7 +111,7 @@ footer .footer .icon.icon-logo {
   vertical-align: middle;
   margin-inline: 4px;
   filter: none;
-  color: var(--color-parchment);
+  color: light-dark(var(--jll-red), var(--jll-white));
 }
 
 footer .footer .icon.icon-logo :is(svg, img) {

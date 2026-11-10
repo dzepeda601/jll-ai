@@ -46,17 +46,18 @@
   /* color scheme */
   color-scheme: light dark;
 
-  /* heritage palette */
-  --color-rust: #a14f2b;
-  --color-gold: #c5a059;
-  --color-parchment: #f5f2ed;
-  --color-ink: #1a1a1a;
+  /* legacy palette names, remapped to JLL (styles/brand.css) so every block follows the JLL design.
+     rust = primary (dark slate), gold = interaction accent, parchment = light surface / text on dark */
+  --color-rust: var(--jll-surface-primary);
+  --color-gold: var(--jll-surface-interaction);
+  --color-parchment: var(--jll-white);
+  --color-ink: var(--jll-text-default);
 
   /* heritage dark palette */
-  --color-obsidian: #060d0d;
-  --color-card-dark: #162121;
-  --color-rust-bright: #d16a3e;
-  --color-muted: #8b9a9a;
+  --color-obsidian: var(--jll-surface-primary);
+  --color-card-dark: #1a2b2d;
+  --color-rust-bright: var(--jll-stroke-interaction);
+  --color-muted: var(--jll-icon-subdued);
 
   /* color tokens – grays and palette */
   --color-gray-100: #f1f1f1;
@@ -120,7 +121,7 @@
 
   /* fonts */
   --font-family: var(--jll-font-family);
-  --font-family-serif: "EB Garamond", georgia, serif;
+  --font-family-serif: var(--jll-font-family);
   --font-family-mono: "JetBrains Mono", menlo, monospace;
   --body-font-family: var(--font-family);
   --heading-font-family: var(--font-family);
@@ -143,7 +144,7 @@
   --body-font-size-m: var(--jll-body-size);
   --body-font-size-s: var(--jll-body-small-size);
   --body-font-size-xs: var(--jll-caption-size);
-  --body-line-height: 1.5;
+  --body-line-height: 1.5; /* JLL body: 16/24 mobile, 18/28 desktop */
 
   /* nav / layout */
   --nav-height: 64px;
@@ -158,14 +159,14 @@
   --link-hover-color: var(--color-link-hover);
 
   /* heritage border */
-  --border-heritage: 2px solid light-dark(rgb(161 79 43 / 20%), rgb(245 242 237 / 20%));
-  --border-radius-heritage: 24px;
+  --border-heritage: 1px solid light-dark(var(--jll-stroke-subdued), rgb(255 255 255 / 20%));
+  --border-radius-heritage: var(--jll-radius-xl);
 
   /* gradient and glow tokens */
-  --gradient-brand: linear-gradient(135deg, var(--color-rust) 0%, var(--color-gold) 100%);
-  --gradient-brand-dark: linear-gradient(135deg, var(--color-rust-bright) 0%, var(--color-gold) 100%);
-  --shadow-glow-rust: 0 0 40px rgb(161 79 43 / 30%);
-  --shadow-glow-gold: 0 0 40px rgb(197 160 89 / 25%);
+  --gradient-brand: linear-gradient(135deg, var(--jll-surface-primary) 0%, #284246 100%);
+  --gradient-brand-dark: linear-gradient(135deg, #284246 0%, var(--jll-surface-interaction) 100%);
+  --shadow-glow-rust: 0 8px 24px rgb(14 29 35 / 12%);
+  --shadow-glow-gold: 0 8px 24px rgb(14 29 35 / 10%);
   --shadow-lift-m: 0 20px 40px -8px rgb(0 0 0 / 15%);
   --shadow-lift-l: 0 30px 60px -12px rgb(0 0 0 / 22%);
   --shadow-card: 0 2px 8px rgb(0 0 0 / 5%), 0 1px 2px rgb(0 0 0 / 7%);
@@ -270,7 +271,7 @@ body {
   color: var(--text-color);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
-  line-height: var(--jll-body-line-height);
+  line-height: var(--body-line-height);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -337,10 +338,6 @@ h4 { font-size: var(--heading-font-size-s); }
 h5 { font-size: var(--heading-font-size-xs); }
 h6 { font-size: var(--heading-font-size-xxs); }
 
-p {
-  font-size: var(--jll-body-size);
-  line-height: var(--jll-body-line-height);
-}
 
 
 p,
@@ -660,7 +657,7 @@ main > .section.rust * {
 
 main > .section.rust a:any-link {
   color: var(--color-parchment);
-  text-decoration-color: rgb(245 242 237 / 40%);
+  text-decoration-color: rgb(255 255 255 / 40%);
 }
 
 /* section-metadata style=gradient: warm brand gradient full-bleed section */
@@ -716,19 +713,19 @@ main > .section.rust a:any-link {
 
 /* section-metadata style=warm: atmospheric warm tint with heritage diamond mesh */
 main > .section.warm {
-  background-color: light-dark(#f2ead8, #0e1812);
+  background-color: light-dark(var(--jll-surface-sand), #1a2b2d);
   background-image:
     repeating-linear-gradient(
       45deg,
-      light-dark(rgb(161 79 43 / 4%), rgb(245 242 237 / 2%)) 0,
-      light-dark(rgb(161 79 43 / 4%), rgb(245 242 237 / 2%)) 1px,
+      light-dark(rgb(14 29 35 / 4%), rgb(255 255 255 / 2%)) 0,
+      light-dark(rgb(14 29 35 / 4%), rgb(255 255 255 / 2%)) 1px,
       transparent 1px,
       transparent 12px
     ),
     repeating-linear-gradient(
       -45deg,
-      light-dark(rgb(161 79 43 / 4%), rgb(245 242 237 / 2%)) 0,
-      light-dark(rgb(161 79 43 / 4%), rgb(245 242 237 / 2%)) 1px,
+      light-dark(rgb(14 29 35 / 4%), rgb(255 255 255 / 2%)) 0,
+      light-dark(rgb(14 29 35 / 4%), rgb(255 255 255 / 2%)) 1px,
       transparent 1px,
       transparent 12px
     );

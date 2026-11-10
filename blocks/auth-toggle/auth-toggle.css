@@ -70,7 +70,7 @@
 .auth-handle-icon {
   color: inherit;
   font-size: 0.625rem;
-  font-weight: 700;
+  font-weight: var(--jll-font-weight-semibold);
   line-height: 1.1;
   text-align: center;
   letter-spacing: 0.025rem;
@@ -85,9 +85,9 @@
   margin-bottom: var(--space-s);
   color: inherit;
   font-size: var(--body-font-size-xs);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+  font-weight: var(--jll-font-weight-semibold);
+  text-transform: none;
+  letter-spacing: normal;
 }
 
 .auth-close {
@@ -126,7 +126,7 @@
   font-weight: 600;
   line-height: 1.2;
   text-align: center;
-  text-transform: uppercase;
+  text-transform: none;
   letter-spacing: 0.03em;
   padding: 0.5rem 0.75rem;
   transition: border-color 0.18s ease, background-color 0.18s ease;

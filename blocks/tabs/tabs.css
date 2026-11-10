@@ -72,9 +72,9 @@ main .section .tabs {
   cursor: pointer;
   font-family: var(--body-font-family);
   font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  font-weight: var(--jll-font-weight-semibold);
+  text-transform: none;
+  letter-spacing: normal;
   margin: 0;
   padding: 16px 18px;
   opacity: 0.5;

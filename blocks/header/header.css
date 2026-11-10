@@ -8,11 +8,11 @@ header {
 
   /* typography: brand (strongest) > primary nav > dropdown headings > dropdown items */
   --nav-brand-size: 1.7rem;
-  --nav-brand-weight: 700;
-  --nav-primary-size: 0.8rem;
-  --nav-primary-weight: 700;
+  --nav-brand-weight: 600;
+  --nav-primary-size: 16px;
+  --nav-primary-weight: var(--jll-font-weight-normal);
   --nav-heading-size: var(--body-font-size-s);
-  --nav-heading-weight: 700;
+  --nav-heading-weight: var(--jll-font-weight-semibold);
   --nav-item-size: var(--body-font-size-s);
   --nav-item-weight: 400;
 
@@ -31,12 +31,12 @@ header {
   --nav-bg-link-hover: var(--header-link-hover-bg);
   --nav-bg-dropdown: light-dark(var(--background-color), var(--color-card-dark));
   --nav-bg-dropdown-mobile: light-dark(var(--color-gray-100), var(--color-card-dark));
-  --nav-bg-mega: light-dark(var(--color-parchment), var(--color-obsidian));
+  --nav-bg-mega: light-dark(var(--jll-surface-default), var(--color-obsidian));
   --nav-bg-hover-item: light-dark(var(--light-color), var(--color-card-dark));
 
   /* header uses neutral hover color */
-  --nav-hover-color: light-dark(var(--color-rust), var(--color-gold));
-  --nav-focus-color: light-dark(var(--color-rust), var(--color-gold));
+  --nav-hover-color: light-dark(var(--jll-text-default), var(--jll-text-reversed));
+  --nav-focus-color: light-dark(var(--jll-surface-interaction), var(--jll-stroke-interaction));
 
   /* desktop-only (overridden in @media 900px) */
   --nav-desktop-max-width: 1264px;
@@ -50,7 +50,7 @@ header {
 }
 
 header .nav-wrapper {
-  background-color: light-dark(#faf8f5, var(--color-obsidian));
+  background-color: light-dark(var(--jll-surface-default), var(--color-obsidian));
   width: 100%;
   z-index: 1000;
   position: fixed;
@@ -235,8 +235,8 @@ header nav .nav-sections ul {
   padding: 0;
   margin: 0;
   font-size: var(--nav-primary-size);
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
+  text-transform: none;
+  letter-spacing: normal;
 }
 
 @media (width <= 899px) {
@@ -335,8 +335,11 @@ header nav .nav-sections .default-content-wrapper > ul > li.nav-drop > p > a {
 }
 
 header nav .nav-sections .default-content-wrapper > ul > li > p > a {
-  display: block;
+  display: flex;
+  align-items: center;
+  min-height: 44px;
   color: inherit;
+  font-size: inherit;
   text-decoration: none;
 }
 
@@ -517,8 +520,8 @@ header nav .nav-sections button.button {
   padding: 0;
   min-width: 0;
   font-weight: var(--nav-primary-weight);
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
+  text-transform: none;
+  letter-spacing: normal;
 }
 
 header nav .nav-sections a.button:any-link:hover,
@@ -539,9 +542,9 @@ header nav .nav-tools a.button:any-link:not(.nav-tool) {
   color: var(--color-rust);
   padding: 12px 24px;
   font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
+  font-weight: var(--jll-font-weight-semibold);
+  text-transform: none;
+  letter-spacing: normal;
   transition: all 0.3s;
 }
 
@@ -562,7 +565,7 @@ header nav .nav-auth-link .nav-auth-info {
   border: 1px solid currentcolor;
   border-radius: 50%;
   font-size: 10px;
-  font-weight: 700;
+  font-weight: var(--jll-font-weight-semibold);
   line-height: 1;
   text-transform: none;
 }
@@ -798,7 +801,7 @@ header nav .nav-tools .nav-language-menu a:focus-visible {
     header nav .nav-tools a.button.nav-auth-link:any-link {
       padding: 8px 10px;
       font-size: var(--body-font-size-xs);
-      letter-spacing: 1px;
+      letter-spacing: normal;
     }
   }
   
@@ -902,9 +905,9 @@ header nav .nav-tools .nav-language-menu a:focus-visible {
     align-items: center;
     min-height: var(--nav-height);
     padding: 0;
-    font-size: var(--body-font-size-l);
+    font-size: var(--nav-primary-size);
     font-weight: var(--nav-primary-weight);
-    letter-spacing: 0.01em;
+    letter-spacing: normal;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > p > a {
@@ -1059,7 +1062,7 @@ header nav .nav-tools .nav-language-menu a:focus-visible {
     top: var(--mega-top, var(--nav-height, 64px));
     padding: var(--space-xl) var(--space-xl);
     border-bottom: var(--border-heritage);
-    background-color: light-dark(#faf8f5, var(--color-obsidian));
+    background-color: light-dark(var(--jll-surface-default), var(--color-obsidian));
     color: var(--text-color);
     box-shadow: var(--header-drop-shadow);
     z-index: 999;
@@ -1298,9 +1301,9 @@ header nav .nav-tools .nav-language-menu a:focus-visible {
     color: var(--color-rust);
     padding: 12px 24px;
     font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
+    font-weight: var(--jll-font-weight-semibold);
+    text-transform: none;
+    letter-spacing: normal;
     line-height: 1;
     min-width: 120px;
     text-decoration: none;

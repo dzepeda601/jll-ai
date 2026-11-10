@@ -118,8 +118,8 @@
   font-size: 0.75rem;
   font-weight: 600;
   color: var(--color-gold);
-  text-transform: uppercase;
-  letter-spacing: 5px;
+  text-transform: none;
+  letter-spacing: normal;
   margin: 0;
 }
 

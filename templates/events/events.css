@@ -21,8 +21,8 @@
   font-family: var(--font-family-mono);
   font-size: var(--body-font-size-xs);
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 3px;
+  text-transform: none;
+  letter-spacing: normal;
   color: light-dark(var(--color-rust), var(--color-gold));
 }
 
@@ -35,14 +35,14 @@
 .events .event-meta-badge {
   display: inline-block;
   padding: 3px var(--space-m);
-  border: 1px solid light-dark(rgb(161 79 43 / 30%), rgb(209 106 62 / 35%));
+  border: 1px solid light-dark(rgb(14 29 35 / 30%), rgb(64 164 200 / 35%));
   border-radius: 20px;
-  background-color: light-dark(rgb(161 79 43 / 8%), rgb(209 106 62 / 10%));
+  background-color: light-dark(rgb(14 29 35 / 8%), rgb(64 164 200 / 10%));
   font-family: var(--font-family-mono);
   font-size: var(--body-font-size-xs);
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  text-transform: none;
+  letter-spacing: normal;
   color: light-dark(var(--color-rust), var(--color-rust-bright));
 }
 
