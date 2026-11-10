@@ -1,0 +1,11 @@
+{
+  "type": "da",
+  "sites": {
+    "jll-ai": {
+      "previewOrg": "dzepeda601",
+      "previewSite": "jll-ai",
+      "contentHostUrl": "https://content.da.live/dzepeda601/jll-ai/",
+      "libraryUrl": "https://main--sta-boilerplate--aemdemos.aem.page/tools/sidekick/library.json"
+    }
+  }
+}

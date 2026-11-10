@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/",
+  "path": "en-us/index",
+  "timestamp": "2026-11-10T01:58:46.275Z",
+  "title": "JLL | Commercial Real Estate and Property Investment",
+  "template": "home",
+  "blocks": [
+    "carousel-hero",
+    "tabs-stacked",
+    "columns-alternating",
+    "carousel-split",
+    "hero-banner"
+  ],
+  "importScript": "a92d605c8d11"
+}

@@ -1,0 +1,825 @@
+{
+  "schemaVersion": 2,
+  "url": "https://www.jll.com/en-us/",
+  "title": "JLL | Commercial Real Estate and Property Investment",
+  "timestamp": "2026-11-10T00:31:58.680Z",
+  "duration": "9.8s",
+  "cleanup": {
+    "elementsRemoved": 12,
+    "types": [
+      "overlay",
+      "cookie-banner",
+      "popup",
+      "geo-modal"
+    ],
+    "cookieConsentDismissed": true,
+    "lateConsentOverlaysRemoved": 0,
+    "removed": [
+      {
+        "selector": "#onetrust-banner-sdk",
+        "type": "overlay"
+      },
+      {
+        "selector": "#onetrust-style",
+        "type": "cookie-banner",
+        "rule": "[id*=\"onetrust\"]"
+      },
+      {
+        "selector": "#onetrust-consent-sdk",
+        "type": "cookie-banner",
+        "rule": "[id*=\"onetrust\"]"
+      },
+      {
+        "selector": "div.c-header__country-selector > button:nth-child(1)",
+        "type": "popup",
+        "rule": "body [class*=\"overlay\"]:not(nav *)"
+      },
+      {
+        "selector": "div.c-header__actions.c-header__actions--cta > button:nth-child(2)",
+        "type": "popup",
+        "rule": "body [class*=\"overlay\"]:not(nav *)"
+      },
+      {
+        "selector": "div.c-header__actions.c-header__actions--cta > div:nth-child(3) > button:nth-child(1)",
+        "type": "popup",
+        "rule": "body [class*=\"overlay\"]:not(nav *)"
+      },
+      {
+        "selector": "div.c-stickyMobileNav--buttons > button:nth-child(1)",
+        "type": "popup",
+        "rule": "body [class*=\"overlay\"]:not(nav *)"
+      },
+      {
+        "selector": "div.c-stickyMobileNav--buttons > button:nth-child(1)",
+        "type": "popup",
+        "rule": "body [class*=\"overlay\"]:not(nav *)"
+      },
+      {
+        "selector": "div.c-dropdown.relative > button:nth-child(1)",
+        "type": "popup",
+        "rule": "body [class*=\"overlay\"]:not(nav *)"
+      },
+      {
+        "selector": "div.react-container.c-bottom-nav > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > button:nth-child(1)",
+        "type": "popup",
+        "rule": "body [class*=\"overlay\"]:not(nav *)"
+      },
+      {
+        "selector": "div.c-header__country-selector",
+        "type": "geo-modal",
+        "rule": "[class*=\"country-selector\"]"
+      }
+    ]
+  },
+  "snapshot": {
+    "html": "page.html",
+    "unresolvedSelectors": []
+  },
+  "images": [
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/26-insights-global-real-estate-perspective-november-2026?qlt=85&dpr=off&fmt=webp",
+      "type": "img"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/26-insights-global-real-estate-perspective-november-2026?qlt=85&wid=320&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/26-insights-global-real-estate-perspective-november-2026?qlt=85&wid=480&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/26-insights-global-real-estate-perspective-november-2026?qlt=85&wid=600&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/26-insights-global-real-estate-perspective-november-2026?qlt=85&wid=800&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/26-insights-global-real-estate-perspective-november-2026?qlt=85&wid=1024&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/26-insights-global-real-estate-perspective-november-2026?qlt=85&wid=1200&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/26-insights-global-real-estate-perspective-november-2026?qlt=85&wid=1600&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/26-campaign-davos-homepage?qlt=85&dpr=off&fmt=webp",
+      "type": "img"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/26-campaign-davos-homepage?qlt=85&wid=320&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/26-campaign-davos-homepage?qlt=85&wid=480&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/26-campaign-davos-homepage?qlt=85&wid=600&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/26-campaign-davos-homepage?qlt=85&wid=800&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/26-campaign-davos-homepage?qlt=85&wid=1024&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/26-campaign-davos-homepage?qlt=85&wid=1200&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/26-campaign-davos-homepage?qlt=85&wid=1600&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/26-webinar-closing-the-ai-readiness-gap-in-your-cre-portfolio-11-4-26?qlt=85&dpr=off&fmt=webp",
+      "type": "img"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/26-webinar-closing-the-ai-readiness-gap-in-your-cre-portfolio-11-4-26?qlt=85&wid=320&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/26-webinar-closing-the-ai-readiness-gap-in-your-cre-portfolio-11-4-26?qlt=85&wid=480&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/26-webinar-closing-the-ai-readiness-gap-in-your-cre-portfolio-11-4-26?qlt=85&wid=600&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/26-webinar-closing-the-ai-readiness-gap-in-your-cre-portfolio-11-4-26?qlt=85&wid=800&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/26-webinar-closing-the-ai-readiness-gap-in-your-cre-portfolio-11-4-26?qlt=85&wid=1024&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/26-webinar-closing-the-ai-readiness-gap-in-your-cre-portfolio-11-4-26?qlt=85&wid=1200&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/26-webinar-closing-the-ai-readiness-gap-in-your-cre-portfolio-11-4-26?qlt=85&wid=1600&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-homepage-hero-carousel-1?qlt=85&dpr=off&fmt=webp",
+      "type": "img"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-homepage-hero-carousel-1?qlt=85&wid=320&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-homepage-hero-carousel-1?qlt=85&wid=480&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-homepage-hero-carousel-1?qlt=85&wid=600&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-homepage-hero-carousel-1?qlt=85&wid=800&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-homepage-hero-carousel-1?qlt=85&wid=1024&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-homepage-hero-carousel-1?qlt=85&wid=1200&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-homepage-hero-carousel-1?qlt=85&wid=1600&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-offering-artificial-intelligence?qlt=85&dpr=off&fmt=webp",
+      "type": "img"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-offering-artificial-intelligence?qlt=85&wid=320&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-offering-artificial-intelligence?qlt=85&wid=480&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-offering-artificial-intelligence?qlt=85&wid=600&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-offering-artificial-intelligence?qlt=85&wid=800&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-offering-artificial-intelligence?qlt=85&wid=1024&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-offering-artificial-intelligence?qlt=85&wid=1200&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-offering-artificial-intelligence?qlt=85&wid=1600&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-lens-future-of-spaces?qlt=85&dpr=off&fmt=webp",
+      "type": "img"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-lens-future-of-spaces?qlt=85&wid=320&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-lens-future-of-spaces?qlt=85&wid=480&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-lens-future-of-spaces?qlt=85&wid=600&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-lens-future-of-spaces?qlt=85&wid=800&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-lens-future-of-spaces?qlt=85&wid=1024&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-lens-future-of-spaces?qlt=85&wid=1200&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-lens-future-of-spaces?qlt=85&wid=1600&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-collection-industries?qlt=85&dpr=off&fmt=webp",
+      "type": "img"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-collection-industries?qlt=85&wid=320&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-collection-industries?qlt=85&wid=480&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-collection-industries?qlt=85&wid=600&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-collection-industries?qlt=85&wid=800&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-collection-industries?qlt=85&wid=1024&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-collection-industries?qlt=85&wid=1200&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-collection-industries?qlt=85&wid=1600&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/26-newsroom-jll-foundation-deploys?qlt=85&dpr=off&fmt=webp",
+      "type": "img"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/26-newsroom-jll-foundation-deploys?qlt=85&wid=320&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/26-newsroom-jll-foundation-deploys?qlt=85&wid=480&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/26-newsroom-jll-foundation-deploys?qlt=85&wid=600&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/26-newsroom-jll-foundation-deploys?qlt=85&wid=800&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/26-newsroom-jll-foundation-deploys?qlt=85&wid=1024&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/26-newsroom-jll-foundation-deploys?qlt=85&wid=1200&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/26-newsroom-jll-foundation-deploys?qlt=85&wid=1600&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-homepage-new-york-stock-exchange?qlt=85&dpr=off&fmt=webp",
+      "type": "img"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-homepage-new-york-stock-exchange?qlt=85&wid=320&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-homepage-new-york-stock-exchange?qlt=85&wid=480&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-homepage-new-york-stock-exchange?qlt=85&wid=600&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-homepage-new-york-stock-exchange?qlt=85&wid=800&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-homepage-new-york-stock-exchange?qlt=85&wid=1024&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-homepage-new-york-stock-exchange?qlt=85&wid=1200&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-homepage-new-york-stock-exchange?qlt=85&wid=1600&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-newsroom-jll-to-expand-us-energy-and-infrastructure?qlt=85&dpr=off&fmt=webp",
+      "type": "img"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-newsroom-jll-to-expand-us-energy-and-infrastructure?qlt=85&wid=320&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-newsroom-jll-to-expand-us-energy-and-infrastructure?qlt=85&wid=480&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-newsroom-jll-to-expand-us-energy-and-infrastructure?qlt=85&wid=600&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-newsroom-jll-to-expand-us-energy-and-infrastructure?qlt=85&wid=800&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-newsroom-jll-to-expand-us-energy-and-infrastructure?qlt=85&wid=1024&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-newsroom-jll-to-expand-us-energy-and-infrastructure?qlt=85&wid=1200&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-newsroom-jll-to-expand-us-energy-and-infrastructure?qlt=85&wid=1600&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-homepage-carousel-3?qlt=85&dpr=off&fmt=webp",
+      "type": "img"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-homepage-carousel-3?qlt=85&wid=320&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-homepage-carousel-3?qlt=85&wid=480&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-homepage-carousel-3?qlt=85&wid=600&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-homepage-carousel-3?qlt=85&wid=800&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-homepage-carousel-3?qlt=85&wid=1024&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-homepage-carousel-3?qlt=85&wid=1200&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-homepage-carousel-3?qlt=85&wid=1600&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-global-promo?qlt=85&dpr=off&fmt=webp",
+      "type": "img"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-global-promo?qlt=85&wid=320&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-global-promo?qlt=85&wid=480&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-global-promo?qlt=85&wid=600&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-global-promo?qlt=85&wid=800&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-global-promo?qlt=85&wid=1024&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-global-promo?qlt=85&wid=1200&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    },
+    {
+      "url": "https://s7d1.scene7.com/is/image/joneslanglasalle/25-global-promo?qlt=85&wid=1600&dpr=off&fit=constrain,0&fmt=webp",
+      "type": "srcset"
+    }
+  ],
+  "skeleton": {
+    "signature": "sB(s,s(4x1(s(s(,),2x1B),s(s(,),2x1B),s(s(,),2x1B),s(s(,),2x1B)),s(s(2x1(,),s),sB(2x1,2x1,2x1),s,sB(2x1,5x1(,,,,)),s),s(s,sB),s))",
+    "nodeMap": {
+      "r": "body",
+      "rc1": "body > div.cmp-page__skiptomaincontent",
+      "rc2": "body > div.root.container.responsivegrid.home-page",
+      "rc2c1": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.carouselpanel.aem-GridColumn.aem-GridColumn--default--12",
+      "rc2c1c1": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.carouselpanel.aem-GridColumn.aem-GridColumn--default--12 > react-component > section.react-container-fluid.carousel-panel.relative > div.row.carousel-panel__stacked-layout.max-laptop-sm\\:flex-col\\!.max-laptop-sm\\:gap-\\(--sol-spacing-8\\).max-tablet-sm\\:gap-\\(--sol-spacing-6\\).laptop-sm\\:w-full.max-tablet\\:px-\\(--sol-spacing-8\\).tablet\\:max-laptop-sm\\:px-\\(--sol-spacing-14\\).min-w-0 > div.col-mobile-small-2.col-tablet-small-4.col-laptop-small-8.col-laptop-default-12.carousel-panel__swiper-column.max-laptop-sm\\:w-full.max-laptop-sm\\:min-w-0.max-laptop-sm\\:overflow-hidden.laptop-sm\\:w-full > div > div.swiper.swiper-initialized.swiper-horizontal.carousel-panel__swiper.w-full.max-w-full.min-w-0 > div.swiper-wrapper > div.swiper-slide.swiper-slide-active.laptop-sm\\:pb-\\(--sol-spacing-6\\).laptop-sm\\:aspect-video.flex\\!.w-full\\!.flex-col.justify-between.overflow-hidden",
+      "rc2c1c1c1": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.carouselpanel.aem-GridColumn.aem-GridColumn--default--12 > react-component > section.react-container-fluid.carousel-panel.relative > div.row.carousel-panel__stacked-layout.max-laptop-sm\\:flex-col\\!.max-laptop-sm\\:gap-\\(--sol-spacing-8\\).max-tablet-sm\\:gap-\\(--sol-spacing-6\\).laptop-sm\\:w-full.max-tablet\\:px-\\(--sol-spacing-8\\).tablet\\:max-laptop-sm\\:px-\\(--sol-spacing-14\\).min-w-0 > div.col-mobile-small-2.col-tablet-small-4.col-laptop-small-8.col-laptop-default-12.carousel-panel__swiper-column.max-laptop-sm\\:w-full.max-laptop-sm\\:min-w-0.max-laptop-sm\\:overflow-hidden.laptop-sm\\:w-full > div > div.swiper.swiper-initialized.swiper-horizontal.carousel-panel__swiper.w-full.max-w-full.min-w-0 > div.swiper-wrapper > div.swiper-slide.swiper-slide-active.laptop-sm\\:pb-\\(--sol-spacing-6\\).laptop-sm\\:aspect-video.flex\\!.w-full\\!.flex-col.justify-between.overflow-hidden > div.carousel-panel-tile.max-laptop-sm\\:h-auto.laptop-sm\\:h-auto.laptop-sm\\:min-h-0.laptop-sm\\:flex-1.h-full.w-full.min-w-0",
+      "rc2c1c1c1c1": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.carouselpanel.aem-GridColumn.aem-GridColumn--default--12 > react-component > section.react-container-fluid.carousel-panel.relative > div.row.carousel-panel__stacked-layout.max-laptop-sm\\:flex-col\\!.max-laptop-sm\\:gap-\\(--sol-spacing-8\\).max-tablet-sm\\:gap-\\(--sol-spacing-6\\).laptop-sm\\:w-full.max-tablet\\:px-\\(--sol-spacing-8\\).tablet\\:max-laptop-sm\\:px-\\(--sol-spacing-14\\).min-w-0 > div.col-mobile-small-2.col-tablet-small-4.col-laptop-small-8.col-laptop-default-12.carousel-panel__swiper-column.max-laptop-sm\\:w-full.max-laptop-sm\\:min-w-0.max-laptop-sm\\:overflow-hidden.laptop-sm\\:w-full > div > div.swiper.swiper-initialized.swiper-horizontal.carousel-panel__swiper.w-full.max-w-full.min-w-0 > div.swiper-wrapper > div.swiper-slide.swiper-slide-active.laptop-sm\\:pb-\\(--sol-spacing-6\\).laptop-sm\\:aspect-video.flex\\!.w-full\\!.flex-col.justify-between.overflow-hidden > div.carousel-panel-tile.max-laptop-sm\\:h-auto.laptop-sm\\:h-auto.laptop-sm\\:min-h-0.laptop-sm\\:flex-1.h-full.w-full.min-w-0 > div.col-mobile-small-2.col-tablet-small-4.col-laptop-small-8.max-laptop-sm\\:w-full.max-laptop-sm\\:max-w-full",
+      "rc2c1c1c1c1c1": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.carouselpanel.aem-GridColumn.aem-GridColumn--default--12 > react-component > section.react-container-fluid.carousel-panel.relative > div.row.carousel-panel__stacked-layout.max-laptop-sm\\:flex-col\\!.max-laptop-sm\\:gap-\\(--sol-spacing-8\\).max-tablet-sm\\:gap-\\(--sol-spacing-6\\).laptop-sm\\:w-full.max-tablet\\:px-\\(--sol-spacing-8\\).tablet\\:max-laptop-sm\\:px-\\(--sol-spacing-14\\).min-w-0 > div.col-mobile-small-2.col-tablet-small-4.col-laptop-small-8.col-laptop-default-12.carousel-panel__swiper-column.max-laptop-sm\\:w-full.max-laptop-sm\\:min-w-0.max-laptop-sm\\:overflow-hidden.laptop-sm\\:w-full > div > div.swiper.swiper-initialized.swiper-horizontal.carousel-panel__swiper.w-full.max-w-full.min-w-0 > div.swiper-wrapper > div.swiper-slide.swiper-slide-active.laptop-sm\\:pb-\\(--sol-spacing-6\\).laptop-sm\\:aspect-video.flex\\!.w-full\\!.flex-col.justify-between.overflow-hidden > div.carousel-panel-tile.max-laptop-sm\\:h-auto.laptop-sm\\:h-auto.laptop-sm\\:min-h-0.laptop-sm\\:flex-1.h-full.w-full.min-w-0 > div.col-mobile-small-2.col-tablet-small-4.col-laptop-small-8.max-laptop-sm\\:w-full.max-laptop-sm\\:max-w-full > div.max-laptop-sm\\:relative.max-laptop-sm\\:top-auto.max-laptop-sm\\:left-auto.max-laptop-sm\\:z-\\(--z-index-lowest\\).max-laptop-sm\\:aspect-video.max-laptop-sm\\:h-auto.max-laptop-sm\\:w-full.max-laptop-sm\\:max-w-full.max-laptop-sm\\:overflow-hidden.max-laptop-sm\\:rounded-\\(--sol-radius-xl\\).\\[\\&_\\.c-image-fallback\\]\\:max-laptop-sm\\:rounded-\\(--sol-radius-xl\\).\\[\\&_img\\]\\:max-laptop-sm\\:rounded-\\(--sol-radius-xl\\).absolute.top-0.left-0.z-\\(--z-index-negative\\).h-full.w-full.\\[\\&_\\.c-image-fallback\\]\\:rounded-none.\\[\\&_img\\]\\:rounded-none > img.c-image.size-full.object-cover",
+      "rc2c1c1c1c1c2": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.carouselpanel.aem-GridColumn.aem-GridColumn--default--12 > react-component > section.react-container-fluid.carousel-panel.relative > div.row.carousel-panel__stacked-layout.max-laptop-sm\\:flex-col\\!.max-laptop-sm\\:gap-\\(--sol-spacing-8\\).max-tablet-sm\\:gap-\\(--sol-spacing-6\\).laptop-sm\\:w-full.max-tablet\\:px-\\(--sol-spacing-8\\).tablet\\:max-laptop-sm\\:px-\\(--sol-spacing-14\\).min-w-0 > div.col-mobile-small-2.col-tablet-small-4.col-laptop-small-8.col-laptop-default-12.carousel-panel__swiper-column.max-laptop-sm\\:w-full.max-laptop-sm\\:min-w-0.max-laptop-sm\\:overflow-hidden.laptop-sm\\:w-full > div > div.swiper.swiper-initialized.swiper-horizontal.carousel-panel__swiper.w-full.max-w-full.min-w-0 > div.swiper-wrapper > div.swiper-slide.swiper-slide-active.laptop-sm\\:pb-\\(--sol-spacing-6\\).laptop-sm\\:aspect-video.flex\\!.w-full\\!.flex-col.justify-between.overflow-hidden > div.carousel-panel-tile.max-laptop-sm\\:h-auto.laptop-sm\\:h-auto.laptop-sm\\:min-h-0.laptop-sm\\:flex-1.h-full.w-full.min-w-0 > div.col-mobile-small-2.col-tablet-small-4.col-laptop-small-8.max-laptop-sm\\:w-full.max-laptop-sm\\:max-w-full > div.max-laptop-sm\\:relative.max-laptop-sm\\:top-auto.max-laptop-sm\\:left-auto.max-laptop-sm\\:z-\\(--z-index-lowest\\).max-laptop-sm\\:aspect-video.max-laptop-sm\\:h-auto.max-laptop-sm\\:w-full.max-laptop-sm\\:max-w-full.max-laptop-sm\\:overflow-hidden.max-laptop-sm\\:rounded-\\(--sol-radius-xl\\).\\[\\&_\\.c-image-fallback\\]\\:max-laptop-sm\\:rounded-\\(--sol-radius-xl\\).\\[\\&_img\\]\\:max-laptop-sm\\:rounded-\\(--sol-radius-xl\\).absolute.top-0.left-0.z-\\(--z-index-negative\\).h-full.w-full.\\[\\&_\\.c-image-fallback\\]\\:rounded-none.\\[\\&_img\\]\\:rounded-none > div.max-laptop-sm\\:hidden.pointer-events-none.absolute.inset-0.z-\\(--z-index-lowest\\).bg-\\[linear-gradient\\(180deg\\,rgba\\(0\\,0\\,0\\,0\\.55\\)_0\\%\\,rgba\\(0\\,0\\,0\\,0\\.25\\)_45\\%\\,rgba\\(0\\,0\\,0\\,0\\)_75\\%\\)\\]",
+      "rc2c1c1c1c2": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.carouselpanel.aem-GridColumn.aem-GridColumn--default--12 > react-component > section.react-container-fluid.carousel-panel.relative > div.row.carousel-panel__stacked-layout.max-laptop-sm\\:flex-col\\!.max-laptop-sm\\:gap-\\(--sol-spacing-8\\).max-tablet-sm\\:gap-\\(--sol-spacing-6\\).laptop-sm\\:w-full.max-tablet\\:px-\\(--sol-spacing-8\\).tablet\\:max-laptop-sm\\:px-\\(--sol-spacing-14\\).min-w-0 > div.col-mobile-small-2.col-tablet-small-4.col-laptop-small-8.col-laptop-default-12.carousel-panel__swiper-column.max-laptop-sm\\:w-full.max-laptop-sm\\:min-w-0.max-laptop-sm\\:overflow-hidden.laptop-sm\\:w-full > div > div.swiper.swiper-initialized.swiper-horizontal.carousel-panel__swiper.w-full.max-w-full.min-w-0 > div.swiper-wrapper > div.swiper-slide.swiper-slide-active.laptop-sm\\:pb-\\(--sol-spacing-6\\).laptop-sm\\:aspect-video.flex\\!.w-full\\!.flex-col.justify-between.overflow-hidden > div.carousel-panel-tile.max-laptop-sm\\:h-auto.laptop-sm\\:h-auto.laptop-sm\\:min-h-0.laptop-sm\\:flex-1.h-full.w-full.min-w-0 > div.max-laptop-sm\\:in-\\[\\.cq-Editable-dom\\]\\:h-\\[450px\\].max-mobile-lg\\:in-\\[\\.cq-Editable-dom\\]\\:h-\\[225px\\].max-laptop-sm\\:hidden.max-laptop-sm\\:h-auto.max-laptop-sm\\:pt-0.max-tablet-sm\\:h-auto.laptop-sm\\:px-\\(--sol-spacing-32\\).desktop\\:px-\\(--sol-spacing-40\\).laptop-sm\\:pt-\\(--sol-spacing-32\\).desktop\\:pt-\\(--sol-spacing-40\\).flex.h-full.flex-col",
+      "rc2c1c1c2": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.carouselpanel.aem-GridColumn.aem-GridColumn--default--12 > react-component > section.react-container-fluid.carousel-panel.relative > div.row.carousel-panel__stacked-layout.max-laptop-sm\\:flex-col\\!.max-laptop-sm\\:gap-\\(--sol-spacing-8\\).max-tablet-sm\\:gap-\\(--sol-spacing-6\\).laptop-sm\\:w-full.max-tablet\\:px-\\(--sol-spacing-8\\).tablet\\:max-laptop-sm\\:px-\\(--sol-spacing-14\\).min-w-0 > div.col-mobile-small-2.col-tablet-small-4.col-laptop-small-8.col-laptop-default-12.carousel-panel__swiper-column.max-laptop-sm\\:w-full.max-laptop-sm\\:min-w-0.max-laptop-sm\\:overflow-hidden.laptop-sm\\:w-full > div > div.swiper.swiper-initialized.swiper-horizontal.carousel-panel__swiper.w-full.max-w-full.min-w-0 > div.swiper-wrapper > div.swiper-slide.swiper-slide-active.laptop-sm\\:pb-\\(--sol-spacing-6\\).laptop-sm\\:aspect-video.flex\\!.w-full\\!.flex-col.justify-between.overflow-hidden > div.carousel-panel__navigation.max-laptop-sm\\:hidden.laptop-sm\\:px-\\(--sol-spacing-32\\).desktop\\:px-\\(--sol-spacing-40\\).z-\\(--z-index-lowest\\)",
+      "rc2c1c2": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.carouselpanel.aem-GridColumn.aem-GridColumn--default--12 > react-component > section.react-container-fluid.carousel-panel.relative > div.row.carousel-panel__stacked-layout.max-laptop-sm\\:flex-col\\!.max-laptop-sm\\:gap-\\(--sol-spacing-8\\).max-tablet-sm\\:gap-\\(--sol-spacing-6\\).laptop-sm\\:w-full.max-tablet\\:px-\\(--sol-spacing-8\\).tablet\\:max-laptop-sm\\:px-\\(--sol-spacing-14\\).min-w-0 > div.col-mobile-small-2.col-tablet-small-4.col-laptop-small-8.col-laptop-default-12.carousel-panel__swiper-column.max-laptop-sm\\:w-full.max-laptop-sm\\:min-w-0.max-laptop-sm\\:overflow-hidden.laptop-sm\\:w-full > div > div.swiper.swiper-initialized.swiper-horizontal.carousel-panel__swiper.w-full.max-w-full.min-w-0 > div.swiper-wrapper > div.swiper-slide.swiper-slide-next.laptop-sm\\:pb-\\(--sol-spacing-6\\).laptop-sm\\:aspect-video.flex\\!.w-full\\!.flex-col.justify-between.overflow-hidden",
+      "rc2c1c2c1": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.carouselpanel.aem-GridColumn.aem-GridColumn--default--12 > react-component > section.react-container-fluid.carousel-panel.relative > div.row.carousel-panel__stacked-layout.max-laptop-sm\\:flex-col\\!.max-laptop-sm\\:gap-\\(--sol-spacing-8\\).max-tablet-sm\\:gap-\\(--sol-spacing-6\\).laptop-sm\\:w-full.max-tablet\\:px-\\(--sol-spacing-8\\).tablet\\:max-laptop-sm\\:px-\\(--sol-spacing-14\\).min-w-0 > div.col-mobile-small-2.col-tablet-small-4.col-laptop-small-8.col-laptop-default-12.carousel-panel__swiper-column.max-laptop-sm\\:w-full.max-laptop-sm\\:min-w-0.max-laptop-sm\\:overflow-hidden.laptop-sm\\:w-full > div > div.swiper.swiper-initialized.swiper-horizontal.carousel-panel__swiper.w-full.max-w-full.min-w-0 > div.swiper-wrapper > div.swiper-slide.swiper-slide-next.laptop-sm\\:pb-\\(--sol-spacing-6\\).laptop-sm\\:aspect-video.flex\\!.w-full\\!.flex-col.justify-between.overflow-hidden > div.carousel-panel-tile.max-laptop-sm\\:h-auto.laptop-sm\\:h-auto.laptop-sm\\:min-h-0.laptop-sm\\:flex-1.h-full.w-full.min-w-0",
+      "rc2c1c2c1c1": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.carouselpanel.aem-GridColumn.aem-GridColumn--default--12 > react-component > section.react-container-fluid.carousel-panel.relative > div.row.carousel-panel__stacked-layout.max-laptop-sm\\:flex-col\\!.max-laptop-sm\\:gap-\\(--sol-spacing-8\\).max-tablet-sm\\:gap-\\(--sol-spacing-6\\).laptop-sm\\:w-full.max-tablet\\:px-\\(--sol-spacing-8\\).tablet\\:max-laptop-sm\\:px-\\(--sol-spacing-14\\).min-w-0 > div.col-mobile-small-2.col-tablet-small-4.col-laptop-small-8.col-laptop-default-12.carousel-panel__swiper-column.max-laptop-sm\\:w-full.max-laptop-sm\\:min-w-0.max-laptop-sm\\:overflow-hidden.laptop-sm\\:w-full > div > div.swiper.swiper-initialized.swiper-horizontal.carousel-panel__swiper.w-full.max-w-full.min-w-0 > div.swiper-wrapper > div.swiper-slide.swiper-slide-next.laptop-sm\\:pb-\\(--sol-spacing-6\\).laptop-sm\\:aspect-video.flex\\!.w-full\\!.flex-col.justify-between.overflow-hidden > div.carousel-panel-tile.max-laptop-sm\\:h-auto.laptop-sm\\:h-auto.laptop-sm\\:min-h-0.laptop-sm\\:flex-1.h-full.w-full.min-w-0 > div.col-mobile-small-2.col-tablet-small-4.col-laptop-small-8.max-laptop-sm\\:w-full.max-laptop-sm\\:max-w-full",
+      "rc2c1c2c1c1c1": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.carouselpanel.aem-GridColumn.aem-GridColumn--default--12 > react-component > section.react-container-fluid.carousel-panel.relative > div.row.carousel-panel__stacked-layout.max-laptop-sm\\:flex-col\\!.max-laptop-sm\\:gap-\\(--sol-spacing-8\\).max-tablet-sm\\:gap-\\(--sol-spacing-6\\).laptop-sm\\:w-full.max-tablet\\:px-\\(--sol-spacing-8\\).tablet\\:max-laptop-sm\\:px-\\(--sol-spacing-14\\).min-w-0 > div.col-mobile-small-2.col-tablet-small-4.col-laptop-small-8.col-laptop-default-12.carousel-panel__swiper-column.max-laptop-sm\\:w-full.max-laptop-sm\\:min-w-0.max-laptop-sm\\:overflow-hidden.laptop-sm\\:w-full > div > div.swiper.swiper-initialized.swiper-horizontal.carousel-panel__swiper.w-full.max-w-full.min-w-0 > div.swiper-wrapper > div.swiper-slide.swiper-slide-next.laptop-sm\\:pb-\\(--sol-spacing-6\\).laptop-sm\\:aspect-video.flex\\!.w-full\\!.flex-col.justify-between.overflow-hidden > div.carousel-panel-tile.max-laptop-sm\\:h-auto.laptop-sm\\:h-auto.laptop-sm\\:min-h-0.laptop-sm\\:flex-1.h-full.w-full.min-w-0 > div.col-mobile-small-2.col-tablet-small-4.col-laptop-small-8.max-laptop-sm\\:w-full.max-laptop-sm\\:max-w-full > div.max-laptop-sm\\:relative.max-laptop-sm\\:top-auto.max-laptop-sm\\:left-auto.max-laptop-sm\\:z-\\(--z-index-lowest\\).max-laptop-sm\\:aspect-video.max-laptop-sm\\:h-auto.max-laptop-sm\\:w-full.max-laptop-sm\\:max-w-full.max-laptop-sm\\:overflow-hidden.max-laptop-sm\\:rounded-\\(--sol-radius-xl\\).\\[\\&_\\.c-image-fallback\\]\\:max-laptop-sm\\:rounded-\\(--sol-radius-xl\\).\\[\\&_img\\]\\:max-laptop-sm\\:rounded-\\(--sol-radius-xl\\).absolute.top-0.left-0.z-\\(--z-index-negative\\).h-full.w-full.\\[\\&_\\.c-image-fallback\\]\\:rounded-none.\\[\\&_img\\]\\:rounded-none > img.c-image.size-full.object-cover",
+      "rc2c1c2c1c1c2": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.carouselpanel.aem-GridColumn.aem-GridColumn--default--12 > react-component > section.react-container-fluid.carousel-panel.relative > div.row.carousel-panel__stacked-layout.max-laptop-sm\\:flex-col\\!.max-laptop-sm\\:gap-\\(--sol-spacing-8\\).max-tablet-sm\\:gap-\\(--sol-spacing-6\\).laptop-sm\\:w-full.max-tablet\\:px-\\(--sol-spacing-8\\).tablet\\:max-laptop-sm\\:px-\\(--sol-spacing-14\\).min-w-0 > div.col-mobile-small-2.col-tablet-small-4.col-laptop-small-8.col-laptop-default-12.carousel-panel__swiper-column.max-laptop-sm\\:w-full.max-laptop-sm\\:min-w-0.max-laptop-sm\\:overflow-hidden.laptop-sm\\:w-full > div > div.swiper.swiper-initialized.swiper-horizontal.carousel-panel__swiper.w-full.max-w-full.min-w-0 > div.swiper-wrapper > div.swiper-slide.swiper-slide-next.laptop-sm\\:pb-\\(--sol-spacing-6\\).laptop-sm\\:aspect-video.flex\\!.w-full\\!.flex-col.justify-between.overflow-hidden > div.carousel-panel-tile.max-laptop-sm\\:h-auto.laptop-sm\\:h-auto.laptop-sm\\:min-h-0.laptop-sm\\:flex-1.h-full.w-full.min-w-0 > div.col-mobile-small-2.col-tablet-small-4.col-laptop-small-8.max-laptop-sm\\:w-full.max-laptop-sm\\:max-w-full > div.max-laptop-sm\\:relative.max-laptop-sm\\:top-auto.max-laptop-sm\\:left-auto.max-laptop-sm\\:z-\\(--z-index-lowest\\).max-laptop-sm\\:aspect-video.max-laptop-sm\\:h-auto.max-laptop-sm\\:w-full.max-laptop-sm\\:max-w-full.max-laptop-sm\\:overflow-hidden.max-laptop-sm\\:rounded-\\(--sol-radius-xl\\).\\[\\&_\\.c-image-fallback\\]\\:max-laptop-sm\\:rounded-\\(--sol-radius-xl\\).\\[\\&_img\\]\\:max-laptop-sm\\:rounded-\\(--sol-radius-xl\\).absolute.top-0.left-0.z-\\(--z-index-negative\\).h-full.w-full.\\[\\&_\\.c-image-fallback\\]\\:rounded-none.\\[\\&_img\\]\\:rounded-none > div.max-laptop-sm\\:hidden.pointer-events-none.absolute.inset-0.z-\\(--z-index-lowest\\).bg-\\[linear-gradient\\(180deg\\,rgba\\(0\\,0\\,0\\,0\\.55\\)_0\\%\\,rgba\\(0\\,0\\,0\\,0\\.25\\)_45\\%\\,rgba\\(0\\,0\\,0\\,0\\)_75\\%\\)\\]",
+      "rc2c1c2c1c2": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.carouselpanel.aem-GridColumn.aem-GridColumn--default--12 > react-component > section.react-container-fluid.carousel-panel.relative > div.row.carousel-panel__stacked-layout.max-laptop-sm\\:flex-col\\!.max-laptop-sm\\:gap-\\(--sol-spacing-8\\).max-tablet-sm\\:gap-\\(--sol-spacing-6\\).laptop-sm\\:w-full.max-tablet\\:px-\\(--sol-spacing-8\\).tablet\\:max-laptop-sm\\:px-\\(--sol-spacing-14\\).min-w-0 > div.col-mobile-small-2.col-tablet-small-4.col-laptop-small-8.col-laptop-default-12.carousel-panel__swiper-column.max-laptop-sm\\:w-full.max-laptop-sm\\:min-w-0.max-laptop-sm\\:overflow-hidden.laptop-sm\\:w-full > div > div.swiper.swiper-initialized.swiper-horizontal.carousel-panel__swiper.w-full.max-w-full.min-w-0 > div.swiper-wrapper > div.swiper-slide.swiper-slide-next.laptop-sm\\:pb-\\(--sol-spacing-6\\).laptop-sm\\:aspect-video.flex\\!.w-full\\!.flex-col.justify-between.overflow-hidden > div.carousel-panel-tile.max-laptop-sm\\:h-auto.laptop-sm\\:h-auto.laptop-sm\\:min-h-0.laptop-sm\\:flex-1.h-full.w-full.min-w-0 > div.max-laptop-sm\\:in-\\[\\.cq-Editable-dom\\]\\:h-\\[450px\\].max-mobile-lg\\:in-\\[\\.cq-Editable-dom\\]\\:h-\\[225px\\].max-laptop-sm\\:hidden.max-laptop-sm\\:h-auto.max-laptop-sm\\:pt-0.max-tablet-sm\\:h-auto.laptop-sm\\:px-\\(--sol-spacing-32\\).desktop\\:px-\\(--sol-spacing-40\\).laptop-sm\\:pt-\\(--sol-spacing-32\\).desktop\\:pt-\\(--sol-spacing-40\\).flex.h-full.flex-col",
+      "rc2c1c2c2": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.carouselpanel.aem-GridColumn.aem-GridColumn--default--12 > react-component > section.react-container-fluid.carousel-panel.relative > div.row.carousel-panel__stacked-layout.max-laptop-sm\\:flex-col\\!.max-laptop-sm\\:gap-\\(--sol-spacing-8\\).max-tablet-sm\\:gap-\\(--sol-spacing-6\\).laptop-sm\\:w-full.max-tablet\\:px-\\(--sol-spacing-8\\).tablet\\:max-laptop-sm\\:px-\\(--sol-spacing-14\\).min-w-0 > div.col-mobile-small-2.col-tablet-small-4.col-laptop-small-8.col-laptop-default-12.carousel-panel__swiper-column.max-laptop-sm\\:w-full.max-laptop-sm\\:min-w-0.max-laptop-sm\\:overflow-hidden.laptop-sm\\:w-full > div > div.swiper.swiper-initialized.swiper-horizontal.carousel-panel__swiper.w-full.max-w-full.min-w-0 > div.swiper-wrapper > div.swiper-slide.swiper-slide-next.laptop-sm\\:pb-\\(--sol-spacing-6\\).laptop-sm\\:aspect-video.flex\\!.w-full\\!.flex-col.justify-between.overflow-hidden > div.carousel-panel__navigation.max-laptop-sm\\:hidden.laptop-sm\\:px-\\(--sol-spacing-32\\).desktop\\:px-\\(--sol-spacing-40\\).z-\\(--z-index-lowest\\)",
+      "rc2c1c3": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.carouselpanel.aem-GridColumn.aem-GridColumn--default--12 > react-component > section.react-container-fluid.carousel-panel.relative > div.row.carousel-panel__stacked-layout.max-laptop-sm\\:flex-col\\!.max-laptop-sm\\:gap-\\(--sol-spacing-8\\).max-tablet-sm\\:gap-\\(--sol-spacing-6\\).laptop-sm\\:w-full.max-tablet\\:px-\\(--sol-spacing-8\\).tablet\\:max-laptop-sm\\:px-\\(--sol-spacing-14\\).min-w-0 > div.col-mobile-small-2.col-tablet-small-4.col-laptop-small-8.col-laptop-default-12.carousel-panel__swiper-column.max-laptop-sm\\:w-full.max-laptop-sm\\:min-w-0.max-laptop-sm\\:overflow-hidden.laptop-sm\\:w-full > div > div.swiper.swiper-initialized.swiper-horizontal.carousel-panel__swiper.w-full.max-w-full.min-w-0 > div.swiper-wrapper > div.swiper-slide.laptop-sm\\:pb-\\(--sol-spacing-6\\).laptop-sm\\:aspect-video.flex\\!.w-full\\!.flex-col.justify-between.overflow-hidden:nth-of-type(3)",
+      "rc2c1c3c1": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.carouselpanel.aem-GridColumn.aem-GridColumn--default--12 > react-component > section.react-container-fluid.carousel-panel.relative > div.row.carousel-panel__stacked-layout.max-laptop-sm\\:flex-col\\!.max-laptop-sm\\:gap-\\(--sol-spacing-8\\).max-tablet-sm\\:gap-\\(--sol-spacing-6\\).laptop-sm\\:w-full.max-tablet\\:px-\\(--sol-spacing-8\\).tablet\\:max-laptop-sm\\:px-\\(--sol-spacing-14\\).min-w-0 > div.col-mobile-small-2.col-tablet-small-4.col-laptop-small-8.col-laptop-default-12.carousel-panel__swiper-column.max-laptop-sm\\:w-full.max-laptop-sm\\:min-w-0.max-laptop-sm\\:overflow-hidden.laptop-sm\\:w-full > div > div.swiper.swiper-initialized.swiper-horizontal.carousel-panel__swiper.w-full.max-w-full.min-w-0 > div.swiper-wrapper > div.swiper-slide.laptop-sm\\:pb-\\(--sol-spacing-6\\).laptop-sm\\:aspect-video.flex\\!.w-full\\!.flex-col.justify-between.overflow-hidden:nth-of-type(3) > div.carousel-panel-tile.max-laptop-sm\\:h-auto.laptop-sm\\:h-auto.laptop-sm\\:min-h-0.laptop-sm\\:flex-1.h-full.w-full.min-w-0",
+      "rc2c1c3c1c1": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.carouselpanel.aem-GridColumn.aem-GridColumn--default--12 > react-component > section.react-container-fluid.carousel-panel.relative > div.row.carousel-panel__stacked-layout.max-laptop-sm\\:flex-col\\!.max-laptop-sm\\:gap-\\(--sol-spacing-8\\).max-tablet-sm\\:gap-\\(--sol-spacing-6\\).laptop-sm\\:w-full.max-tablet\\:px-\\(--sol-spacing-8\\).tablet\\:max-laptop-sm\\:px-\\(--sol-spacing-14\\).min-w-0 > div.col-mobile-small-2.col-tablet-small-4.col-laptop-small-8.col-laptop-default-12.carousel-panel__swiper-column.max-laptop-sm\\:w-full.max-laptop-sm\\:min-w-0.max-laptop-sm\\:overflow-hidden.laptop-sm\\:w-full > div > div.swiper.swiper-initialized.swiper-horizontal.carousel-panel__swiper.w-full.max-w-full.min-w-0 > div.swiper-wrapper > div.swiper-slide.laptop-sm\\:pb-\\(--sol-spacing-6\\).laptop-sm\\:aspect-video.flex\\!.w-full\\!.flex-col.justify-between.overflow-hidden:nth-of-type(3) > div.carousel-panel-tile.max-laptop-sm\\:h-auto.laptop-sm\\:h-auto.laptop-sm\\:min-h-0.laptop-sm\\:flex-1.h-full.w-full.min-w-0 > div.col-mobile-small-2.col-tablet-small-4.col-laptop-small-8.max-laptop-sm\\:w-full.max-laptop-sm\\:max-w-full",
+      "rc2c1c3c1c1c1": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.carouselpanel.aem-GridColumn.aem-GridColumn--default--12 > react-component > section.react-container-fluid.carousel-panel.relative > div.row.carousel-panel__stacked-layout.max-laptop-sm\\:flex-col\\!.max-laptop-sm\\:gap-\\(--sol-spacing-8\\).max-tablet-sm\\:gap-\\(--sol-spacing-6\\).laptop-sm\\:w-full.max-tablet\\:px-\\(--sol-spacing-8\\).tablet\\:max-laptop-sm\\:px-\\(--sol-spacing-14\\).min-w-0 > div.col-mobile-small-2.col-tablet-small-4.col-laptop-small-8.col-laptop-default-12.carousel-panel__swiper-column.max-laptop-sm\\:w-full.max-laptop-sm\\:min-w-0.max-laptop-sm\\:overflow-hidden.laptop-sm\\:w-full > div > div.swiper.swiper-initialized.swiper-horizontal.carousel-panel__swiper.w-full.max-w-full.min-w-0 > div.swiper-wrapper > div.swiper-slide.laptop-sm\\:pb-\\(--sol-spacing-6\\).laptop-sm\\:aspect-video.flex\\!.w-full\\!.flex-col.justify-between.overflow-hidden:nth-of-type(3) > div.carousel-panel-tile.max-laptop-sm\\:h-auto.laptop-sm\\:h-auto.laptop-sm\\:min-h-0.laptop-sm\\:flex-1.h-full.w-full.min-w-0 > div.col-mobile-small-2.col-tablet-small-4.col-laptop-small-8.max-laptop-sm\\:w-full.max-laptop-sm\\:max-w-full > div.max-laptop-sm\\:relative.max-laptop-sm\\:top-auto.max-laptop-sm\\:left-auto.max-laptop-sm\\:z-\\(--z-index-lowest\\).max-laptop-sm\\:aspect-video.max-laptop-sm\\:h-auto.max-laptop-sm\\:w-full.max-laptop-sm\\:max-w-full.max-laptop-sm\\:overflow-hidden.max-laptop-sm\\:rounded-\\(--sol-radius-xl\\).\\[\\&_\\.c-image-fallback\\]\\:max-laptop-sm\\:rounded-\\(--sol-radius-xl\\).\\[\\&_img\\]\\:max-laptop-sm\\:rounded-\\(--sol-radius-xl\\).absolute.top-0.left-0.z-\\(--z-index-negative\\).h-full.w-full.\\[\\&_\\.c-image-fallback\\]\\:rounded-none.\\[\\&_img\\]\\:rounded-none > img.c-image.size-full.object-cover",
+      "rc2c1c3c1c1c2": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.carouselpanel.aem-GridColumn.aem-GridColumn--default--12 > react-component > section.react-container-fluid.carousel-panel.relative > div.row.carousel-panel__stacked-layout.max-laptop-sm\\:flex-col\\!.max-laptop-sm\\:gap-\\(--sol-spacing-8\\).max-tablet-sm\\:gap-\\(--sol-spacing-6\\).laptop-sm\\:w-full.max-tablet\\:px-\\(--sol-spacing-8\\).tablet\\:max-laptop-sm\\:px-\\(--sol-spacing-14\\).min-w-0 > div.col-mobile-small-2.col-tablet-small-4.col-laptop-small-8.col-laptop-default-12.carousel-panel__swiper-column.max-laptop-sm\\:w-full.max-laptop-sm\\:min-w-0.max-laptop-sm\\:overflow-hidden.laptop-sm\\:w-full > div > div.swiper.swiper-initialized.swiper-horizontal.carousel-panel__swiper.w-full.max-w-full.min-w-0 > div.swiper-wrapper > div.swiper-slide.laptop-sm\\:pb-\\(--sol-spacing-6\\).laptop-sm\\:aspect-video.flex\\!.w-full\\!.flex-col.justify-between.overflow-hidden:nth-of-type(3) > div.carousel-panel-tile.max-laptop-sm\\:h-auto.laptop-sm\\:h-auto.laptop-sm\\:min-h-0.laptop-sm\\:flex-1.h-full.w-full.min-w-0 > div.col-mobile-small-2.col-tablet-small-4.col-laptop-small-8.max-laptop-sm\\:w-full.max-laptop-sm\\:max-w-full > div.max-laptop-sm\\:relative.max-laptop-sm\\:top-auto.max-laptop-sm\\:left-auto.max-laptop-sm\\:z-\\(--z-index-lowest\\).max-laptop-sm\\:aspect-video.max-laptop-sm\\:h-auto.max-laptop-sm\\:w-full.max-laptop-sm\\:max-w-full.max-laptop-sm\\:overflow-hidden.max-laptop-sm\\:rounded-\\(--sol-radius-xl\\).\\[\\&_\\.c-image-fallback\\]\\:max-laptop-sm\\:rounded-\\(--sol-radius-xl\\).\\[\\&_img\\]\\:max-laptop-sm\\:rounded-\\(--sol-radius-xl\\).absolute.top-0.left-0.z-\\(--z-index-negative\\).h-full.w-full.\\[\\&_\\.c-image-fallback\\]\\:rounded-none.\\[\\&_img\\]\\:rounded-none > div.max-laptop-sm\\:hidden.pointer-events-none.absolute.inset-0.z-\\(--z-index-lowest\\).bg-\\[linear-gradient\\(180deg\\,rgba\\(0\\,0\\,0\\,0\\.55\\)_0\\%\\,rgba\\(0\\,0\\,0\\,0\\.25\\)_45\\%\\,rgba\\(0\\,0\\,0\\,0\\)_75\\%\\)\\]",
+      "rc2c1c3c1c2": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.carouselpanel.aem-GridColumn.aem-GridColumn--default--12 > react-component > section.react-container-fluid.carousel-panel.relative > div.row.carousel-panel__stacked-layout.max-laptop-sm\\:flex-col\\!.max-laptop-sm\\:gap-\\(--sol-spacing-8\\).max-tablet-sm\\:gap-\\(--sol-spacing-6\\).laptop-sm\\:w-full.max-tablet\\:px-\\(--sol-spacing-8\\).tablet\\:max-laptop-sm\\:px-\\(--sol-spacing-14\\).min-w-0 > div.col-mobile-small-2.col-tablet-small-4.col-laptop-small-8.col-laptop-default-12.carousel-panel__swiper-column.max-laptop-sm\\:w-full.max-laptop-sm\\:min-w-0.max-laptop-sm\\:overflow-hidden.laptop-sm\\:w-full > div > div.swiper.swiper-initialized.swiper-horizontal.carousel-panel__swiper.w-full.max-w-full.min-w-0 > div.swiper-wrapper > div.swiper-slide.laptop-sm\\:pb-\\(--sol-spacing-6\\).laptop-sm\\:aspect-video.flex\\!.w-full\\!.flex-col.justify-between.overflow-hidden:nth-of-type(3) > div.carousel-panel-tile.max-laptop-sm\\:h-auto.laptop-sm\\:h-auto.laptop-sm\\:min-h-0.laptop-sm\\:flex-1.h-full.w-full.min-w-0 > div.max-laptop-sm\\:in-\\[\\.cq-Editable-dom\\]\\:h-\\[450px\\].max-mobile-lg\\:in-\\[\\.cq-Editable-dom\\]\\:h-\\[225px\\].max-laptop-sm\\:hidden.max-laptop-sm\\:h-auto.max-laptop-sm\\:pt-0.max-tablet-sm\\:h-auto.laptop-sm\\:px-\\(--sol-spacing-32\\).desktop\\:px-\\(--sol-spacing-40\\).laptop-sm\\:pt-\\(--sol-spacing-32\\).desktop\\:pt-\\(--sol-spacing-40\\).flex.h-full.flex-col",
+      "rc2c1c3c2": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.carouselpanel.aem-GridColumn.aem-GridColumn--default--12 > react-component > section.react-container-fluid.carousel-panel.relative > div.row.carousel-panel__stacked-layout.max-laptop-sm\\:flex-col\\!.max-laptop-sm\\:gap-\\(--sol-spacing-8\\).max-tablet-sm\\:gap-\\(--sol-spacing-6\\).laptop-sm\\:w-full.max-tablet\\:px-\\(--sol-spacing-8\\).tablet\\:max-laptop-sm\\:px-\\(--sol-spacing-14\\).min-w-0 > div.col-mobile-small-2.col-tablet-small-4.col-laptop-small-8.col-laptop-default-12.carousel-panel__swiper-column.max-laptop-sm\\:w-full.max-laptop-sm\\:min-w-0.max-laptop-sm\\:overflow-hidden.laptop-sm\\:w-full > div > div.swiper.swiper-initialized.swiper-horizontal.carousel-panel__swiper.w-full.max-w-full.min-w-0 > div.swiper-wrapper > div.swiper-slide.laptop-sm\\:pb-\\(--sol-spacing-6\\).laptop-sm\\:aspect-video.flex\\!.w-full\\!.flex-col.justify-between.overflow-hidden:nth-of-type(3) > div.carousel-panel__navigation.max-laptop-sm\\:hidden.laptop-sm\\:px-\\(--sol-spacing-32\\).desktop\\:px-\\(--sol-spacing-40\\).z-\\(--z-index-lowest\\)",
+      "rc2c1c4": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.carouselpanel.aem-GridColumn.aem-GridColumn--default--12 > react-component > section.react-container-fluid.carousel-panel.relative > div.row.carousel-panel__stacked-layout.max-laptop-sm\\:flex-col\\!.max-laptop-sm\\:gap-\\(--sol-spacing-8\\).max-tablet-sm\\:gap-\\(--sol-spacing-6\\).laptop-sm\\:w-full.max-tablet\\:px-\\(--sol-spacing-8\\).tablet\\:max-laptop-sm\\:px-\\(--sol-spacing-14\\).min-w-0 > div.col-mobile-small-2.col-tablet-small-4.col-laptop-small-8.col-laptop-default-12.carousel-panel__swiper-column.max-laptop-sm\\:w-full.max-laptop-sm\\:min-w-0.max-laptop-sm\\:overflow-hidden.laptop-sm\\:w-full > div > div.swiper.swiper-initialized.swiper-horizontal.carousel-panel__swiper.w-full.max-w-full.min-w-0 > div.swiper-wrapper > div.swiper-slide.laptop-sm\\:pb-\\(--sol-spacing-6\\).laptop-sm\\:aspect-video.flex\\!.w-full\\!.flex-col.justify-between.overflow-hidden:nth-of-type(4)",
+      "rc2c1c4c1": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.carouselpanel.aem-GridColumn.aem-GridColumn--default--12 > react-component > section.react-container-fluid.carousel-panel.relative > div.row.carousel-panel__stacked-layout.max-laptop-sm\\:flex-col\\!.max-laptop-sm\\:gap-\\(--sol-spacing-8\\).max-tablet-sm\\:gap-\\(--sol-spacing-6\\).laptop-sm\\:w-full.max-tablet\\:px-\\(--sol-spacing-8\\).tablet\\:max-laptop-sm\\:px-\\(--sol-spacing-14\\).min-w-0 > div.col-mobile-small-2.col-tablet-small-4.col-laptop-small-8.col-laptop-default-12.carousel-panel__swiper-column.max-laptop-sm\\:w-full.max-laptop-sm\\:min-w-0.max-laptop-sm\\:overflow-hidden.laptop-sm\\:w-full > div > div.swiper.swiper-initialized.swiper-horizontal.carousel-panel__swiper.w-full.max-w-full.min-w-0 > div.swiper-wrapper > div.swiper-slide.laptop-sm\\:pb-\\(--sol-spacing-6\\).laptop-sm\\:aspect-video.flex\\!.w-full\\!.flex-col.justify-between.overflow-hidden:nth-of-type(4) > div.carousel-panel-tile.max-laptop-sm\\:h-auto.laptop-sm\\:h-auto.laptop-sm\\:min-h-0.laptop-sm\\:flex-1.h-full.w-full.min-w-0",
+      "rc2c1c4c1c1": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.carouselpanel.aem-GridColumn.aem-GridColumn--default--12 > react-component > section.react-container-fluid.carousel-panel.relative > div.row.carousel-panel__stacked-layout.max-laptop-sm\\:flex-col\\!.max-laptop-sm\\:gap-\\(--sol-spacing-8\\).max-tablet-sm\\:gap-\\(--sol-spacing-6\\).laptop-sm\\:w-full.max-tablet\\:px-\\(--sol-spacing-8\\).tablet\\:max-laptop-sm\\:px-\\(--sol-spacing-14\\).min-w-0 > div.col-mobile-small-2.col-tablet-small-4.col-laptop-small-8.col-laptop-default-12.carousel-panel__swiper-column.max-laptop-sm\\:w-full.max-laptop-sm\\:min-w-0.max-laptop-sm\\:overflow-hidden.laptop-sm\\:w-full > div > div.swiper.swiper-initialized.swiper-horizontal.carousel-panel__swiper.w-full.max-w-full.min-w-0 > div.swiper-wrapper > div.swiper-slide.laptop-sm\\:pb-\\(--sol-spacing-6\\).laptop-sm\\:aspect-video.flex\\!.w-full\\!.flex-col.justify-between.overflow-hidden:nth-of-type(4) > div.carousel-panel-tile.max-laptop-sm\\:h-auto.laptop-sm\\:h-auto.laptop-sm\\:min-h-0.laptop-sm\\:flex-1.h-full.w-full.min-w-0 > div.col-mobile-small-2.col-tablet-small-4.col-laptop-small-8.max-laptop-sm\\:w-full.max-laptop-sm\\:max-w-full",
+      "rc2c1c4c1c1c1": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.carouselpanel.aem-GridColumn.aem-GridColumn--default--12 > react-component > section.react-container-fluid.carousel-panel.relative > div.row.carousel-panel__stacked-layout.max-laptop-sm\\:flex-col\\!.max-laptop-sm\\:gap-\\(--sol-spacing-8\\).max-tablet-sm\\:gap-\\(--sol-spacing-6\\).laptop-sm\\:w-full.max-tablet\\:px-\\(--sol-spacing-8\\).tablet\\:max-laptop-sm\\:px-\\(--sol-spacing-14\\).min-w-0 > div.col-mobile-small-2.col-tablet-small-4.col-laptop-small-8.col-laptop-default-12.carousel-panel__swiper-column.max-laptop-sm\\:w-full.max-laptop-sm\\:min-w-0.max-laptop-sm\\:overflow-hidden.laptop-sm\\:w-full > div > div.swiper.swiper-initialized.swiper-horizontal.carousel-panel__swiper.w-full.max-w-full.min-w-0 > div.swiper-wrapper > div.swiper-slide.laptop-sm\\:pb-\\(--sol-spacing-6\\).laptop-sm\\:aspect-video.flex\\!.w-full\\!.flex-col.justify-between.overflow-hidden:nth-of-type(4) > div.carousel-panel-tile.max-laptop-sm\\:h-auto.laptop-sm\\:h-auto.laptop-sm\\:min-h-0.laptop-sm\\:flex-1.h-full.w-full.min-w-0 > div.col-mobile-small-2.col-tablet-small-4.col-laptop-small-8.max-laptop-sm\\:w-full.max-laptop-sm\\:max-w-full > div.max-laptop-sm\\:relative.max-laptop-sm\\:top-auto.max-laptop-sm\\:left-auto.max-laptop-sm\\:z-\\(--z-index-lowest\\).max-laptop-sm\\:aspect-video.max-laptop-sm\\:h-auto.max-laptop-sm\\:w-full.max-laptop-sm\\:max-w-full.max-laptop-sm\\:overflow-hidden.max-laptop-sm\\:rounded-\\(--sol-radius-xl\\).\\[\\&_\\.c-image-fallback\\]\\:max-laptop-sm\\:rounded-\\(--sol-radius-xl\\).\\[\\&_img\\]\\:max-laptop-sm\\:rounded-\\(--sol-radius-xl\\).absolute.top-0.left-0.z-\\(--z-index-negative\\).h-full.w-full.\\[\\&_\\.c-image-fallback\\]\\:rounded-none.\\[\\&_img\\]\\:rounded-none > img.c-image.size-full.object-cover",
+      "rc2c1c4c1c1c2": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.carouselpanel.aem-GridColumn.aem-GridColumn--default--12 > react-component > section.react-container-fluid.carousel-panel.relative > div.row.carousel-panel__stacked-layout.max-laptop-sm\\:flex-col\\!.max-laptop-sm\\:gap-\\(--sol-spacing-8\\).max-tablet-sm\\:gap-\\(--sol-spacing-6\\).laptop-sm\\:w-full.max-tablet\\:px-\\(--sol-spacing-8\\).tablet\\:max-laptop-sm\\:px-\\(--sol-spacing-14\\).min-w-0 > div.col-mobile-small-2.col-tablet-small-4.col-laptop-small-8.col-laptop-default-12.carousel-panel__swiper-column.max-laptop-sm\\:w-full.max-laptop-sm\\:min-w-0.max-laptop-sm\\:overflow-hidden.laptop-sm\\:w-full > div > div.swiper.swiper-initialized.swiper-horizontal.carousel-panel__swiper.w-full.max-w-full.min-w-0 > div.swiper-wrapper > div.swiper-slide.laptop-sm\\:pb-\\(--sol-spacing-6\\).laptop-sm\\:aspect-video.flex\\!.w-full\\!.flex-col.justify-between.overflow-hidden:nth-of-type(4) > div.carousel-panel-tile.max-laptop-sm\\:h-auto.laptop-sm\\:h-auto.laptop-sm\\:min-h-0.laptop-sm\\:flex-1.h-full.w-full.min-w-0 > div.col-mobile-small-2.col-tablet-small-4.col-laptop-small-8.max-laptop-sm\\:w-full.max-laptop-sm\\:max-w-full > div.max-laptop-sm\\:relative.max-laptop-sm\\:top-auto.max-laptop-sm\\:left-auto.max-laptop-sm\\:z-\\(--z-index-lowest\\).max-laptop-sm\\:aspect-video.max-laptop-sm\\:h-auto.max-laptop-sm\\:w-full.max-laptop-sm\\:max-w-full.max-laptop-sm\\:overflow-hidden.max-laptop-sm\\:rounded-\\(--sol-radius-xl\\).\\[\\&_\\.c-image-fallback\\]\\:max-laptop-sm\\:rounded-\\(--sol-radius-xl\\).\\[\\&_img\\]\\:max-laptop-sm\\:rounded-\\(--sol-radius-xl\\).absolute.top-0.left-0.z-\\(--z-index-negative\\).h-full.w-full.\\[\\&_\\.c-image-fallback\\]\\:rounded-none.\\[\\&_img\\]\\:rounded-none > div.max-laptop-sm\\:hidden.pointer-events-none.absolute.inset-0.z-\\(--z-index-lowest\\).bg-\\[linear-gradient\\(180deg\\,rgba\\(0\\,0\\,0\\,0\\.55\\)_0\\%\\,rgba\\(0\\,0\\,0\\,0\\.25\\)_45\\%\\,rgba\\(0\\,0\\,0\\,0\\)_75\\%\\)\\]",
+      "rc2c1c4c1c2": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.carouselpanel.aem-GridColumn.aem-GridColumn--default--12 > react-component > section.react-container-fluid.carousel-panel.relative > div.row.carousel-panel__stacked-layout.max-laptop-sm\\:flex-col\\!.max-laptop-sm\\:gap-\\(--sol-spacing-8\\).max-tablet-sm\\:gap-\\(--sol-spacing-6\\).laptop-sm\\:w-full.max-tablet\\:px-\\(--sol-spacing-8\\).tablet\\:max-laptop-sm\\:px-\\(--sol-spacing-14\\).min-w-0 > div.col-mobile-small-2.col-tablet-small-4.col-laptop-small-8.col-laptop-default-12.carousel-panel__swiper-column.max-laptop-sm\\:w-full.max-laptop-sm\\:min-w-0.max-laptop-sm\\:overflow-hidden.laptop-sm\\:w-full > div > div.swiper.swiper-initialized.swiper-horizontal.carousel-panel__swiper.w-full.max-w-full.min-w-0 > div.swiper-wrapper > div.swiper-slide.laptop-sm\\:pb-\\(--sol-spacing-6\\).laptop-sm\\:aspect-video.flex\\!.w-full\\!.flex-col.justify-between.overflow-hidden:nth-of-type(4) > div.carousel-panel-tile.max-laptop-sm\\:h-auto.laptop-sm\\:h-auto.laptop-sm\\:min-h-0.laptop-sm\\:flex-1.h-full.w-full.min-w-0 > div.max-laptop-sm\\:in-\\[\\.cq-Editable-dom\\]\\:h-\\[450px\\].max-mobile-lg\\:in-\\[\\.cq-Editable-dom\\]\\:h-\\[225px\\].max-laptop-sm\\:hidden.max-laptop-sm\\:h-auto.max-laptop-sm\\:pt-0.max-tablet-sm\\:h-auto.laptop-sm\\:px-\\(--sol-spacing-32\\).desktop\\:px-\\(--sol-spacing-40\\).laptop-sm\\:pt-\\(--sol-spacing-32\\).desktop\\:pt-\\(--sol-spacing-40\\).flex.h-full.flex-col",
+      "rc2c1c4c2": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.carouselpanel.aem-GridColumn.aem-GridColumn--default--12 > react-component > section.react-container-fluid.carousel-panel.relative > div.row.carousel-panel__stacked-layout.max-laptop-sm\\:flex-col\\!.max-laptop-sm\\:gap-\\(--sol-spacing-8\\).max-tablet-sm\\:gap-\\(--sol-spacing-6\\).laptop-sm\\:w-full.max-tablet\\:px-\\(--sol-spacing-8\\).tablet\\:max-laptop-sm\\:px-\\(--sol-spacing-14\\).min-w-0 > div.col-mobile-small-2.col-tablet-small-4.col-laptop-small-8.col-laptop-default-12.carousel-panel__swiper-column.max-laptop-sm\\:w-full.max-laptop-sm\\:min-w-0.max-laptop-sm\\:overflow-hidden.laptop-sm\\:w-full > div > div.swiper.swiper-initialized.swiper-horizontal.carousel-panel__swiper.w-full.max-w-full.min-w-0 > div.swiper-wrapper > div.swiper-slide.laptop-sm\\:pb-\\(--sol-spacing-6\\).laptop-sm\\:aspect-video.flex\\!.w-full\\!.flex-col.justify-between.overflow-hidden:nth-of-type(4) > div.carousel-panel__navigation.max-laptop-sm\\:hidden.laptop-sm\\:px-\\(--sol-spacing-32\\).desktop\\:px-\\(--sol-spacing-40\\).z-\\(--z-index-lowest\\)",
+      "rc2c2": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.bg-container.aem-GridColumn.aem-GridColumn--default--12",
+      "rc2c2c1": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.bg-container.aem-GridColumn.aem-GridColumn--default--12 > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.accordion-carousel.aem-GridColumn.aem-GridColumn--default--12",
+      "rc2c2c1c1": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.bg-container.aem-GridColumn.aem-GridColumn--default--12 > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.accordion-carousel.aem-GridColumn.aem-GridColumn--default--12 > react-component > section.w-full > div.react-container.carousel-accordion-multi",
+      "rc2c2c1c1c1": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.bg-container.aem-GridColumn.aem-GridColumn--default--12 > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.accordion-carousel.aem-GridColumn.aem-GridColumn--default--12 > react-component > section.w-full > div.react-container.carousel-accordion-multi > div.carousel-navigation-wrapper > div.row.flex.w-full.min-w-0.items-start.justify-between.border-b.border-\\(--sol-stroke-default\\).py-\\(--sol-responsive-spacing-8\\) > div.col-mobile-small-2.col-mobile-default-4.col-tablet-default-6.col-laptop-small-6.col-laptop-default-8.col-desktop-default-6.col-offset-laptop-default-1.col-offset-desktop-default-1.flex.min-w-0.flex-col.items-start.gap-\\(--sol-responsive-spacing-7\\) > nav.flex.w-full.flex-col.gap-\\(--sol-responsive-spacing-4\\) > div.max-tablet-sm\\:flex-col.flex.w-full.max-w-full.flex-row.flex-wrap.items-stretch.gap-\\(--sol-responsive-spacing-4\\).self-stretch:nth-of-type(1)",
+      "rc2c2c1c1c2": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.bg-container.aem-GridColumn.aem-GridColumn--default--12 > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.accordion-carousel.aem-GridColumn.aem-GridColumn--default--12 > react-component > section.w-full > div.react-container.carousel-accordion-multi > div.carousel-navigation-wrapper > div.row.flex.w-full.min-w-0.items-start.justify-between.border-b.border-\\(--sol-stroke-default\\).py-\\(--sol-responsive-spacing-8\\) > div.col-mobile-small-2.col-mobile-default-4.col-tablet-default-6.col-laptop-small-6.col-laptop-default-8.col-desktop-default-6.col-offset-laptop-default-1.col-offset-desktop-default-1.flex.min-w-0.flex-col.items-start.gap-\\(--sol-responsive-spacing-7\\) > nav.flex.w-full.flex-col.gap-\\(--sol-responsive-spacing-4\\) > div.max-tablet-sm\\:flex-col.flex.w-full.max-w-full.flex-row.flex-wrap.items-stretch.gap-\\(--sol-responsive-spacing-4\\).self-stretch:nth-of-type(2)",
+      "rc2c2c1c2": "#\\:R0H1\\:",
+      "rc2c2c2": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.bg-container.aem-GridColumn.aem-GridColumn--default--12 > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.featuredcardlist.aem-GridColumn.aem-GridColumn--default--12",
+      "rc2c2c2c1": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.bg-container.aem-GridColumn.aem-GridColumn--default--12 > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.featuredcardlist.aem-GridColumn.aem-GridColumn--default--12 > react-component > div.featured-card-list > article.featured-card.tablet-sm\\:pt-\\(--sol-spacing-10\\).laptop-sm\\:pt-\\(--sol-spacing-16\\).relative.pt-\\(--sol-spacing-8\\).featured-card__manual:nth-of-type(1)",
+      "rc2c2c2c2": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.bg-container.aem-GridColumn.aem-GridColumn--default--12 > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.featuredcardlist.aem-GridColumn.aem-GridColumn--default--12 > react-component > div.featured-card-list > article.featured-card.tablet-sm\\:pt-\\(--sol-spacing-10\\).laptop-sm\\:pt-\\(--sol-spacing-16\\).relative.pt-\\(--sol-spacing-8\\).featured-card__manual:nth-of-type(2)",
+      "rc2c2c2c3": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.bg-container.aem-GridColumn.aem-GridColumn--default--12 > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.featuredcardlist.aem-GridColumn.aem-GridColumn--default--12 > react-component > div.featured-card-list > article.featured-card.tablet-sm\\:pt-\\(--sol-spacing-10\\).laptop-sm\\:pt-\\(--sol-spacing-16\\).relative.pt-\\(--sol-spacing-8\\).featured-card__manual:nth-of-type(3)",
+      "rc2c2c3": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.bg-container.aem-GridColumn.aem-GridColumn--default--12 > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.ghost.aem-GridColumn.aem-GridColumn--default--12",
+      "rc2c2c4": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.bg-container.aem-GridColumn.aem-GridColumn--default--12 > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.carouselsingledouble.aem-GridColumn.aem-GridColumn--default--12",
+      "rc2c2c4c1": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.bg-container.aem-GridColumn.aem-GridColumn--default--12 > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.carouselsingledouble.aem-GridColumn.aem-GridColumn--default--12 > react-component > div.react-container.carousel-feature-tile-container.tablet-sm\\:pt-\\(--sol-spacing-10\\).laptop-sm\\:pt-\\(--sol-spacing-16\\).pt-\\(--sol-spacing-8\\) > div.overflow-hidden > div.swiper.swiper-initialized.swiper-horizontal.w-full.\\[\\&_\\.swiper-wrapper\\]\\:items-stretch.swiper-backface-hidden > div:nth-of-type(1)",
+      "rc2c2c4c2": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.bg-container.aem-GridColumn.aem-GridColumn--default--12 > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.carouselsingledouble.aem-GridColumn.aem-GridColumn--default--12 > react-component > div.react-container.carousel-feature-tile-container.tablet-sm\\:pt-\\(--sol-spacing-10\\).laptop-sm\\:pt-\\(--sol-spacing-16\\).pt-\\(--sol-spacing-8\\) > div.overflow-hidden > div.swiper.swiper-initialized.swiper-horizontal.w-full.\\[\\&_\\.swiper-wrapper\\]\\:items-stretch.swiper-backface-hidden > div.swiper-wrapper",
+      "rc2c2c4c2c1": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.bg-container.aem-GridColumn.aem-GridColumn--default--12 > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.carouselsingledouble.aem-GridColumn.aem-GridColumn--default--12 > react-component > div.react-container.carousel-feature-tile-container.tablet-sm\\:pt-\\(--sol-spacing-10\\).laptop-sm\\:pt-\\(--sol-spacing-16\\).pt-\\(--sol-spacing-8\\) > div.overflow-hidden > div.swiper.swiper-initialized.swiper-horizontal.w-full.\\[\\&_\\.swiper-wrapper\\]\\:items-stretch.swiper-backface-hidden > div.swiper-wrapper > div.swiper-slide.swiper-slide-active.h-auto\\!.self-stretch",
+      "rc2c2c4c2c2": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.bg-container.aem-GridColumn.aem-GridColumn--default--12 > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.carouselsingledouble.aem-GridColumn.aem-GridColumn--default--12 > react-component > div.react-container.carousel-feature-tile-container.tablet-sm\\:pt-\\(--sol-spacing-10\\).laptop-sm\\:pt-\\(--sol-spacing-16\\).pt-\\(--sol-spacing-8\\) > div.overflow-hidden > div.swiper.swiper-initialized.swiper-horizontal.w-full.\\[\\&_\\.swiper-wrapper\\]\\:items-stretch.swiper-backface-hidden > div.swiper-wrapper > div.swiper-slide.swiper-slide-next.h-auto\\!.self-stretch",
+      "rc2c2c4c2c3": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.bg-container.aem-GridColumn.aem-GridColumn--default--12 > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.carouselsingledouble.aem-GridColumn.aem-GridColumn--default--12 > react-component > div.react-container.carousel-feature-tile-container.tablet-sm\\:pt-\\(--sol-spacing-10\\).laptop-sm\\:pt-\\(--sol-spacing-16\\).pt-\\(--sol-spacing-8\\) > div.overflow-hidden > div.swiper.swiper-initialized.swiper-horizontal.w-full.\\[\\&_\\.swiper-wrapper\\]\\:items-stretch.swiper-backface-hidden > div.swiper-wrapper > div.swiper-slide.h-auto\\!.self-stretch:nth-of-type(3)",
+      "rc2c2c4c2c4": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.bg-container.aem-GridColumn.aem-GridColumn--default--12 > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.carouselsingledouble.aem-GridColumn.aem-GridColumn--default--12 > react-component > div.react-container.carousel-feature-tile-container.tablet-sm\\:pt-\\(--sol-spacing-10\\).laptop-sm\\:pt-\\(--sol-spacing-16\\).pt-\\(--sol-spacing-8\\) > div.overflow-hidden > div.swiper.swiper-initialized.swiper-horizontal.w-full.\\[\\&_\\.swiper-wrapper\\]\\:items-stretch.swiper-backface-hidden > div.swiper-wrapper > div.swiper-slide.h-auto\\!.self-stretch:nth-of-type(4)",
+      "rc2c2c4c2c5": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.bg-container.aem-GridColumn.aem-GridColumn--default--12 > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.carouselsingledouble.aem-GridColumn.aem-GridColumn--default--12 > react-component > div.react-container.carousel-feature-tile-container.tablet-sm\\:pt-\\(--sol-spacing-10\\).laptop-sm\\:pt-\\(--sol-spacing-16\\).pt-\\(--sol-spacing-8\\) > div.overflow-hidden > div.swiper.swiper-initialized.swiper-horizontal.w-full.\\[\\&_\\.swiper-wrapper\\]\\:items-stretch.swiper-backface-hidden > div.swiper-wrapper > div.swiper-slide.h-auto\\!.self-stretch:nth-of-type(5)",
+      "rc2c2c5": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.bg-container.aem-GridColumn.aem-GridColumn--default--12 > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.embed.aem-GridColumn.aem-GridColumn--default--12",
+      "rc2c3": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.banner.aem-GridColumn.aem-GridColumn--default--12",
+      "rc2c3c1": "#id-banner > div.tablet-sm\\:mt-\\(--sol-spacing-10\\).laptop-sm\\:mt-\\(--sol-spacing-16\\).relative.mt-\\(--sol-spacing-8\\).px-\\(--side-margin\\) > a.relative.block.w-full > div.laptop\\:aspect-\\[21\\/9\\].aspect-16\\/9.rounded-\\(--sol-radius-xl\\).h-full.w-full.relative.overflow-hidden",
+      "rc2c3c2": "#id-banner > div.tablet-sm\\:mt-\\(--sol-spacing-10\\).laptop-sm\\:mt-\\(--sol-spacing-16\\).relative.mt-\\(--sol-spacing-8\\).px-\\(--side-margin\\) > a.relative.block.w-full > div.pointer-events-none.absolute.inset-0.z-1.rounded-xl.bg-\\[linear-gradient\\(292deg\\,rgba\\(0\\,0\\,0\\,0\\)_13\\.26\\%\\,rgba\\(0\\,0\\,0\\,0\\.6\\)_89\\.81\\%\\)\\]",
+      "rc2c4": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.spotlightbroadcaster.aem-GridColumn.aem-GridColumn--default--12"
+    },
+    "sections": [
+      {
+        "id": "rc1",
+        "selector": "body > div.cmp-page__skiptomaincontent",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc2",
+        "selector": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.carouselpanel.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": "4x1",
+        "hasBg": false,
+        "hint": "block",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc3",
+        "selector": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.bg-container.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": null,
+        "hasBg": false,
+        "hint": "block",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc4",
+        "selector": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.banner.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc5",
+        "selector": "#main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.spotlightbroadcaster.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      }
+    ],
+    "invalidIgnore": []
+  },
+  "pageLayout": {
+    "box": {
+      "y": 213,
+      "height": 3775.25
+    },
+    "splits": [],
+    "start": {
+      "kind": "heading",
+      "look": {
+        "font": "\"Source Sans 3\", \"Source Han Sans SC\", sans-serif",
+        "color": "rgb(255, 255, 255)",
+        "align": "start"
+      }
+    }
+  },
+  "blocks": [
+    {
+      "id": "5e79eedb5626",
+      "type": "columns",
+      "detectionTier": 1,
+      "selector": "#main > div > div.carouselpanel.aem-GridColumn.aem-GridColumn--default--12 > react-component > section > div.row.carousel-panel__stacked-layout.max-laptop-sm\\:flex-col\\!.max-laptop-sm\\:gap-\\(--sol-spacing-8\\).max-tablet-sm\\:gap-\\(--sol-spacing-6\\).laptop-sm\\:w-full.max-tablet\\:px-\\(--sol-spacing-8\\).tablet\\:max-laptop-sm\\:px-\\(--sol-spacing-14\\).min-w-0",
+      "bounds": {
+        "x": 0,
+        "y": 213,
+        "width": 1440,
+        "height": 810
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "image + heading + link + list + button"
+      },
+      "description": "row",
+      "features": {
+        "skeleton": "(~@({~ T}) [T|nav])",
+        "variant": "(~@({~k Tcw}) [Tr|nav])",
+        "variantClean": "(~@({~k Tw}) [Tk|nav])"
+      },
+      "screenshot": "blocks/5e79eedb5626.jpg",
+      "html": "blocks/5e79eedb5626.html"
+    },
+    {
+      "id": "ac193e7e9e06",
+      "type": "columns",
+      "detectionTier": 1,
+      "selector": "#container-7f83424b86 > div > div.accordion-carousel.aem-GridColumn.aem-GridColumn--default--12",
+      "bounds": {
+        "x": 0,
+        "y": 1023,
+        "width": 1440,
+        "height": 269
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "heading + text + button"
+      },
+      "description": "accordion-carousel",
+      "features": {
+        "skeleton": "[T|nav]",
+        "variant": "[Tc|nav]",
+        "variantClean": "[Tk|nav]"
+      },
+      "screenshot": "blocks/ac193e7e9e06.jpg",
+      "html": "blocks/ac193e7e9e06.html"
+    },
+    {
+      "id": "fd9aea51385f",
+      "type": "columns",
+      "detectionTier": 1,
+      "selector": "#container-7f83424b86 > div > div.featuredcardlist.aem-GridColumn.aem-GridColumn--default--12 > react-component > div > article:nth-child(1)",
+      "bounds": {
+        "x": 0,
+        "y": 1292,
+        "width": 1440,
+        "height": 471
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "image + text + heading + button"
+      },
+      "description": "featured-card",
+      "features": {
+        "skeleton": "[T|(T button)]",
+        "variant": "[T|(Tcr button~c)]",
+        "variantClean": "[T|(Tk button~c)]"
+      },
+      "screenshot": "blocks/fd9aea51385f.jpg",
+      "html": "blocks/fd9aea51385f.html"
+    },
+    {
+      "id": "be1083577c17",
+      "type": "columns",
+      "detectionTier": 1,
+      "selector": "#container-7f83424b86 > div > div.featuredcardlist.aem-GridColumn.aem-GridColumn--default--12 > react-component > div > article:nth-child(2)",
+      "bounds": {
+        "x": 0,
+        "y": 1763,
+        "width": 1440,
+        "height": 431
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "image + text + heading + button"
+      },
+      "description": "featured-card",
+      "features": {
+        "skeleton": "[T|(T button)]",
+        "variant": "[T|(Tcr button~c)]",
+        "variantClean": "[T|(Tk button~c)]"
+      },
+      "screenshot": "blocks/be1083577c17.jpg",
+      "html": "blocks/be1083577c17.html"
+    },
+    {
+      "id": "0ccf54e443af",
+      "type": "columns",
+      "detectionTier": 1,
+      "selector": "#container-7f83424b86 > div > div.featuredcardlist.aem-GridColumn.aem-GridColumn--default--12 > react-component > div > article:nth-child(3)",
+      "bounds": {
+        "x": 0,
+        "y": 2194,
+        "width": 1440,
+        "height": 487
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "image + text + heading + button"
+      },
+      "description": "featured-card",
+      "features": {
+        "skeleton": "[T|(T button)]",
+        "variant": "[T|(Tcr button~c)]",
+        "variantClean": "[T|(Tk button~c)]"
+      },
+      "screenshot": "blocks/0ccf54e443af.jpg",
+      "html": "blocks/0ccf54e443af.html"
+    },
+    {
+      "id": "ecd671c3e93a",
+      "type": "columns",
+      "detectionTier": 1,
+      "selector": "#container-7f83424b86 > div > div.carouselsingledouble.aem-GridColumn.aem-GridColumn--default--12 > react-component > div > div > div > div:nth-child(1)",
+      "bounds": {
+        "x": 88,
+        "y": 2721,
+        "width": 1264,
+        "height": 44
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "heading + button"
+      },
+      "description": "",
+      "features": {
+        "skeleton": "[T|[button]]",
+        "variant": "[Tc|[button~c]]",
+        "variantClean": "[Tk|[button~c]]"
+      },
+      "screenshot": "blocks/ecd671c3e93a.jpg",
+      "html": "blocks/ecd671c3e93a.html"
+    },
+    {
+      "id": "67be7ad9b023",
+      "type": "columns",
+      "detectionTier": 1,
+      "selector": "#container-7f83424b86 > div > div.carouselsingledouble.aem-GridColumn.aem-GridColumn--default--12 > react-component > div > div > div > div.swiper-wrapper",
+      "bounds": {
+        "x": 88,
+        "y": 2765,
+        "width": 1264,
+        "height": 408
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "dense",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "image + text + heading + link + button"
+      },
+      "description": "swiper-wrapper",
+      "features": {
+        "skeleton": "[T|~(T)]",
+        "variant": "[T|~w(Tc)]",
+        "variantClean": "[T|~w(Tk)]"
+      },
+      "screenshot": "blocks/67be7ad9b023.jpg",
+      "html": "blocks/67be7ad9b023.html"
+    },
+    {
+      "id": "2d2a4f8aabd4",
+      "type": "unknown",
+      "detectionTier": 1,
+      "selector": "#main > div > div.banner.aem-GridColumn.aem-GridColumn--default--12",
+      "bounds": {
+        "x": 0,
+        "y": 3213,
+        "width": 1440,
+        "height": 775
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "link + image + heading"
+      },
+      "description": "banner",
+      "features": {
+        "skeleton": "~@({~ T})",
+        "variant": "~@({~k Tw})",
+        "variantClean": "~@({~k Tw})"
+      },
+      "screenshot": "blocks/2d2a4f8aabd4.jpg",
+      "html": "blocks/2d2a4f8aabd4.html"
+    }
+  ],
+  "globalElements": {
+    "header": {
+      "selector": "div.experiencefragment.aem-GridColumn"
+    },
+    "footer": {
+      "selector": "footer.experiencefragment.aem-GridColumn"
+    },
+    "isFirstCapture": true
+  }
+}
