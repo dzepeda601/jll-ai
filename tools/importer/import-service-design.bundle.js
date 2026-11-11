@@ -1303,6 +1303,14 @@ var CustomImportScript = (() => {
       if (picture) picture.querySelectorAll("source").forEach((s) => s.remove());
     });
   }
+  function useDamWebRenditions(root) {
+    root.querySelectorAll("img").forEach((img) => {
+      const src = img.getAttribute("src") || "";
+      if (!/^https:\/\/www\.jll\.com\/content\/dam\/[^?#]+\.(jpe?g|png)(\?[^#]*)?$/i.test(src)) return;
+      const base = src.split("?")[0];
+      img.setAttribute("src", `${base}/jcr:content/renditions/cq5dam.web.1280.1280.jpeg`);
+    });
+  }
   function transform(hookName, element, payload) {
     const root = element;
     if (hookName === "beforeTransform") {
@@ -1388,6 +1396,7 @@ var CustomImportScript = (() => {
         });
       });
       normalizeScene7Images(root);
+      useDamWebRenditions(root);
     }
   }
 

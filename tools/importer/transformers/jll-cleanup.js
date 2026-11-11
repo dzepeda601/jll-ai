@@ -74,6 +74,19 @@ function normalizeScene7Images(root) {
   });
 }
 
+/**
+ * Point raw AEM DAM originals (www.jll.com/content/dam/...jpg|png, often 10-30MB) at the
+ * published 1280px web rendition. Edge Delivery rejects images over 20MB.
+ */
+function useDamWebRenditions(root) {
+  root.querySelectorAll('img').forEach((img) => {
+    const src = img.getAttribute('src') || '';
+    if (!/^https:\/\/www\.jll\.com\/content\/dam\/[^?#]+\.(jpe?g|png)(\?[^#]*)?$/i.test(src)) return;
+    const base = src.split('?')[0];
+    img.setAttribute('src', `${base}/jcr:content/renditions/cq5dam.web.1280.1280.jpeg`);
+  });
+}
+
 export default function transform(hookName, element, payload) {
   const root = element;
 
@@ -174,5 +187,6 @@ export default function transform(hookName, element, payload) {
     });
 
     normalizeScene7Images(root);
+    useDamWebRenditions(root);
   }
 }
