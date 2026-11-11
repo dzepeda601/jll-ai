@@ -726,6 +726,26 @@ function buildForm(fields, submit) {
 }
 
 /**
+ * Fetches the form definition. An absolute link to an Edge Delivery host (*.aem.page /
+ * *.aem.live) that can't be fetched cross-origin (e.g. from a local dev server) falls back to
+ * the same path on the current origin, which serves the same sheet.
+ * @param {string} source - Form definition URL from the block
+ * @returns {Promise<Response>} Fetch response
+ */
+async function fetchFormDefinition(source) {
+  const url = new URL(source, window.location.origin);
+  const sameOrigin = url.origin === window.location.origin;
+  const edgeHost = /\.aem\.(page|live)$/.test(url.hostname);
+  try {
+    const resp = await fetch(url);
+    if (resp.ok || sameOrigin || !edgeHost) return resp;
+  } catch (error) {
+    if (sameOrigin || !edgeHost) throw error;
+  }
+  return fetch(new URL(`${url.pathname}${url.search}`, window.location.origin));
+}
+
+/**
  * Initializes form block with data from JSON endpoint
  * @param {HTMLElement} block - Form block element
  */
@@ -737,7 +757,7 @@ export default function decorate(block) {
       entries.forEach(async (entry) => {
         if (entry.isIntersecting) {
           try {
-            const resp = await fetch(new URL(source, window.location.origin));
+            const resp = await fetchFormDefinition(source);
             if (!resp.ok) throw new Error(`${resp.status}: ${resp.statusText}`);
             const json = await resp.json();
             const raw = json.data ?? json.fields ?? json;

@@ -1494,7 +1494,7 @@ var CustomImportScript = (() => {
   }
 
   // tools/importer/parsers/form.js
-  var FORM_DEFINITION = "/forms/contact-us.json";
+  var FORM_DEFINITION = "https://main--jll-ai--dzepeda601.aem.live/forms/contact-us.json";
   var FORM_SUBMIT = "https://demo.bbird.live/contact-us/";
   function linkCell(document, href) {
     const a = document.createElement("a");
