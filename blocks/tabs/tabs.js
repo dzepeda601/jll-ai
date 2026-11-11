@@ -146,12 +146,34 @@ function buildTabsFromSections(tabSections) {
   tabsContainer.append(tabsUI);
 }
 
+/*
+ * Row-based tabs (library convention): one row per tab, label | content.
+ * Used when no Tab ID sections follow the block; each content cell becomes a panel.
+ */
+function collectTabRows(block) {
+  return [...block.children].map((row, index) => {
+    const [labelCell, ...contentCells] = [...row.children];
+    const title = labelCell?.textContent.trim();
+    if (!title) return null;
+    const panel = document.createElement('div');
+    panel.className = 'tabs-panel';
+    contentCells.forEach((cell) => panel.append(...cell.childNodes));
+    return { id: toClassName(title) || `tab-${index + 1}`, title, section: panel };
+  }).filter(Boolean);
+}
+
 export default function decorate(block) {
   const currSection = block.closest('.section');
   if (!currSection) return;
 
-  const tabDefs = collectTabSections(currSection);
-  if (!tabDefs.length) return;
+  let tabDefs = collectTabSections(currSection);
+  if (!tabDefs.length) {
+    tabDefs = collectTabRows(block);
+    if (!tabDefs.length) return;
+    const tabsUI = buildTabsUI(tabDefs, currSection, currSection.id || '');
+    block.replaceChildren(tabsUI);
+    return;
+  }
 
   currSection.classList.add('tabs');
   tabDefs.forEach((def) => def.section.classList.remove('tabs'));

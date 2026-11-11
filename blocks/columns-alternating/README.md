@@ -10,7 +10,9 @@ Single block table. Content: One row per feature, 2 cells: an image-only cell an
 
 ## Supported variations
 
-No variations.
+| Variation | Option class |
+| --- | --- |
+| Video | `video` |
 
 ## Universal Editor fields
 

@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/services/capital-markets/private-investor",
+  "path": "en-us/services/capital-markets/private-investor",
+  "timestamp": "2026-11-11T00:34:01.136Z",
+  "title": "Private investor services - Private real estate investment | JLL",
+  "template": "service-landing",
+  "blocks": [
+    "hero-split",
+    "cards-stats",
+    "carousel-split",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "hero-photo-panel",
+    "form"
+  ],
+  "importScript": "aa48fc10c5c3"
+}

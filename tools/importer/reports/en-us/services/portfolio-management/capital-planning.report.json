@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/services/portfolio-management/capital-planning",
+  "path": "en-us/services/portfolio-management/capital-planning",
+  "timestamp": "2026-11-11T00:50:26.837Z",
+  "title": "Real estate capital planning services | JLL",
+  "template": "service-detail",
+  "blocks": [
+    "hero-split",
+    "cards-stats",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "hero-photo-panel"
+  ],
+  "importScript": "2c316a8e605c"
+}

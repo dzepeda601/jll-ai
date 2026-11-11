@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/services/value-risk/valuations",
+  "path": "en-us/services/value-risk/valuations",
+  "timestamp": "2026-11-11T00:52:55.565Z",
+  "title": "Real estate valuation advisory - Capital markets | JLL",
+  "template": "service-detail",
+  "blocks": [
+    "hero-split",
+    "cards-stats",
+    "accordion-divided",
+    "carousel-split",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "hero-photo-panel",
+    "form"
+  ],
+  "importScript": "2c316a8e605c"
+}

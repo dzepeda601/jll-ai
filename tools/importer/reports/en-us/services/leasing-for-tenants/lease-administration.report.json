@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/services/leasing-for-tenants/lease-administration",
+  "path": "en-us/services/leasing-for-tenants/lease-administration",
+  "timestamp": "2026-11-11T00:38:32.343Z",
+  "title": "Commercial lease administration services | JLL",
+  "template": "service-detail",
+  "blocks": [
+    "hero-split",
+    "cards-stats",
+    "carousel-split",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "form"
+  ],
+  "importScript": "2c316a8e605c"
+}

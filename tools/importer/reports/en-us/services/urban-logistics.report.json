@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/services/urban-logistics",
+  "path": "en-us/services/urban-logistics",
+  "timestamp": "2026-11-11T00:52:06.803Z",
+  "title": "Urban logistics and last mile real estate solutions | JLL",
+  "template": "service-detail",
+  "blocks": [
+    "hero-split",
+    "cards-stats",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "hero-photo-panel",
+    "columns-alternating",
+    "form"
+  ],
+  "importScript": "2c316a8e605c"
+}

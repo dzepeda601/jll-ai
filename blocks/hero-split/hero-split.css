@@ -1,0 +1,291 @@
+/* Hero split – JLL hub hero ("goldenratio").
+   Source computed styles at 1440px: text column 449px beside a 775px 16:9
+   image with a 12px radius, 40px apart; H1 title-1, subtitle 24/32,
+   primary + tonal buttons 8px apart.
+   Mobile: image on top, text below. >= 900px: text left, image right. */
+
+.hero-split {
+  display: flex;
+  flex-direction: column;
+  gap: var(--jll-space-8);
+  padding-block: var(--jll-space-6) 0;
+  color: var(--jll-text-default);
+}
+
+.hero-split .hero-split-media {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--jll-radius-xl);
+  line-height: 0;
+}
+
+.hero-split .hero-split-media picture {
+  display: contents;
+}
+
+.hero-split .hero-split-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  object-fit: cover;
+}
+
+.hero-split .hero-split-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--jll-space-2);
+  min-width: 0;
+}
+
+.hero-split .hero-split-content > * {
+  margin: 0;
+}
+
+.hero-split .hero-split-eyebrow {
+  font-size: var(--jll-eyebrow-size);
+  line-height: var(--jll-eyebrow-line-height);
+  letter-spacing: var(--jll-eyebrow-tracking);
+  font-variant: small-caps;
+}
+
+.hero-split .hero-split-content > p:not(.hero-split-eyebrow) {
+  font-size: var(--jll-title-3-size);
+  line-height: var(--jll-title-3-line-height);
+  letter-spacing: var(--jll-title-3-tracking);
+}
+
+.hero-split .hero-split-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--jll-space-2);
+  margin-top: var(--jll-space-6);
+}
+
+.hero-split .hero-split-actions > .button-container {
+  margin: 0;
+}
+
+/* italic marks the secondary CTA; it is not a visual style */
+.hero-split .hero-split-actions em {
+  font-style: normal;
+}
+
+@media (width >= 900px) {
+  .hero-split {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    gap: var(--jll-space-10);
+    padding-block-start: var(--jll-space-12);
+  }
+
+  .hero-split .hero-split-media {
+    flex: 775 1 0;
+    min-width: 0;
+  }
+
+  .hero-split .hero-split-content {
+    flex: 449 1 0;
+  }
+
+  .hero-split.no-image .hero-split-content {
+    max-width: 600px;
+  }
+
+  .hero-split .hero-split-actions {
+    margin-top: var(--jll-space-10);
+  }
+}
+
+@media (width >= 1200px) {
+  .hero-split .hero-split-actions {
+    margin-top: var(--jll-space-12);
+  }
+}
+
+/* ------------------------------------------------------------------
+   Option: side-image (block class "hero-split side-image")
+   JLL offering hero ("sideImage"). Source computed styles at 1440px:
+   H1 48/60 across the full width; 48px below it a 612px 4:3 image on
+   the left and a 516px text column (intro 30/36, CTAs 40px below)
+   starting 136px after the image. Scoped to .side-image.
+   ------------------------------------------------------------------ */
+
+.hero-split.side-image .hero-split-title > * {
+  margin: 0;
+}
+
+.hero-split.side-image .hero-split-media {
+  aspect-ratio: 4 / 3;
+}
+
+.hero-split.side-image .hero-split-content > p:not(.hero-split-eyebrow) {
+  font-size: var(--jll-title-2-size);
+  line-height: var(--jll-title-2-line-height);
+  letter-spacing: var(--jll-title-2-tracking);
+}
+
+@media (width >= 900px) {
+  .hero-split.side-image {
+    display: grid;
+    grid-template-columns: minmax(0, 612fr) minmax(0, 136fr) minmax(0, 516fr);
+    gap: var(--jll-space-12) 0;
+    align-items: start;
+  }
+
+  .hero-split.side-image .hero-split-title {
+    grid-column: 1 / -1;
+  }
+
+  .hero-split.side-image .hero-split-media {
+    grid-column: 1;
+  }
+
+  .hero-split.side-image .hero-split-content {
+    grid-column: 3;
+  }
+
+  .hero-split.side-image.no-image .hero-split-content {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ------------------------------------------------------------------
+   Option: stacked (block class "hero-split stacked")
+   JLL design-services hero ("designServices"). Source computed styles
+   at 1440px: large display eyebrow 96/96, a full-width 4:3 image, then
+   the H1 60/60 light and below it the intro 30/36 (~75%) with the CTA
+   on the right. Scoped to .stacked.
+   ------------------------------------------------------------------ */
+
+.hero-split.stacked {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--jll-space-6);
+}
+
+.hero-split.stacked .hero-split-media {
+  order: -1;
+  aspect-ratio: 4 / 3;
+  border-radius: 0;
+}
+
+.hero-split.stacked .hero-split-content {
+  display: contents;
+}
+
+.hero-split.stacked .hero-split-content > .hero-split-eyebrow {
+  order: -2;
+  font-size: var(--jll-display-size);
+  line-height: var(--jll-display-line-height);
+  letter-spacing: var(--jll-display-tracking);
+  font-weight: var(--jll-font-weight-semibold);
+  font-variant: normal;
+}
+
+.hero-split.stacked .hero-split-content > h1 {
+  font-size: var(--jll-display-size);
+  line-height: var(--jll-display-line-height);
+  letter-spacing: var(--jll-display-tracking);
+  font-weight: var(--jll-font-weight-light);
+}
+
+.hero-split.stacked .hero-split-content > p:not(.hero-split-eyebrow) {
+  font-size: var(--jll-title-2-size);
+  line-height: var(--jll-title-2-line-height);
+  letter-spacing: var(--jll-title-2-tracking);
+}
+
+.hero-split.stacked .hero-split-actions {
+  margin-top: 0;
+}
+
+@media (width >= 900px) {
+  .hero-split.stacked {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 1fr);
+    gap: var(--jll-space-8) var(--jll-space-10);
+  }
+
+  .hero-split.stacked .hero-split-content > .hero-split-eyebrow {
+    font-size: 96px;
+    line-height: 96px;
+  }
+
+  .hero-split.stacked .hero-split-media,
+  .hero-split.stacked .hero-split-content > .hero-split-eyebrow,
+  .hero-split.stacked .hero-split-content > h1 {
+    grid-column: 1 / -1;
+  }
+
+  .hero-split.stacked .hero-split-content > p:not(.hero-split-eyebrow, .button-container) {
+    grid-column: 1;
+  }
+
+  .hero-split.stacked .hero-split-actions {
+    grid-column: 2;
+    grid-row: span 2;
+    justify-content: flex-end;
+    align-self: start;
+  }
+}
+
+/* ------------------------------------------------------------------
+   Option: bleed (with side-image: "hero-split side-image bleed")
+   JLL landing hero ("creative2"). Source computed styles at 1440px:
+   eyebrow above an H1 60/60 light; 64px below it a 4:3 image that
+   runs to the page edge (only the top inner corner rounded), 96px
+   gap, then the text column: lead 30/36, sub paragraphs 24/32, CTA
+   40px below. Scoped to .bleed.
+   ------------------------------------------------------------------ */
+
+.hero-split.bleed .hero-split-title h1 {
+  font-size: var(--jll-display-size);
+  line-height: var(--jll-display-line-height);
+  letter-spacing: var(--jll-display-tracking);
+  font-weight: var(--jll-font-weight-light);
+}
+
+.hero-split.bleed .hero-split-title .hero-split-eyebrow {
+  margin-bottom: var(--jll-space-2);
+  font-size: var(--jll-title-2-size);
+  line-height: var(--jll-title-2-line-height);
+  letter-spacing: var(--jll-title-2-tracking);
+  font-variant: normal;
+}
+
+.hero-split.bleed .hero-split-media {
+  margin-inline: calc(-1 * var(--content-padding-inline));
+  border-radius: 0;
+}
+
+.hero-split.side-image.bleed .hero-split-content > p + p {
+  font-size: var(--jll-title-3-size);
+  line-height: var(--jll-title-3-line-height);
+  letter-spacing: var(--jll-title-3-tracking);
+}
+
+@media (width >= 900px) {
+  .hero-split.side-image.bleed {
+    grid-template-columns: minmax(0, 584fr) minmax(0, 96fr) minmax(0, 584fr);
+    gap: var(--jll-space-16) 0;
+  }
+
+  .hero-split.bleed .hero-split-media {
+    margin-inline: calc(-1 * var(--content-padding-inline)) 0;
+    border-start-end-radius: var(--jll-radius-xl);
+  }
+
+  .hero-split.bleed .hero-split-content {
+    padding-block-start: var(--jll-space-10);
+  }
+}
+
+@media (width >= 1200px) {
+  /* beyond the content cap the page edge is further out than the side padding */
+  .hero-split.bleed .hero-split-media {
+    margin-inline-start: calc(-1 * var(--content-padding-inline) - max(0px, (100vw - var(--grid-container-width)) / 2));
+  }
+}

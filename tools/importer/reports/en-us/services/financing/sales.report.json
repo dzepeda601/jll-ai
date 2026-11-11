@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/services/financing/sales",
+  "path": "en-us/services/financing/sales",
+  "timestamp": "2026-11-11T00:48:49.648Z",
+  "title": "Commercial Real Estate Loan Sales - Capital Markets | JLL",
+  "template": "service-detail",
+  "blocks": [
+    "hero-split",
+    "cards-stats",
+    "carousel-split",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "hero-photo-panel",
+    "form"
+  ],
+  "importScript": "2c316a8e605c"
+}

@@ -1,0 +1,31 @@
+{
+  "variantName": "cards-stats",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Row of stat tiles: an oversized figure over a short label on a sand fill",
+    "layout": "Sand (#f9f2ec) tiles with 12px radius and 32px padding, 48px medium value over an 18px subdued label; all tiles in one row from 900px, two across from 600px, stacked on mobile."
+  },
+  "contentPattern": {
+    "description": "3 stat tiles (value + label).",
+    "structure": "One row per stat. One cell: value paragraph (e.g. **4,100+**) then label paragraph. Or two cells: value | label.",
+    "notes": "Stat values are not headings; keep them as paragraphs. Option small: text tiles; author a heading (H3) as the tile title and a paragraph as the description; a tile may hold only the description."
+  },
+  "options": [
+    {
+      "class": "small",
+      "label": "Small"
+    }
+  ],
+  "memberVariantIds": [],
+  "usage": {
+    "description": "Row of stat tiles with a large value and a label.",
+    "pagesUsing": [
+      "/en-us/services/capital-markets",
+      "/en-us/services/consulting"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-10"
+  },
+  "reuseGuidance": "Use for key-figure rows. Use cards for image/text cards and cards-eyebrow for linked cards."
+}

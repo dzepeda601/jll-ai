@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/services/sustainability",
+  "path": "en-us/services/sustainability",
+  "timestamp": "2026-11-11T00:35:00.908Z",
+  "title": "Sustainability in real estate - Sustainability services | JLL",
+  "template": "service-landing",
+  "blocks": [
+    "hero-split",
+    "cards-stats",
+    "carousel-split",
+    "carousel-split",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "columns-alternating",
+    "columns-alternating",
+    "form"
+  ],
+  "importScript": "aa48fc10c5c3"
+}

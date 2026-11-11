@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/services/investing/quants",
+  "path": "en-us/services/investing/quants",
+  "timestamp": "2026-11-11T00:49:40.703Z",
+  "title": "AI for Real Estate Investment - Capital Markets | JLL",
+  "template": "service-detail",
+  "blocks": [
+    "hero-split",
+    "cards-stats",
+    "carousel-split",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "hero-photo-panel",
+    "form"
+  ],
+  "importScript": "2c316a8e605c"
+}

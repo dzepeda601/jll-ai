@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/services/financing/derivative-advisory",
+  "path": "en-us/services/financing/derivative-advisory",
+  "timestamp": "2026-11-11T00:48:21.572Z",
+  "title": "Derivatives Advisory Services - Capital Markets | JLL",
+  "template": "service-detail",
+  "blocks": [
+    "hero-split",
+    "cards-stats",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "hero-photo-panel",
+    "form"
+  ],
+  "importScript": "2c316a8e605c"
+}

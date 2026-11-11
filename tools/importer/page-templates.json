@@ -124,6 +124,878 @@
           "defaultContent": []
         }
       ]
+    },
+    {
+      "name": "service-overview",
+      "urls": [
+        "https://www.jll.com/en-us/services/capital-markets",
+        "https://www.jll.com/en-us/services/experience-services",
+        "https://www.jll.com/en-us/services/facilities-management",
+        "https://www.jll.com/en-us/services/financing",
+        "https://www.jll.com/en-us/services/investing",
+        "https://www.jll.com/en-us/services/leasing",
+        "https://www.jll.com/en-us/services/occupancy-space-planning",
+        "https://www.jll.com/en-us/services/operations-management",
+        "https://www.jll.com/en-us/services/portfolio-management",
+        "https://www.jll.com/en-us/services/strategy-design",
+        "https://www.jll.com/en-us/services/technology",
+        "https://www.jll.com/en-us/services/value-risk"
+      ],
+      "representativeUrl": "https://www.jll.com/en-us/services/capital-markets",
+      "description": "JLL service overview pages (e.g. /en-us/services/capital-markets, /leasing, /investing): golden-ratio hero, stats row, service tile lists, side-content banners (image or Brightcove video), photo + link panel (jumppoint) or people banner, client-story carousel, article / listing card lists, FAQ or rotating-tile accordion and a contact section with form.",
+      "urlPattern": "/en-us/services/*",
+      "blocks": [
+        {
+          "name": "hero-split",
+          "instances": [
+            "div.hero.aem-GridColumn",
+            "react-component[data-component=\"hero\"]"
+          ]
+        },
+        {
+          "name": "cards-stats",
+          "instances": [
+            "div.stats.aem-GridColumn",
+            "react-component[data-component=\"stats\"]"
+          ]
+        },
+        {
+          "name": "cards-eyebrow",
+          "instances": [
+            "div.dynamiclist.aem-GridColumn",
+            "div.dynamiclist"
+          ]
+        },
+        {
+          "name": "hero-photo-panel",
+          "instances": [
+            "div.jumppoint.aem-GridColumn",
+            "div.banner.aem-GridColumn:has(.c-people)"
+          ]
+        },
+        {
+          "name": "columns-alternating",
+          "instances": [
+            "div.banner.aem-GridColumn:has(.c-side-content)"
+          ]
+        },
+        {
+          "name": "accordion-divided",
+          "instances": [
+            "div.accordion.aem-GridColumn",
+            "div.rotatingtile.aem-GridColumn"
+          ]
+        },
+        {
+          "name": "carousel-split",
+          "instances": [
+            "div.carouselsingledouble"
+          ]
+        },
+        {
+          "name": "form",
+          "instances": [
+            "div.eloquaform"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1-hero",
+          "name": "Service hero",
+          "selector": [
+            "div.hero.aem-GridColumn"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-split"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2-stats",
+          "name": "Stats (e.g. A capital markets leader)",
+          "selector": [
+            "div.stats.aem-GridColumn"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-stats"
+          ],
+          "defaultContent": [
+            "div.stats.aem-GridColumn h2",
+            "div.stats.aem-GridColumn .rich-text p"
+          ]
+        },
+        {
+          "id": "section-3-investing",
+          "name": "Service tiles (Investing / Explore our services)",
+          "selector": [
+            "div.cmp-container > div.aem-Grid > div.dynamiclist:nth-of-type(2)",
+            "div.dynamiclist.hidetags"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-eyebrow"
+          ],
+          "defaultContent": [
+            "div.dynamiclist .c-list-with-request__title"
+          ]
+        },
+        {
+          "id": "section-4-financing",
+          "name": "Service tiles (Financing)",
+          "selector": [
+            "div.cmp-container > div.aem-Grid > div.dynamiclist:nth-of-type(3)"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-eyebrow"
+          ],
+          "defaultContent": [
+            "div.dynamiclist .c-list-with-request__title"
+          ]
+        },
+        {
+          "id": "section-5-value-risk",
+          "name": "Service tiles (Value and risk)",
+          "selector": [
+            "div.cmp-container > div.aem-Grid > div.dynamiclist:nth-of-type(4)"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-eyebrow"
+          ],
+          "defaultContent": [
+            "div.dynamiclist .c-list-with-request__title"
+          ]
+        },
+        {
+          "id": "section-6-technology",
+          "name": "Side-content banner(s) (image or video)",
+          "selector": [
+            "div.banner.aem-GridColumn:has(.c-side-content)"
+          ],
+          "style": null,
+          "blocks": [
+            "columns-alternating"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-7-expertise",
+          "name": "Our fields of expertise (photo + link panel)",
+          "selector": [
+            "div.jumppoint.aem-GridColumn"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-photo-panel"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-8-clients",
+          "name": "What our clients say (client story carousel)",
+          "selector": [
+            "div.carouselsingledouble"
+          ],
+          "style": null,
+          "blocks": [
+            "carousel-split"
+          ],
+          "defaultContent": [
+            "div.carouselsingledouble h2"
+          ]
+        },
+        {
+          "id": "section-9-articles",
+          "name": "Read our latest articles",
+          "selector": [
+            "div.cmp-container > div.aem-Grid > div.dynamiclist:nth-of-type(8)"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-eyebrow"
+          ],
+          "defaultContent": [
+            "div.dynamiclist .c-list-with-request__title"
+          ]
+        },
+        {
+          "id": "section-10-listings",
+          "name": "View our featured listings",
+          "selector": [
+            "div.cmp-container > div.aem-Grid > div.dynamiclist:nth-of-type(9)"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-eyebrow"
+          ],
+          "defaultContent": [
+            "div.dynamiclist .c-list-with-request__title"
+          ]
+        },
+        {
+          "id": "section-11-contact",
+          "name": "Contact us (editorial + form)",
+          "selector": [
+            "div.editorial.aem-GridColumn:has(+ div.eloquaform)",
+            "div.eloquaform"
+          ],
+          "style": null,
+          "blocks": [
+            "form"
+          ],
+          "defaultContent": [
+            "div.editorial .editorial__title h2",
+            "div.editorial .editorial__body p"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "service-detail",
+      "urls": [
+        "https://www.jll.com/en-us/services/consulting",
+        "https://www.jll.com/en-us/services/facilities-management/engineering",
+        "https://www.jll.com/en-us/services/facilities-management/integrated",
+        "https://www.jll.com/en-us/services/financing/agency-lending",
+        "https://www.jll.com/en-us/services/financing/debt-advisory",
+        "https://www.jll.com/en-us/services/financing/derivative-advisory",
+        "https://www.jll.com/en-us/services/financing/distressed-assets",
+        "https://www.jll.com/en-us/services/financing/loan-servicing",
+        "https://www.jll.com/en-us/services/financing/sales",
+        "https://www.jll.com/en-us/services/government-facilities-technology",
+        "https://www.jll.com/en-us/services/higher-education-public-private-partnerships",
+        "https://www.jll.com/en-us/services/infrastructure-advisory-services",
+        "https://www.jll.com/en-us/services/investing/banking",
+        "https://www.jll.com/en-us/services/investing/banking/energy-and-infrastructure-advisory",
+        "https://www.jll.com/en-us/services/investing/optimization",
+        "https://www.jll.com/en-us/services/investing/quants",
+        "https://www.jll.com/en-us/services/investing/sales",
+        "https://www.jll.com/en-us/services/leasing-for-owners/property-marketing",
+        "https://www.jll.com/en-us/services/leasing-for-tenants/lease-administration",
+        "https://www.jll.com/en-us/services/leasing-for-tenants/lease-restructuring",
+        "https://www.jll.com/en-us/services/leasing-for-tenants/location-strategy",
+        "https://www.jll.com/en-us/services/portfolio-management/capital-planning",
+        "https://www.jll.com/en-us/services/portfolio-management/transaction-management",
+        "https://www.jll.com/en-us/services/project-management",
+        "https://www.jll.com/en-us/services/project-management/construction",
+        "https://www.jll.com/en-us/services/project-management/cost-management",
+        "https://www.jll.com/en-us/services/project-management/development",
+        "https://www.jll.com/en-us/services/project-management/multisite",
+        "https://www.jll.com/en-us/services/project-management/relocation",
+        "https://www.jll.com/en-us/services/property-management",
+        "https://www.jll.com/en-us/services/supply-chain",
+        "https://www.jll.com/en-us/services/sustainability/decarbonization",
+        "https://www.jll.com/en-us/services/sustainability/electric-vehicle-charging",
+        "https://www.jll.com/en-us/services/sustainability/program-management",
+        "https://www.jll.com/en-us/services/sustainability/renewable-energy",
+        "https://www.jll.com/en-us/services/technology/artificial-intelligence",
+        "https://www.jll.com/en-us/services/urban-logistics",
+        "https://www.jll.com/en-us/services/value-risk/due-diligence",
+        "https://www.jll.com/en-us/services/value-risk/litigation-support",
+        "https://www.jll.com/en-us/services/value-risk/property-tax",
+        "https://www.jll.com/en-us/services/value-risk/risk",
+        "https://www.jll.com/en-us/services/value-risk/valuations",
+        "https://www.jll.com/en-us/services/workplace-strategy"
+      ],
+      "representativeUrl": "https://www.jll.com/en-us/services/consulting",
+      "description": "JLL service detail pages (e.g. /en-us/services/consulting, /financing/debt-advisory): side-image hero, text or figure stat tiles, editorial text, rotating-tile image accordion, tabbed information, client-story carousel, people / side-content / full-width message banners, featured video tile, article / listing card lists, FAQ accordion, 2-column \"explore similar offerings\" link list and a contact section with form.",
+      "blocks": [
+        {
+          "name": "hero-split",
+          "instances": [
+            "div.hero.aem-GridColumn",
+            "react-component[data-component=\"hero\"]"
+          ]
+        },
+        {
+          "name": "cards-stats",
+          "instances": [
+            "div.stats.aem-GridColumn",
+            "react-component[data-component=\"stats\"]"
+          ]
+        },
+        {
+          "name": "accordion-divided",
+          "instances": [
+            "div.accordion.aem-GridColumn",
+            "div.rotatingtile.aem-GridColumn"
+          ]
+        },
+        {
+          "name": "tabs",
+          "instances": [
+            "div.tabbedinformation"
+          ]
+        },
+        {
+          "name": "carousel-split",
+          "instances": [
+            "div.carouselsingledouble"
+          ]
+        },
+        {
+          "name": "cards-eyebrow",
+          "instances": [
+            "div.dynamiclist.aem-GridColumn",
+            "div.dynamiclist",
+            "div.jumppoint.aem-GridColumn"
+          ]
+        },
+        {
+          "name": "hero-photo-panel",
+          "instances": [
+            "div.banner.aem-GridColumn:has(.c-people)"
+          ]
+        },
+        {
+          "name": "columns-alternating",
+          "instances": [
+            "div.banner.aem-GridColumn:has(.c-side-content)",
+            "div.featuredtile"
+          ]
+        },
+        {
+          "name": "form",
+          "instances": [
+            "div.eloquaform"
+          ]
+        }
+      ],
+      "urlPattern": "/en-us/services/*",
+      "sections": [
+        {
+          "id": "section-1-hero",
+          "name": "Service hero (side image)",
+          "selector": [
+            "div.hero.aem-GridColumn"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-split"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2-stats",
+          "name": "Meeting your needs (text stat tiles)",
+          "selector": [
+            "div.stats.aem-GridColumn"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-stats"
+          ],
+          "defaultContent": [
+            "div.stats.aem-GridColumn h2"
+          ]
+        },
+        {
+          "id": "section-3-editorial",
+          "name": "Editorial (H2 + rich text)",
+          "selector": [
+            "div.editorial.aem-GridColumn:not(:has(+ div.eloquaform))"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "div.editorial h2",
+            "div.editorial .rich-text p",
+            "div.editorial .rich-text h3"
+          ]
+        },
+        {
+          "id": "section-4-rotating",
+          "name": "Rotating tile (image-swap list)",
+          "selector": [
+            "div.rotatingtile.aem-GridColumn"
+          ],
+          "style": null,
+          "blocks": [
+            "accordion-divided"
+          ],
+          "defaultContent": [
+            "div.rotatingtile h2"
+          ]
+        },
+        {
+          "id": "section-5-carousel",
+          "name": "See how we do it (client-story carousel)",
+          "selector": [
+            "div.carouselsingledouble"
+          ],
+          "style": null,
+          "blocks": [
+            "carousel-split"
+          ],
+          "defaultContent": [
+            "div.carouselsingledouble h2"
+          ]
+        },
+        {
+          "id": "section-6-articles",
+          "name": "Read our latest articles",
+          "selector": [
+            "div.dynamiclist.aem-GridColumn",
+            "div.dynamiclist"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-eyebrow"
+          ],
+          "defaultContent": [
+            "div.dynamiclist h2"
+          ]
+        },
+        {
+          "id": "section-7-faq",
+          "name": "FAQs about consulting services",
+          "selector": [
+            "div.accordion.aem-GridColumn"
+          ],
+          "style": null,
+          "blocks": [
+            "accordion-divided"
+          ],
+          "defaultContent": [
+            "div.accordion h2"
+          ]
+        },
+        {
+          "id": "section-8-similar",
+          "name": "Explore similar offerings (2-column jumppoint)",
+          "selector": [
+            "div.jumppoint.aem-GridColumn"
+          ],
+          "style": "split",
+          "blocks": [
+            "cards-eyebrow"
+          ],
+          "defaultContent": [
+            "div.jumppoint h2",
+            "div.jumppoint h2 ~ div p",
+            "div.jumppoint a[href=\"/en-us/services\"]"
+          ]
+        },
+        {
+          "id": "section-9-contact",
+          "name": "Contact us (editorial + form)",
+          "selector": [
+            "div.editorial.aem-GridColumn:has(+ div.eloquaform)",
+            "div.eloquaform"
+          ],
+          "style": null,
+          "blocks": [
+            "form"
+          ],
+          "defaultContent": [
+            "div.editorial .editorial__title h2",
+            "div.editorial .editorial__body p"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "service-landing",
+      "urls": [
+        "https://www.jll.com/en-us/services/capital-markets/private-investor",
+        "https://www.jll.com/en-us/services/design/furniture",
+        "https://www.jll.com/en-us/services/future-of-spaces",
+        "https://www.jll.com/en-us/services/leasing-for-owners",
+        "https://www.jll.com/en-us/services/leasing-for-tenants",
+        "https://www.jll.com/en-us/services/leasing/green",
+        "https://www.jll.com/en-us/services/sustainability",
+        "https://www.jll.com/en-us/services/technology/cre-operations",
+        "https://www.jll.com/en-us/services/technology/financial-investing",
+        "https://www.jll.com/en-us/services/technology/leasing"
+      ],
+      "representativeUrl": "https://www.jll.com/en-us/services/capital-markets/private-investor",
+      "description": "JLL service landing pages (e.g. /en-us/services/future-of-spaces, /leasing-for-owners): \"creative2\" hero (eyebrow, H1, edge-bleed image beside lead text), text or figure stat tiles, curated service tiles, two-panel feature tile carousel, side-content banners (image or video), featured tiles, query-driven article / client story cards, people banner and a contact section with form. /design/furniture adds the design-services components: stacked hero, section headings, featured card list, golden-ratio jump point, content block, shifting image links and FAQs.",
+      "blocks": [
+        {
+          "name": "hero-split",
+          "instances": [
+            "div.hero.aem-GridColumn"
+          ]
+        },
+        {
+          "name": "cards-stats",
+          "instances": [
+            "div.stats.aem-GridColumn"
+          ]
+        },
+        {
+          "name": "accordion-divided",
+          "instances": [
+            "div.accordion.aem-GridColumn",
+            "div.rotatingtile.aem-GridColumn"
+          ]
+        },
+        {
+          "name": "tabs",
+          "instances": [
+            "div.tabbedinformation"
+          ]
+        },
+        {
+          "name": "carousel-split",
+          "instances": [
+            "div.carouselsingledouble"
+          ]
+        },
+        {
+          "name": "cards-eyebrow",
+          "instances": [
+            "div.dynamiclist",
+            "div.jumppoint.aem-GridColumn"
+          ]
+        },
+        {
+          "name": "hero-photo-panel",
+          "instances": [
+            "div.banner.aem-GridColumn:has(.c-people)",
+            "div.banner.aem-GridColumn:has(react-component[data-config*='\"bannerType\":\"people\"'])",
+            "div.banner.aem-GridColumn:has(react-component[data-config*='\"bannerType\":\"shiftingImageLinks\"'])"
+          ]
+        },
+        {
+          "name": "columns-alternating",
+          "instances": [
+            "div.banner.aem-GridColumn:has(.c-side-content)",
+            "div.banner.aem-GridColumn:has(react-component[data-config*='\"bannerType\":\"sideContent\"'])",
+            "div.featuredtile",
+            "div.featuredcardlist",
+            "div.contentblock"
+          ]
+        },
+        {
+          "name": "form",
+          "instances": [
+            "div.eloquaform"
+          ]
+        }
+      ],
+      "urlPattern": "/en-us/services/*",
+      "sections": [
+        {
+          "id": "section-1-hero",
+          "name": "Landing hero (eyebrow, H1, edge-bleed image + lead text)",
+          "selector": [
+            "div.hero.aem-GridColumn"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-split"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2-stats",
+          "name": "Stat tiles (text or figures)",
+          "selector": [
+            "div.stats.aem-GridColumn"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-stats"
+          ],
+          "defaultContent": [
+            "div.stats.aem-GridColumn h2"
+          ]
+        },
+        {
+          "id": "section-3-services",
+          "name": "Explore our services (curated service tiles)",
+          "selector": [
+            "div.dynamiclist.hidetags"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-eyebrow"
+          ],
+          "defaultContent": [
+            "div.dynamiclist h2"
+          ]
+        },
+        {
+          "id": "section-4-carousel",
+          "name": "View our expertise (two-panel feature tile carousel)",
+          "selector": [
+            "div.carouselsingledouble"
+          ],
+          "style": null,
+          "blocks": [
+            "carousel-split"
+          ],
+          "defaultContent": [
+            "div.carouselsingledouble h2"
+          ]
+        },
+        {
+          "id": "section-5-stories",
+          "name": "Read our latest client stories (query-driven cards, static snapshot)",
+          "selector": [
+            "div.dynamiclist:not(.hidetags)"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-eyebrow"
+          ],
+          "defaultContent": [
+            "div.dynamiclist h2"
+          ]
+        },
+        {
+          "id": "section-6-people",
+          "name": "Meet our experts (people banner)",
+          "selector": [
+            "div.banner.aem-GridColumn:has(react-component[data-config*='\"bannerType\":\"people\"'])"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-photo-panel"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-7-contact",
+          "name": "Contact us (editorial + form)",
+          "selector": [
+            "div.editorial.aem-GridColumn:has(+ div.eloquaform)",
+            "div.eloquaform"
+          ],
+          "style": null,
+          "blocks": [
+            "form"
+          ],
+          "defaultContent": [
+            "div.editorial .editorial__title h2",
+            "div.editorial .editorial__body p"
+          ]
+        },
+        {
+          "id": "section-8-other-services",
+          "name": "Other services (golden-ratio jump point, /design/furniture)",
+          "selector": [
+            "div.jumppoint.aem-GridColumn"
+          ],
+          "style": "split",
+          "blocks": [
+            "cards-eyebrow"
+          ],
+          "defaultContent": [
+            "div.jumppoint h2",
+            "div.jumppoint h2 ~ div p",
+            "div.jumppoint a"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "service-design",
+      "urls": [
+        "https://www.jll.com/en-us/services/design",
+        "https://www.jll.com/en-us/services/project-management/design"
+      ],
+      "representativeUrl": "https://www.jll.com/en-us/services/design",
+      "description": "JLL design service pages (/en-us/services/design; /project-management/design redirects to it): \"designLanding\" hero (autoplay video, CTA, H1), featured card lists (alternating feature rows and sector color cards), section headings, two-panel news carousel, side-content banner, shifting image links, query-driven design project cards and a contact section with form.",
+      "blocks": [
+        {
+          "name": "hero-split",
+          "instances": [
+            "div.hero.aem-GridColumn"
+          ]
+        },
+        {
+          "name": "columns-alternating",
+          "instances": [
+            "div.featuredcardlist",
+            "div.banner.aem-GridColumn:has(react-component[data-config*='\"bannerType\":\"sideContent\"'])",
+            "div.banner.aem-GridColumn:has(.c-side-content)"
+          ]
+        },
+        {
+          "name": "carousel-split",
+          "instances": [
+            "div.carouselsingledouble"
+          ]
+        },
+        {
+          "name": "hero-photo-panel",
+          "instances": [
+            "div.banner.aem-GridColumn:has(react-component[data-config*='\"bannerType\":\"shiftingImageLinks\"'])"
+          ]
+        },
+        {
+          "name": "cards-eyebrow",
+          "instances": [
+            "div.dynamiclist"
+          ]
+        },
+        {
+          "name": "form",
+          "instances": [
+            "div.eloquaform"
+          ]
+        }
+      ],
+      "urlPattern": "/en-us/services/*",
+      "sections": [
+        {
+          "id": "section-1-hero",
+          "name": "Design landing hero (video poster, CTA, H1)",
+          "selector": [
+            "div.hero.aem-GridColumn"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-split"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2-features",
+          "name": "Featured cards (alternating feature rows)",
+          "selector": [
+            "div.featuredcardlist:not(:has(.featured-card-color-cards))"
+          ],
+          "style": null,
+          "blocks": [
+            "columns-alternating"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-3-news",
+          "name": "News (section heading + two-panel carousel)",
+          "selector": [
+            "div.carouselsingledouble"
+          ],
+          "style": null,
+          "blocks": [
+            "carousel-split"
+          ],
+          "defaultContent": [
+            "div.sectionheading h2"
+          ]
+        },
+        {
+          "id": "section-4-sectors",
+          "name": "Sector color cards",
+          "selector": [
+            "div.featuredcardlist:has(.featured-card-color-cards)"
+          ],
+          "style": null,
+          "blocks": [
+            "columns-alternating"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-5-tetris",
+          "name": "Delivered by Tetris (side content banner)",
+          "selector": [
+            "div.banner.aem-GridColumn:has(react-component[data-config*='\"bannerType\":\"sideContent\"'])"
+          ],
+          "style": null,
+          "blocks": [
+            "columns-alternating"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-6-transform",
+          "name": "How we transform (section heading + shifting image links)",
+          "selector": [
+            "div.banner.aem-GridColumn:has(react-component[data-config*='\"bannerType\":\"shiftingImageLinks\"'])"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-photo-panel"
+          ],
+          "defaultContent": [
+            "div.sectionheading h2"
+          ]
+        },
+        {
+          "id": "section-7-projects",
+          "name": "Design projects (client story cards, static snapshot + view-all link)",
+          "selector": [
+            "div.dynamiclist"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-eyebrow"
+          ],
+          "defaultContent": [
+            "div.sectionheading h2",
+            "div.dynamiclist a[href*=\"client-stories\"]"
+          ]
+        },
+        {
+          "id": "section-8-contact",
+          "name": "Contact us (editorial + form)",
+          "selector": [
+            "div.editorial.aem-GridColumn:has(+ div.eloquaform)",
+            "div.eloquaform"
+          ],
+          "style": null,
+          "blocks": [
+            "form"
+          ],
+          "defaultContent": [
+            "div.editorial .editorial__title h2",
+            "div.editorial .editorial__body p"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "services-hub",
+      "urls": [
+        "https://www.jll.com/en-us/services"
+      ],
+      "representativeUrl": "https://www.jll.com/en-us/services",
+      "description": "JLL services hub (/en-us/services): \"single\" hero (H1 + intro on a light band, no media) and the search component listing every service / hub page (paginated image cards; static snapshot of all pages).",
+      "blocks": [
+        {
+          "name": "cards-eyebrow",
+          "instances": [
+            "div.search.aem-GridColumn"
+          ]
+        }
+      ],
+      "urlPattern": "/en-us/services/*",
+      "sections": [
+        {
+          "id": "section-1-intro",
+          "name": "Hub intro (H1 + intro, light band)",
+          "selector": [
+            "div.hero.aem-GridColumn"
+          ],
+          "style": "light",
+          "blocks": [],
+          "defaultContent": [
+            "div.hero h1",
+            "div.hero p"
+          ]
+        },
+        {
+          "id": "section-2-results",
+          "name": "Services list (all search result pages as image cards)",
+          "selector": [
+            "div.search.aem-GridColumn"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-eyebrow"
+          ],
+          "defaultContent": []
+        }
+      ]
     }
   ]
 }

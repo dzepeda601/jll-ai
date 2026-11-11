@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/services",
+  "path": "en-us/services",
+  "timestamp": "2026-11-11T00:29:23.944Z",
+  "title": "Commercial real estate services and solutions | JLL",
+  "template": "services-hub",
+  "blocks": [
+    "cards-eyebrow"
+  ],
+  "importScript": "14c122db4885"
+}

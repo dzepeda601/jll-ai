@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/services/value-risk/litigation-support",
+  "path": "en-us/services/value-risk/litigation-support",
+  "timestamp": "2026-11-11T00:52:26.969Z",
+  "title": "Real estate litigation services - Capital markets | JLL",
+  "template": "service-detail",
+  "blocks": [
+    "hero-split",
+    "cards-stats",
+    "accordion-divided",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "hero-photo-panel",
+    "form"
+  ],
+  "importScript": "2c316a8e605c"
+}

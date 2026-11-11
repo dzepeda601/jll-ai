@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/services/facilities-management/integrated",
+  "path": "en-us/services/facilities-management/integrated",
+  "timestamp": "2026-11-11T00:35:57.788Z",
+  "title": "Integrated facilities management services | JLL",
+  "template": "service-detail",
+  "blocks": [
+    "hero-split",
+    "cards-stats",
+    "carousel-split",
+    "carousel-split",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "hero-photo-panel",
+    "columns-alternating",
+    "form"
+  ],
+  "importScript": "2c316a8e605c"
+}

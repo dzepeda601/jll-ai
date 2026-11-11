@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/services/facilities-management/engineering",
+  "path": "en-us/services/facilities-management/engineering",
+  "timestamp": "2026-11-11T00:35:46.758Z",
+  "title": "Engineering solutions and services | JLL",
+  "template": "service-detail",
+  "blocks": [
+    "hero-split",
+    "cards-stats",
+    "carousel-split",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "form"
+  ],
+  "importScript": "2c316a8e605c"
+}

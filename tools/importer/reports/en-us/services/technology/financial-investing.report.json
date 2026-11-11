@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/services/technology/financial-investing",
+  "path": "en-us/services/technology/financial-investing",
+  "timestamp": "2026-11-11T00:35:18.104Z",
+  "title": "Capital Markets Technology - Fintech solutions for CRE | JLL",
+  "template": "service-landing",
+  "blocks": [
+    "hero-split",
+    "cards-stats",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "hero-photo-panel",
+    "columns-alternating",
+    "columns-alternating"
+  ],
+  "importScript": "aa48fc10c5c3"
+}

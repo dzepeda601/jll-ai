@@ -1,0 +1,25 @@
+{
+  "variantName": "hero-photo-panel",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Full-bleed photo with a white rounded panel overlapping its bottom edge, holding a heading and a stacked list of chevron links (or heading + text beside a second cell such as a person card)",
+    "layout": "Full-bleed 16:9 photo (21:9 from 900px); white 12px-radius panel pulled 64px up over the photo, 56px padding on desktop; H2 then link rows 32px apart with a 20px chevron on the right."
+  },
+  "contentPattern": {
+    "description": "Full-bleed photo with an overlapping white panel: H2 + 11 links.",
+    "structure": "Row 1: image. Row 2: panel content (H2, optional paragraph, bulleted list of links). Optional second cell in row 2 sits beside the first from 900px (e.g. a person card: portrait, name, job title, link).",
+    "notes": "A list whose items are each a single link becomes the chevron link list; other lists render as normal lists."
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": {
+    "description": "Full-bleed photo with an overlapping content panel (link list or split content).",
+    "pagesUsing": [
+      "/en-us/services/capital-markets"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-10"
+  },
+  "reuseGuidance": "Use for 'fields of expertise' style jump lists over a photo. Use hero-banner for a short clickable promo tile."
+}

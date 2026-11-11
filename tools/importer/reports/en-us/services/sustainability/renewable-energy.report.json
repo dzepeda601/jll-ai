@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/services/sustainability/renewable-energy",
+  "path": "en-us/services/sustainability/renewable-energy",
+  "timestamp": "2026-11-11T00:51:55.733Z",
+  "title": "Renewable energy solutions - Sustainability services | JLL",
+  "template": "service-detail",
+  "blocks": [
+    "hero-split",
+    "cards-stats",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "hero-photo-panel",
+    "form"
+  ],
+  "importScript": "2c316a8e605c"
+}

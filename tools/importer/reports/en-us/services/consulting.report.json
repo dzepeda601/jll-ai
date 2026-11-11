@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/services/consulting",
+  "path": "en-us/services/consulting",
+  "timestamp": "2026-11-11T00:35:35.802Z",
+  "title": "Commercial real estate consulting services | JLL",
+  "template": "service-detail",
+  "blocks": [
+    "hero-split",
+    "cards-stats",
+    "accordion-divided",
+    "accordion-divided",
+    "carousel-split",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "form"
+  ],
+  "importScript": "2c316a8e605c"
+}

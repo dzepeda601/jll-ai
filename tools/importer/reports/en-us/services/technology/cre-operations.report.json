@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/services/technology/cre-operations",
+  "path": "en-us/services/technology/cre-operations",
+  "timestamp": "2026-11-11T00:35:10.324Z",
+  "title": "Operations and management technology solutions | JLL",
+  "template": "service-landing",
+  "blocks": [
+    "hero-split",
+    "carousel-split",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "columns-alternating",
+    "columns-alternating",
+    "columns-alternating",
+    "form"
+  ],
+  "importScript": "aa48fc10c5c3"
+}

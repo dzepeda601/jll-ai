@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/services/investing",
+  "path": "en-us/services/investing",
+  "timestamp": "2026-11-11T00:32:47.457Z",
+  "title": "Real estate investment services | JLL",
+  "template": "service-overview",
+  "blocks": [
+    "hero-split",
+    "cards-stats",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "hero-photo-panel",
+    "columns-alternating",
+    "carousel-split",
+    "form"
+  ],
+  "importScript": "d075fa42592c"
+}

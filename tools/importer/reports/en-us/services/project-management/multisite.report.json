@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/services/project-management/multisite",
+  "path": "en-us/services/project-management/multisite",
+  "timestamp": "2026-11-11T00:51:09.159Z",
+  "title": "Multi-site project management services - Design and construction | JLL",
+  "template": "service-detail",
+  "blocks": [
+    "hero-split",
+    "cards-stats",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "hero-photo-panel",
+    "form"
+  ],
+  "importScript": "2c316a8e605c"
+}

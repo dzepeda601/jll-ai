@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/services/technology/artificial-intelligence",
+  "path": "en-us/services/technology/artificial-intelligence",
+  "timestamp": "2026-11-11T00:41:13.970Z",
+  "title": "AI solutions for commercial real estate - Gen AI for CRE | JLL",
+  "template": "service-detail",
+  "blocks": [
+    "hero-split",
+    "cards-stats",
+    "accordion-divided",
+    "accordion-divided",
+    "tabs",
+    "carousel-split",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "form"
+  ],
+  "importScript": "2c316a8e605c"
+}

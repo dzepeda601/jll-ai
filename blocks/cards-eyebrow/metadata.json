@@ -8,10 +8,34 @@
   },
   "contentPattern": {
     "description": "Cards inside each tab panel (image, eyebrow, H3, description, icon link).",
-    "structure": "One row per card: cell 1 image; cell 2 eyebrow paragraph, H3, description, link"
+    "structure": "One row per card: cell 1 image; cell 2 eyebrow paragraph, H3, description, link",
+    "notes": "Option tiles: text-only filled tiles (H3, description, link; no image) in a wrapping grid, 4 across from 1200px, 3 from 900px, 2 from 600px; the whole tile links out. Option links: same rows as tiles (H3, description, link) rendered as unfilled text links with a chevron, 2 across from 600px; put the block in a section with section-metadata style \"split\" to place the section intro (H2, text, CTA) beside it from 900px. Option grid: default rows (image; H3, description, link) as image-top cards in a wrapping grid, 4 across from 1200px, 3 from 900px, 2 from 600px; the whole card links out; a card without an image gets a sand placeholder."
   },
-  "options": [],
+  "options": [
+    {
+      "class": "tiles",
+      "label": "Tiles"
+    },
+    {
+      "class": "links",
+      "label": "Links"
+    },
+    {
+      "class": "grid",
+      "label": "Grid"
+    }
+  ],
   "memberVariantIds": [],
-  "usage": "Image-top link cards with an eyebrow, heading, description and an icon-only CTA; slides horizontally on small screens, three across on desktop.",
+  "usage": {
+    "description": "Image-top link cards with an eyebrow, heading, description and an icon-only CTA; slides horizontally on small screens, three across on desktop.",
+    "pagesUsing": [
+      "/en-us/index",
+      "/en-us/services/capital-markets",
+      "/en-us/services/consulting",
+      "/en-us/services"
+    ],
+    "reuseCount": 2,
+    "lastUsed": "2026-11-11"
+  },
   "reuseGuidance": "Use for linked cards with a category label. Use cards for plain image/text cards."
 }

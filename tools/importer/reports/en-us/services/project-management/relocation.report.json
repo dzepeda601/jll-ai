@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/services/project-management/relocation",
+  "path": "en-us/services/project-management/relocation",
+  "timestamp": "2026-11-11T00:51:19.139Z",
+  "title": "Relocation Project Management - Office Move Solutions | JLL",
+  "template": "service-detail",
+  "blocks": [
+    "hero-split",
+    "cards-stats",
+    "carousel-split",
+    "cards-eyebrow",
+    "hero-photo-panel",
+    "form"
+  ],
+  "importScript": "2c316a8e605c"
+}

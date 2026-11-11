@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/services/project-management/cost-management",
+  "path": "en-us/services/project-management/cost-management",
+  "timestamp": "2026-11-11T00:50:47.668Z",
+  "title": "Cost management - Budget planning services | JLL",
+  "template": "service-detail",
+  "blocks": [
+    "hero-split",
+    "cards-stats",
+    "accordion-divided",
+    "tabs",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "hero-photo-panel",
+    "columns-alternating",
+    "form"
+  ],
+  "importScript": "2c316a8e605c"
+}

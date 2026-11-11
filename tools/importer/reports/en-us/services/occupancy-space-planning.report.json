@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/services/occupancy-space-planning",
+  "path": "en-us/services/occupancy-space-planning",
+  "timestamp": "2026-11-11T00:33:05.400Z",
+  "title": "Occupancy planning and space utilization services I JLL",
+  "template": "service-overview",
+  "blocks": [
+    "hero-split",
+    "cards-stats",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "hero-photo-panel",
+    "columns-alternating",
+    "accordion-divided",
+    "carousel-split"
+  ],
+  "importScript": "d075fa42592c"
+}

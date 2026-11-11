@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/services/value-risk/due-diligence",
+  "path": "en-us/services/value-risk/due-diligence",
+  "timestamp": "2026-11-11T00:52:17.058Z",
+  "title": "Commercial real estate due diligence services | JLL",
+  "template": "service-detail",
+  "blocks": [
+    "hero-split",
+    "cards-stats",
+    "carousel-split",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "hero-photo-panel",
+    "form"
+  ],
+  "importScript": "2c316a8e605c"
+}

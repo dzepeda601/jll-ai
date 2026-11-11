@@ -7,6 +7,13 @@ import { createTag } from '../../scripts/shared.js';
  * - the first paragraph before the heading becomes the eyebrow
  * - the last link becomes an icon-style CTA that keeps its authored text
  *   as the accessible name
+ * - `tiles` option: text-only filled tiles in a wrapping grid, the whole tile
+ *   links out (styles in cards-eyebrow.css; a linked heading is accepted too)
+ * - `links` option: same content as tiles, rendered as unfilled text links
+ *   (title with a chevron, description below) in a two-column grid; in a
+ *   `split` section the default content sits beside it
+ * - `grid` option: default rows as image-top cards in a wrapping grid, the
+ *   whole card links out (CSS only; a card without an image gets a placeholder)
  */
 
 function optimizePictures(scope) {
@@ -38,7 +45,20 @@ function splitCells(row) {
   return { image: image.childNodes.length ? image : null, body };
 }
 
-function decorateBody(body) {
+/*
+ * tiles option: when the heading itself is the tile's only link, keep the
+ * heading text and move the link into its own CTA paragraph.
+ */
+function moveHeadingLink(body, heading) {
+  const link = heading?.querySelector('a[href]');
+  if (!link || [...body.querySelectorAll('a[href]')].length > 1) return;
+  const cta = link.cloneNode(true);
+  link.replaceWith(...link.childNodes);
+  const p = createTag('p', {}, cta);
+  body.append(p);
+}
+
+function decorateBody(body, isTiles = false) {
   const heading = body.querySelector('h1, h2, h3, h4, h5, h6');
   if (heading) {
     let prev = heading.previousElementSibling;
@@ -50,6 +70,8 @@ function decorateBody(body) {
       prev = prev.previousElementSibling;
     }
   }
+
+  if (isTiles) moveHeadingLink(body, heading);
 
   const links = [...body.querySelectorAll('a[href]')];
   const cta = links[links.length - 1];
@@ -77,10 +99,11 @@ function decorateBody(body) {
 /** @param {Element} block */
 export default function decorate(block) {
   const ul = createTag('ul');
+  const isTiles = block.classList.contains('tiles') || block.classList.contains('links');
 
   [...block.children].forEach((row) => {
     const { image, body } = splitCells(row);
-    decorateBody(body);
+    decorateBody(body, isTiles);
     const article = createTag('article', { class: 'cards-eyebrow-card' });
     if (image) article.append(image);
     else article.classList.add('cards-eyebrow-card-text-only');

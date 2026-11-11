@@ -1,0 +1,41 @@
+{
+  "variantName": "hero-split",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Page-top hero with the H1, intro and CTAs beside a large contained, rounded image",
+    "layout": "Text column (~37%) with H1, 24px intro paragraph and a primary + tonal button beside a 16:9 image with a 12px radius (~63%); image on top on mobile."
+  },
+  "contentPattern": {
+    "description": "H1, intro paragraph, 2 CTAs, large rounded image right.",
+    "structure": "Row 1: image. Row 2: text cell (optional eyebrow paragraph, H1, intro paragraph, CTA links: bold = primary, italic = secondary). A single row with an image cell and a text cell also works.",
+    "notes": "Author the source subtitle as a paragraph, not a heading. The image is the LCP image and is loaded eagerly. Option side-image: same rows; the H1 spans the full width on top and the image sits left of the text (intro 30/36) from 900px, image 4:3 (JLL offering pages, heroStyle \"sideImage\"). Option bleed (with side-image, JLL landing pages, heroStyle \"creative2\"): optional eyebrow paragraph above a 60px light H1; the 4:3 image runs to the page edge (top inner corner rounded) beside the lead paragraph (30/36) and further paragraphs (24/32). Option stacked (JLL design-services pages, heroStyle \"designServices\"): large display eyebrow, full-width 4:3 image, then the 60px light H1 and the intro (30/36) with the CTA on the right from 900px."
+  },
+  "options": [
+    {
+      "class": "side-image",
+      "label": "Side image"
+    },
+    {
+      "class": "bleed",
+      "label": "Bleed"
+    },
+    {
+      "class": "stacked",
+      "label": "Stacked"
+    }
+  ],
+  "memberVariantIds": [],
+  "usage": {
+    "description": "Page-top hero with the H1 and CTAs beside a contained rounded image.",
+    "pagesUsing": [
+      "/en-us/services/capital-markets",
+      "/en-us/services/consulting",
+      "/en-us/services/capital-markets/private-investor",
+      "/en-us/services/design/furniture"
+    ],
+    "reuseCount": 2,
+    "lastUsed": "2026-11-10"
+  },
+  "reuseGuidance": "Use for service/hub page heros with a contained image beside the text. Use hero for full-width photo-background heros and hero-banner for clickable promo tiles."
+}

@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/services/future-of-spaces",
+  "path": "en-us/services/future-of-spaces",
+  "timestamp": "2026-11-11T00:34:21.057Z",
+  "title": "Future of Work - Services | JLL",
+  "template": "service-landing",
+  "blocks": [
+    "hero-split",
+    "cards-stats",
+    "carousel-split",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "hero-photo-panel",
+    "columns-alternating",
+    "form"
+  ],
+  "importScript": "aa48fc10c5c3"
+}

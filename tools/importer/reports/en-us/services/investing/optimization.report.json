@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/services/investing/optimization",
+  "path": "en-us/services/investing/optimization",
+  "timestamp": "2026-11-11T00:49:30.470Z",
+  "title": "Real estate portfolio optimization - Capital markets | JLL",
+  "template": "service-detail",
+  "blocks": [
+    "hero-split",
+    "cards-stats",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "hero-photo-panel",
+    "form"
+  ],
+  "importScript": "2c316a8e605c"
+}

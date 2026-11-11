@@ -181,3 +181,86 @@ main .columns-alternating a.button:any-link::after {
     height: 24px;
   }
 }
+
+/* ------------------------------------------------------------------
+   Video media (auto-detected Brightcove link, or the `video` option).
+   Source computed styles at 1440px (.multimedia-block__brightcove-facade):
+   4:3 box with the media 12px radius, #091e25 fill, centered 72px round
+   play button at 55% of that colour. Image rows are not affected.
+   ------------------------------------------------------------------ */
+
+.columns-alternating .columns-alternating-video {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 16 / 9;
+  background-color: #091e25;
+}
+
+.columns-alternating .columns-alternating-video picture {
+  position: absolute;
+  inset: 0;
+}
+
+.columns-alternating .columns-alternating-video-col .columns-alternating-video img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  object-fit: cover;
+}
+
+.columns-alternating .columns-alternating-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.columns-alternating .columns-alternating-video-play {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: var(--jll-radius-full);
+  background-color: rgb(9 30 37 / 55%);
+  color: var(--jll-white);
+  cursor: pointer;
+  transition: transform var(--jll-duration) var(--jll-ease), background-color var(--jll-duration) var(--jll-ease);
+}
+
+.columns-alternating .columns-alternating-video-play:focus-visible {
+  outline: 3px solid var(--jll-stroke-interaction);
+  outline-offset: 2px;
+}
+
+.columns-alternating .columns-alternating-video:hover .columns-alternating-video-play {
+  background-color: rgb(9 30 37 / 75%);
+}
+
+/* Material Symbols "play_arrow" (filled), 32px */
+.columns-alternating .columns-alternating-video-play-icon {
+  width: 32px;
+  height: 32px;
+  background-color: currentcolor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960'%3E%3Cpath d='M320-202v-560l440 280-440 280Z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .columns-alternating .columns-alternating-video-play {
+    transition: none;
+  }
+}
+
+@media (width >= 900px) {
+  .columns-alternating .columns-alternating-video {
+    aspect-ratio: 4 / 3;
+  }
+}

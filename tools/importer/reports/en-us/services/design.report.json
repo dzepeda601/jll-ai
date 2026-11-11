@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/services/design",
+  "path": "en-us/services/design",
+  "timestamp": "2026-11-11T00:17:26.639Z",
+  "title": "Design and delivery solutions for commercial spaces | JLL Design",
+  "template": "service-design",
+  "blocks": [
+    "hero-split",
+    "columns-alternating",
+    "columns-alternating",
+    "columns-alternating",
+    "carousel-split",
+    "hero-photo-panel",
+    "cards-eyebrow",
+    "form"
+  ],
+  "importScript": "a44ce2751388"
+}

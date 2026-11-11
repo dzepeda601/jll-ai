@@ -210,3 +210,433 @@
     padding-block-start: 56px;
   }
 }
+
+/* ------------------------------------------------------------------
+   Option: grid (block class "cards-eyebrow grid")
+   Image-top link cards in a wrapping grid (services hub result list).
+   Source computed styles at 1440px (.c-default-card): 286px cards 40px
+   apart, 4 across, rows 40px apart; 16:9 image with an 8px radius (a sand
+   placeholder when a card has no image); 24px above the title; title
+   24/28 default with 16px below; description 16/24 subdued; 20px arrow
+   at the bottom; the whole card is the link. Everything below is scoped
+   to .grid, so the default cards-eyebrow layout is untouched.
+   ------------------------------------------------------------------ */
+
+.cards-eyebrow.grid > ul {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--jll-space-8) var(--jll-space-6);
+}
+
+.cards-eyebrow.grid .cards-eyebrow-card {
+  position: relative;
+  flex-direction: column;
+  gap: 0;
+}
+
+.cards-eyebrow.grid .cards-eyebrow-card-image {
+  flex: 0 0 auto;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--jll-radius-md);
+}
+
+.cards-eyebrow.grid .cards-eyebrow-card-image img {
+  border-radius: var(--jll-radius-md);
+  transition: transform var(--jll-duration) var(--jll-ease);
+}
+
+.cards-eyebrow.grid .cards-eyebrow-card:hover .cards-eyebrow-card-image img {
+  transform: scale(1.03);
+}
+
+/* no image: decorative sand placeholder keeps the rows aligned */
+.cards-eyebrow.grid .cards-eyebrow-card-text-only::before {
+  content: '';
+  display: block;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--jll-radius-md);
+  background-color: var(--jll-surface-sand);
+}
+
+.cards-eyebrow.grid .cards-eyebrow-card-body {
+  flex: 1 1 auto;
+  padding-block: var(--jll-space-6) 0;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+.cards-eyebrow.grid .cards-eyebrow-card-body > * {
+  padding-inline: 0;
+}
+
+.cards-eyebrow.grid .cards-eyebrow-card-body > :is(h2, h3, h4) {
+  padding-block-end: var(--jll-space-4);
+  font-size: var(--jll-title-3-size);
+  line-height: 28px;
+}
+
+.cards-eyebrow.grid .cards-eyebrow-card:hover .cards-eyebrow-card-body > :is(h2, h3, h4) {
+  text-decoration: underline;
+}
+
+.cards-eyebrow.grid .cards-eyebrow-card-body > p {
+  padding-block-end: var(--jll-space-2);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.cards-eyebrow.grid .cards-eyebrow-card-body > p.cards-eyebrow-card-cta {
+  justify-content: flex-start;
+  padding-block: var(--jll-space-4) 0;
+}
+
+.cards-eyebrow.grid > ul > li:has(a:focus-visible) {
+  outline: 3px solid var(--jll-stroke-interaction);
+  outline-offset: 4px;
+  border-radius: var(--jll-radius-md);
+}
+
+/* plain arrow; the link covers the whole card */
+.cards-eyebrow.grid a.cards-eyebrow-card-cta-link:any-link {
+  position: static;
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  color: var(--jll-icon-default);
+}
+
+.cards-eyebrow.grid a.cards-eyebrow-card-cta-link:hover {
+  opacity: 1;
+  color: var(--jll-icon-default);
+}
+
+.cards-eyebrow.grid a.cards-eyebrow-card-cta-link:focus-visible {
+  outline: 0;
+}
+
+.cards-eyebrow.grid a.cards-eyebrow-card-cta-link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cards-eyebrow.grid .cards-eyebrow-card-image img {
+    transition: none;
+  }
+
+  .cards-eyebrow.grid .cards-eyebrow-card:hover .cards-eyebrow-card-image img {
+    transform: none;
+  }
+}
+
+@media (width >= 600px) {
+  .cards-eyebrow.grid > ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cards-eyebrow.grid .cards-eyebrow-card,
+  .cards-eyebrow.grid > ul > li:nth-child(even) .cards-eyebrow-card {
+    flex-direction: column;
+  }
+
+  .cards-eyebrow.grid .cards-eyebrow-card-image {
+    flex: 0 0 auto;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (width >= 900px) {
+  .cards-eyebrow.grid > ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--jll-space-10) var(--jll-space-8);
+  }
+}
+
+@media (width >= 1200px) {
+  .cards-eyebrow.grid > ul {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--jll-space-10);
+  }
+}
+
+/* ------------------------------------------------------------------
+   Option: tiles (block class "cards-eyebrow tiles")
+   Text-only filled service tiles that link out, in a wrapping grid.
+   Source computed styles at 1440px (.search-tile-card): 286px tiles 40px
+   apart, 4 across; #eaeff1 fill, 8px radius, 24px padding; H3 24/28 with
+   16px below; description 16/24 subdued; 20px arrow bottom right; the whole
+   tile is the link. Everything below is scoped to .tiles, so the default
+   cards-eyebrow layout is untouched.
+   ------------------------------------------------------------------ */
+
+.cards-eyebrow.tiles {
+  padding-block-start: var(--jll-space-8);
+}
+
+.cards-eyebrow.tiles > ul {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--jll-space-6);
+}
+
+.cards-eyebrow.tiles .cards-eyebrow-card,
+.cards-eyebrow.links .cards-eyebrow-card {
+  position: relative;
+  flex-direction: column;
+}
+
+.cards-eyebrow.tiles .cards-eyebrow-card-image {
+  display: none;
+}
+
+.cards-eyebrow.tiles .cards-eyebrow-card-body {
+  flex: 1 1 auto;
+  padding: var(--jll-space-6);
+  border-radius: var(--jll-radius-lg);
+  background-color: #eaeff1;
+  transition: background-color var(--jll-duration) var(--jll-ease);
+}
+
+/* links option (see below): unfilled text body */
+.cards-eyebrow.links .cards-eyebrow-card-body {
+  flex: 1 1 auto;
+  padding: 0;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+.cards-eyebrow.tiles .cards-eyebrow-card:hover .cards-eyebrow-card-body {
+  background-color: var(--jll-stroke-subdued);
+}
+
+.cards-eyebrow.tiles .cards-eyebrow-card:has(a:focus-visible) {
+  outline: 3px solid var(--jll-stroke-interaction);
+  outline-offset: 2px;
+  border-radius: var(--jll-radius-lg);
+}
+
+.cards-eyebrow.tiles .cards-eyebrow-card-body > * {
+  padding-inline: 0;
+}
+
+.cards-eyebrow.tiles .cards-eyebrow-card-body > :is(h2, h3, h4) {
+  padding-block-end: var(--jll-space-4);
+  font-size: var(--jll-title-3-size);
+  line-height: 28px;
+  letter-spacing: normal;
+}
+
+.cards-eyebrow.tiles .cards-eyebrow-card-body > p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.cards-eyebrow.tiles .cards-eyebrow-card-body > p.cards-eyebrow-card-cta {
+  padding-block-start: var(--jll-space-2);
+  padding-inline: 0;
+}
+
+/* plain arrow; the link covers the whole tile */
+.cards-eyebrow.tiles a.cards-eyebrow-card-cta-link:any-link {
+  position: static;
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  color: var(--jll-icon-default);
+}
+
+.cards-eyebrow.tiles a.cards-eyebrow-card-cta-link:hover {
+  opacity: 1;
+  color: var(--jll-icon-default);
+}
+
+.cards-eyebrow.tiles a.cards-eyebrow-card-cta-link:focus-visible {
+  outline: 0;
+}
+
+.cards-eyebrow.tiles a.cards-eyebrow-card-cta-link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--jll-radius-lg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cards-eyebrow.tiles .cards-eyebrow-card-body {
+    transition: none;
+  }
+}
+
+@media (width >= 600px) {
+  .cards-eyebrow.tiles {
+    padding-block-start: var(--jll-space-8);
+  }
+
+  .cards-eyebrow.tiles > ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cards-eyebrow.tiles .cards-eyebrow-card,
+  .cards-eyebrow.tiles > ul > li:nth-child(even) .cards-eyebrow-card {
+    flex-direction: column;
+  }
+}
+
+@media (width >= 900px) {
+  .cards-eyebrow.tiles {
+    padding-block-start: var(--jll-space-10);
+  }
+
+  .cards-eyebrow.tiles > ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--jll-space-8);
+  }
+}
+
+@media (width >= 1200px) {
+  .cards-eyebrow.tiles {
+    padding-block-start: var(--jll-space-12);
+  }
+
+  .cards-eyebrow.tiles > ul {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--jll-space-10);
+  }
+}
+
+/* ------------------------------------------------------------------
+   Option: links (block class "cards-eyebrow links")
+   Unfilled text links ("Explore similar offerings", jumppoint "2col").
+   Source computed styles at 1440px: two 286px columns 40px apart (rows
+   40px apart); title 16/24 default with a 24px chevron on the right;
+   description 16/24 subdued directly below; the title is the link.
+   In a section with style "split" the default content (H2, text, CTA)
+   takes the left half and the links the right half from 900px.
+   Everything below is scoped to .links / the split section.
+   ------------------------------------------------------------------ */
+
+.cards-eyebrow.links {
+  padding-block-start: var(--jll-space-8);
+}
+
+.cards-eyebrow.links > ul {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--jll-space-8) var(--jll-space-10);
+}
+
+.cards-eyebrow.links .cards-eyebrow-card-image {
+  display: none;
+}
+
+.cards-eyebrow.links .cards-eyebrow-card-body > * {
+  padding-inline: 0;
+}
+
+.cards-eyebrow.links .cards-eyebrow-card-body > :is(h2, h3, h4) {
+  padding-inline-end: var(--jll-space-8);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.cards-eyebrow.links .cards-eyebrow-card-body > p {
+  padding-block-start: var(--jll-space-1);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.cards-eyebrow.links .cards-eyebrow-card:hover .cards-eyebrow-card-body > :is(h2, h3, h4) {
+  text-decoration: underline;
+}
+
+.cards-eyebrow.links .cards-eyebrow-card:has(a:focus-visible) {
+  outline: 3px solid var(--jll-stroke-interaction);
+  outline-offset: 4px;
+  border-radius: var(--jll-radius-sm);
+}
+
+/* chevron beside the title; the link covers the whole item */
+.cards-eyebrow.links .cards-eyebrow-card-body > p.cards-eyebrow-card-cta {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-end: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.cards-eyebrow.links a.cards-eyebrow-card-cta-link:any-link {
+  position: static;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  color: var(--jll-icon-default);
+}
+
+.cards-eyebrow.links a.cards-eyebrow-card-cta-link:hover {
+  opacity: 1;
+  color: var(--jll-icon-default);
+}
+
+.cards-eyebrow.links a.cards-eyebrow-card-cta-link:focus-visible {
+  outline: 0;
+}
+
+.cards-eyebrow.links a.cards-eyebrow-card-cta-link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+/* Material Symbols "chevron_right" */
+.cards-eyebrow.links .cards-eyebrow-card-cta-link .cards-eyebrow-card-cta-icon,
+.cards-eyebrow.links .cards-eyebrow-card-cta-link.is-external .cards-eyebrow-card-cta-icon {
+  width: 24px;
+  height: 24px;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960'%3E%3Cpath d='M517.85-480 354.92-642.92 377-665l185 185-185 185-22.08-22.08L517.85-480Z'/%3E%3C/svg%3E");
+}
+
+@media (width >= 600px) {
+  .cards-eyebrow.links > ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--jll-space-10);
+  }
+
+  .cards-eyebrow.links .cards-eyebrow-card,
+  .cards-eyebrow.links > ul > li:nth-child(even) .cards-eyebrow-card {
+    flex-direction: column;
+  }
+}
+
+/* section-metadata style "split": intro left, links right */
+@media (width >= 900px) {
+  main > .section.split.cards-eyebrow-container:has(.cards-eyebrow.links) {
+    --cards-eyebrow-gutter: max(var(--content-padding-inline), calc((100% - var(--jll-content-max-width)) / 2));
+
+    display: grid;
+    grid-template-columns: var(--cards-eyebrow-gutter) minmax(0, 1fr) var(--jll-space-10) minmax(0, 1fr) var(--cards-eyebrow-gutter);
+    align-items: start;
+  }
+
+  main > .section.split.cards-eyebrow-container:has(.cards-eyebrow.links) > .default-content-wrapper {
+    grid-column: 2;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  main > .section.split.cards-eyebrow-container:has(.cards-eyebrow.links) > .default-content-wrapper > :first-child {
+    margin-block-start: 0;
+  }
+
+  main > .section.split.cards-eyebrow-container:has(.cards-eyebrow.links) > .cards-eyebrow-wrapper {
+    grid-column: 4;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  main > .section.split.cards-eyebrow-container .cards-eyebrow.links {
+    padding-block-start: 0;
+  }
+}

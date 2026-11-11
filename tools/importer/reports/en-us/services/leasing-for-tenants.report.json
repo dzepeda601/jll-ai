@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/services/leasing-for-tenants",
+  "path": "en-us/services/leasing-for-tenants",
+  "timestamp": "2026-11-11T00:34:40.708Z",
+  "title": "Tenant representation services - Commercial property leasing for tenants | JLL",
+  "template": "service-landing",
+  "blocks": [
+    "hero-split",
+    "cards-stats",
+    "carousel-split",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "hero-photo-panel",
+    "columns-alternating",
+    "columns-alternating",
+    "form"
+  ],
+  "importScript": "aa48fc10c5c3"
+}

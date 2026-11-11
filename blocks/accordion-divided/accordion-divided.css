@@ -1,0 +1,181 @@
+/* Accordion divided – JLL accordion (FAQ) and rotating tile (image beside the list).
+   Source computed styles at 1440px: rows 16px top/bottom padding, title 20/28,
+   16px subdued chevron rotating when open, 1px #dce2e5 rule between rows (none
+   after the last); answers 18/28.
+   has-media: list and image in two equal columns 40px apart from 900px, square
+   image with 12px radius; bullets are 4x12 bars, 24px apart, 14/20 text. */
+
+.accordion-divided {
+  color: var(--jll-text-default);
+}
+
+.accordion-divided .accordion-divided-item {
+  border-bottom: 1px solid var(--jll-stroke-subdued);
+}
+
+.accordion-divided:not(.has-media) .accordion-divided-item:last-child {
+  border-bottom: 0;
+}
+
+.accordion-divided .accordion-divided-item-label {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--jll-space-4);
+  padding: var(--jll-space-4) 0;
+  font-size: var(--jll-title-3-size);
+  line-height: var(--jll-title-3-line-height);
+  cursor: pointer;
+  list-style: none;
+  border-radius: var(--jll-radius-md);
+}
+
+.accordion-divided .accordion-divided-item-label::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-divided .accordion-divided-item-label:focus-visible {
+  outline: 3px solid rgb(22 121 155 / 50%);
+  outline-offset: 2px;
+}
+
+.accordion-divided .accordion-divided-item-title {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* lucide "chevron-down", 16px */
+.accordion-divided .accordion-divided-item-icon {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  margin-top: 6px;
+  background-color: var(--jll-text-subdued);
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") center / contain no-repeat;
+  transition: transform var(--jll-duration) var(--jll-ease);
+}
+
+.accordion-divided .accordion-divided-item[open] .accordion-divided-item-icon {
+  transform: rotate(180deg);
+}
+
+.accordion-divided .accordion-divided-item-body {
+  padding-block-end: var(--jll-space-4);
+  font-size: var(--jll-body-size);
+  line-height: var(--jll-body-line-height);
+}
+
+.accordion-divided .accordion-divided-item-body > :first-child {
+  margin-top: 0;
+}
+
+.accordion-divided .accordion-divided-item-body > :last-child {
+  margin-bottom: 0;
+}
+
+.accordion-divided .accordion-divided-item-body p {
+  margin: 0;
+}
+
+.accordion-divided .accordion-divided-item-body ul,
+.accordion-divided .accordion-divided-item-body ol {
+  margin: var(--jll-space-4) 0 0;
+  padding-inline-start: 20px;
+}
+
+.accordion-divided .accordion-divided-item-body li {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.accordion-divided .accordion-divided-item-body li + li {
+  margin-top: var(--jll-space-1);
+}
+
+/* has-media: image per item, shown beside the list from 900px */
+.accordion-divided.has-media .accordion-divided-item-body > p:not(.accordion-divided-item-image) {
+  color: var(--jll-text-subdued);
+}
+
+.accordion-divided.has-media .accordion-divided-item-body ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--jll-space-6);
+  margin: var(--jll-space-4) 0 var(--jll-space-6);
+  padding: 0;
+  list-style: none;
+}
+
+.accordion-divided.has-media .accordion-divided-item-body li {
+  display: flex;
+  align-items: center;
+  gap: var(--jll-space-3);
+  margin: 0;
+  padding-inline-start: 2px;
+  font-size: var(--jll-body-small-size);
+  line-height: var(--jll-body-small-line-height);
+}
+
+.accordion-divided.has-media .accordion-divided-item-body li::before {
+  content: '';
+  flex-shrink: 0;
+  width: 4px;
+  height: 12px;
+  background-color: #948477;
+}
+
+.accordion-divided .accordion-divided-item-image {
+  margin: 20px 0 0;
+  line-height: 0;
+}
+
+.accordion-divided .accordion-divided-item-image img,
+.accordion-divided .accordion-divided-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--jll-radius-xl);
+}
+
+.accordion-divided .accordion-divided-media {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .accordion-divided .accordion-divided-item-icon {
+    transition: none;
+  }
+}
+
+@media (width >= 900px) {
+  .accordion-divided .accordion-divided-item-label {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .accordion-divided.has-media {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: var(--jll-space-10);
+  }
+
+  .accordion-divided.has-media .accordion-divided-item-image {
+    display: none;
+  }
+
+  .accordion-divided.has-media .accordion-divided-media {
+    display: block;
+  }
+
+  .accordion-divided .accordion-divided-media-item[hidden] {
+    display: none;
+  }
+
+  .accordion-divided .accordion-divided-media img {
+    aspect-ratio: 1;
+    box-shadow: 0 6px 21px 0 rgb(1 21 28 / 8%);
+  }
+}

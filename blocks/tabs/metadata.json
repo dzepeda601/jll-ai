@@ -1,0 +1,30 @@
+{
+  "variantName": "tabs",
+  "baseBlock": "tabs",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Tabs: a row of tab labels that switches between panels",
+    "layout": "Horizontal tab list above one visible panel. Option underline: JLL style, left-aligned 16px labels on a thin grey rule with a blue active underline; panel text left and image right from 900px."
+  },
+  "contentPattern": {
+    "description": "Tab labels with one panel each (text, list, CTA, optional image).",
+    "structure": "One row per tab: cell 1 tab label; cell 2 panel content (paragraphs, lists, links, an optional image). Alternatively leave the block empty and follow it with sections that carry section metadata Tab ID and Tab Title (section-based tabs).",
+    "notes": "Option underline: JLL tabbedinformation look; a panel image is shown beside the text from 900px. Put the tabs heading (H2) as default content before the block."
+  },
+  "options": [
+    {
+      "class": "underline",
+      "label": "Underline"
+    }
+  ],
+  "memberVariantIds": [],
+  "usage": {
+    "description": "Section-based tabs.",
+    "pagesUsing": [
+      "/en-us/services/project-management"
+    ],
+    "reuseCount": 0,
+    "lastUsed": "2026-11-10"
+  },
+  "reuseGuidance": "Use for switchable panels of text and media. Use tabs-stacked for the grid of full-width triggers (homepage accordion-carousel)."
+}

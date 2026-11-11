@@ -386,8 +386,276 @@ var CustomImportScript = (() => {
     }
     return content.length ? [imageCell, content] : null;
   }
-  function parse3(element, { document: document2 }) {
+  var PIN_HREF = "data-excat-href";
+  var PIN_LABEL = "data-excat-label";
+  function decodeHtml(document2, str) {
+    const div = document2.createElement("div");
+    if (!str) return div;
+    div.innerHTML = String(str);
+    if (/<[a-z/]/i.test(div.textContent)) div.innerHTML = div.textContent;
+    div.querySelectorAll("script, style").forEach((n) => n.remove());
+    return div;
+  }
+  function readDynamicListConfig(root) {
+    const rc = root.matches('react-component[data-component="dynamiclist"]') ? root : root.querySelector('react-component[data-component="dynamiclist"][data-config]');
+    if (!rc) return null;
+    try {
+      return JSON.parse(rc.getAttribute("data-config") || "null");
+    } catch (e) {
+      return null;
+    }
+  }
+  function descParagraphs(document2, container) {
+    const blocks = [...container.querySelectorAll("p")].filter((n) => !n.parentElement.closest("p"));
+    const sources = blocks.length ? blocks : clean3(container.textContent) ? [container] : [];
+    return sources.map((src) => {
+      const p = document2.createElement("p");
+      p.innerHTML = src.innerHTML;
+      p.querySelectorAll("span, font, div").forEach((n) => n.replaceWith(...n.childNodes));
+      p.querySelectorAll("*").forEach((n) => {
+        [...n.attributes].forEach((attr) => {
+          if (!(n.tagName === "A" && attr.name === "href")) n.removeAttribute(attr.name);
+        });
+        if (n.tagName === "A") n.setAttribute("href", absUrl3(n.getAttribute("href")));
+      });
+      return p;
+    }).filter((p) => clean3(p.textContent));
+  }
+  function linkPara(document2, href, label) {
+    const p = document2.createElement("p");
+    const a = el2(document2, "a", clean3(label) || absUrl3(href));
+    a.href = absUrl3(href);
+    p.append(a);
+    return p;
+  }
+  function cardLink(card) {
+    const pinned = card.matches(`[${PIN_HREF}]`) ? card : card.querySelector(`[${PIN_HREF}]`);
+    if (pinned) return { href: pinned.getAttribute(PIN_HREF), label: pinned.getAttribute(PIN_LABEL) || "" };
+    const a = [...card.querySelectorAll("a[href]")].find((x) => !x.closest('ul, [data-testid$="__tags"]'));
+    return a ? { href: a.getAttribute("href"), label: a.getAttribute("aria-label") || clean3(a.textContent) } : null;
+  }
+  function renderedItems(root) {
+    const container = root.querySelector(".c-list-container") || root;
+    const titled = [...container.querySelectorAll("h3")];
+    const items = [];
+    titled.forEach((h3) => {
+      let item = h3;
+      while (item.parentElement && item.parentElement !== container && item.parentElement.querySelectorAll("h3").length === 1) item = item.parentElement;
+      if (!items.includes(item)) items.push(item);
+    });
+    return items;
+  }
+  function tileRowsFromConfig(document2, pageList) {
+    return pageList.map((item) => {
+      const title = clean3(decodeHtml(document2, item.title).textContent);
+      const content = [];
+      if (title) content.push(el2(document2, "h3", title));
+      content.push(...descParagraphs(document2, decodeHtml(document2, item.description)));
+      if (item.ctaLink) content.push(linkPara(document2, item.ctaLink, title));
+      return content.length ? [content] : null;
+    }).filter(Boolean);
+  }
+  function tileRowsFromDom(document2, root) {
+    return renderedItems(root).map((item) => {
+      const h3 = item.querySelector("h3");
+      const title = clean3(h3 && h3.textContent);
+      const content = [];
+      if (title) content.push(el2(document2, "h3", title));
+      const desc = item.querySelector('.description, [data-testid$="__description"]');
+      if (desc && clean3(desc.textContent)) content.push(el2(document2, "p", clean3(desc.textContent)));
+      const tags = [...item.querySelectorAll("ul a[href]")];
+      if (tags.length) {
+        const ul = document2.createElement("ul");
+        tags.forEach((tag) => {
+          const li = document2.createElement("li");
+          const a = el2(document2, "a", clean3(tag.textContent));
+          a.href = absUrl3(tag.getAttribute("href"));
+          li.append(a);
+          ul.append(li);
+        });
+        content.push(ul);
+      }
+      const target = cardLink(item);
+      if (target && target.href) content.push(linkPara(document2, target.href, target.label || title));
+      return content.length ? [content] : null;
+    }).filter(Boolean);
+  }
+  function cardRowsFromDom(document2, root) {
+    return renderedItems(root).map((item) => {
+      const h3 = item.querySelector("h3");
+      const title = clean3(h3 && h3.textContent);
+      const img = item.querySelector("img");
+      let imageCell = "";
+      if (img && img.getAttribute("src") && !/^data:/.test(img.getAttribute("src"))) {
+        const image = document2.createElement("img");
+        image.src = absUrl3(img.getAttribute("src")).replace(/^http:\/\//i, "https://");
+        image.alt = img.getAttribute("alt") || "";
+        imageCell = image;
+      }
+      const content = [];
+      const eyebrow = item.querySelector('[data-testid$="__content-preheader"]') || [...item.querySelectorAll("p")].find((p) => h3 && p.compareDocumentPosition(h3) & 4);
+      if (eyebrow && clean3(eyebrow.textContent)) content.push(el2(document2, "p", clean3(eyebrow.textContent)));
+      if (title) content.push(el2(document2, "h3", title));
+      let details = [...item.querySelectorAll('[data-testid$="__content-body"], [data-testid$="__footer-text"]')];
+      if (!details.length && h3) {
+        details = [...item.querySelectorAll("div.wrap-anywhere, div.text-sm")].filter((d) => h3.compareDocumentPosition(d) & 4 && !d.querySelector("div.wrap-anywhere, div.text-sm"));
+      }
+      details.forEach((d) => {
+        if (clean3(d.textContent)) content.push(el2(document2, "p", clean3(d.textContent)));
+      });
+      const target = cardLink(item);
+      if (target && target.href) content.push(linkPara(document2, target.href, target.label || title));
+      return content.length ? [imageCell, content] : null;
+    }).filter(Boolean);
+  }
+  function parseDynamicList(element, document2) {
+    const root = element.closest("div.dynamiclist") || element;
+    if (!root.parentNode) return;
+    const cfg = readDynamicListConfig(root) || {};
+    const isTiles = cfg.listType ? cfg.listType === "tile" : !!root.querySelector(".search-tile-card");
+    let cells;
+    if (isTiles) {
+      cells = Array.isArray(cfg.pageList) && cfg.pageList.length ? tileRowsFromConfig(document2, cfg.pageList) : tileRowsFromDom(document2, root);
+    } else {
+      cells = cardRowsFromDom(document2, root);
+    }
+    const out = [];
+    const renderedTitle = root.querySelector("h2");
+    const title = clean3(decodeHtml(document2, cfg.title).textContent) || clean3(renderedTitle && renderedTitle.textContent);
+    if (title && cfg.hideTitle !== true) {
+      const h2 = document2.createElement("h2");
+      if (cfg.titleCtaPath) {
+        const a = el2(document2, "a", title);
+        a.href = absUrl3(cfg.titleCtaPath);
+        h2.append(a);
+      } else {
+        h2.textContent = title;
+      }
+      out.push(h2);
+    }
+    if (cells.length) {
+      out.push(WebImporter.Blocks.createBlock(document2, {
+        name: "cards-eyebrow",
+        variants: isTiles ? ["tiles"] : [],
+        cells
+      }));
+    }
+    if (!out.length) return;
+    root.replaceWith(...out);
+  }
+  function readJumppointConfig(root) {
+    const rc = root.querySelector('react-component[data-component="jumppoint"][data-config]');
+    if (!rc) return null;
+    try {
+      return JSON.parse(rc.getAttribute("data-config") || "null");
+    } catch (e) {
+      return null;
+    }
+  }
+  function parseJumppoint(element, document2) {
+    const root = element.closest("div.jumppoint") || element;
+    if (!root.parentNode) return;
+    const cfg = readJumppointConfig(root) || {};
+    const out = [];
+    const renderedTitle = root.querySelector("h2");
+    const title = clean3(decodeHtml(document2, cfg.title).textContent) || clean3(renderedTitle && renderedTitle.textContent);
+    if (title) out.push(el2(document2, "h2", title));
+    out.push(...descParagraphs(document2, decodeHtml(document2, cfg.description)));
+    const primary = cfg.ctaUrl ? [cfg.ctaTitle, cfg.ctaUrl] : [cfg.primaryCtaLabel, cfg.primaryCtaUrl];
+    [primary, [cfg.secondaryCtaLabel, cfg.secondaryCtaUrl]].forEach(([label, href]) => {
+      if (clean3(label) && href) out.push(linkPara(document2, href, label));
+    });
+    let cells = [];
+    if (Array.isArray(cfg.destinations) && cfg.destinations.length) {
+      cells = cfg.destinations.map((d) => {
+        const name = clean3(decodeHtml(document2, d.title).textContent);
+        const content = [];
+        if (name) content.push(el2(document2, "h3", name));
+        content.push(...descParagraphs(document2, decodeHtml(document2, d.description)));
+        if (d.url) content.push(linkPara(document2, d.url, name || d.accessibilityLabel));
+        return content.length ? [content] : null;
+      }).filter(Boolean);
+    } else {
+      cells = [...root.querySelectorAll("a[href]")].filter((a) => a.querySelector("p") && a.nextElementSibling).map((a) => {
+        const name = clean3(a.textContent).replace(/chevron_right$/, "").trim();
+        const content = [el2(document2, "h3", name)];
+        const desc = clean3(a.nextElementSibling.textContent);
+        if (desc) content.push(el2(document2, "p", desc));
+        content.push(linkPara(document2, a.getAttribute("href"), name));
+        return [content];
+      });
+    }
+    if (cells.length) {
+      out.push(WebImporter.Blocks.createBlock(document2, { name: "cards-eyebrow", variants: ["links"], cells }));
+    }
+    if (!out.length) return;
+    root.replaceWith(...out);
+  }
+  function listCta(document2, element) {
+    const root = element.closest("div.dynamiclist") || element;
+    const cfg = readDynamicListConfig(root) || {};
+    if (!clean3(cfg.ctaTitle) || !cfg.ctaUrl) return null;
+    return linkPara(document2, cfg.ctaUrl, cfg.ctaTitle);
+  }
+  function searchResultItems(root) {
+    try {
+      const items = JSON.parse(root.getAttribute("data-excat-search-results") || "null");
+      if (Array.isArray(items) && items.length) return items;
+    } catch (e) {
+    }
+    return [...root.querySelectorAll(".c-default-card")].map((card) => {
+      const pinned = card.matches(`[${PIN_HREF}]`) ? card : card.querySelector(`[${PIN_HREF}]`);
+      const link = card.querySelector("a[href]");
+      const header = card.querySelector(".c-default-card__content-header");
+      const body = card.querySelector(".c-default-card__content-body");
+      const img = card.querySelector(".c-default-card__image img");
+      return {
+        href: pinned && pinned.getAttribute(PIN_HREF) || link && link.getAttribute("href") || "",
+        title: clean3(header && header.textContent) || clean3(pinned && pinned.getAttribute(PIN_LABEL)),
+        description: clean3(body && body.textContent),
+        image: img ? img.getAttribute("src") || "" : "",
+        alt: img ? img.getAttribute("alt") || "" : ""
+      };
+    });
+  }
+  function parseSearchResults(element, document2) {
+    const root = element.closest("div.search") || element;
+    if (!root.parentNode) return;
+    const cells = searchResultItems(root).filter((item) => item.title && item.href).map((item) => {
+      let imageCell = "";
+      if (item.image) {
+        const image = document2.createElement("img");
+        image.src = absUrl3(item.image);
+        image.alt = item.alt || "";
+        imageCell = image;
+      }
+      const content = [el2(document2, "h3", item.title)];
+      if (item.description) content.push(el2(document2, "p", item.description));
+      content.push(linkPara(document2, item.href, item.title));
+      return [imageCell, content];
+    });
+    if (!cells.length) return;
+    root.replaceWith(WebImporter.Blocks.createBlock(document2, { name: "cards-eyebrow", variants: ["grid"], cells }));
+  }
+  function parse3(element, { document: document2, params }) {
     if (!element.parentNode) return;
+    if (element.matches("div.search")) {
+      parseSearchResults(element, document2);
+      return;
+    }
+    if (element.matches("div.jumppoint")) {
+      parseJumppoint(element, document2);
+      return;
+    }
+    if (element.matches('div.dynamiclist, react-component[data-component="dynamiclist"]')) {
+      const templateName = params && params.targets && params.targets.template && params.targets.template.name;
+      const cta = templateName === "service-design" ? listCta(document2, element) : null;
+      const marker = cta && document2.createComment("excat-list-cta");
+      if (marker) (element.closest("div.dynamiclist") || element).after(marker);
+      parseDynamicList(element, document2);
+      if (marker) marker.replaceWith(cta);
+      return;
+    }
     if (element.closest('div.accordion-carousel, react-component[data-component="accordion-carousel"]')) return;
     const slide = element.matches(".carousel-accordion-slide") ? element : element.querySelector(".carousel-accordion-slide") || element;
     const cols = [...slide.children].filter((c) => c.querySelector(".carousel-accordion-card, h1, h2, h3, h4, h5, h6"));
@@ -412,7 +680,7 @@ var CustomImportScript = (() => {
   function clean4(text) {
     return String(text || "").replace(/\s+/g, " ").trim();
   }
-  function decodeHtml(document2, str) {
+  function decodeHtml2(document2, str) {
     const div = document2.createElement("div");
     if (!str) return div;
     div.innerHTML = String(str);
@@ -461,10 +729,10 @@ var CustomImportScript = (() => {
     return config.featuredCards.map((card, idx) => ({
       image: card.image && card.image.imageUrl,
       alt: card.image && card.image.imageAlt || "",
-      eyebrow: clean4(decodeHtml(document2, card.eyebrow).textContent),
-      title: clean4(decodeHtml(document2, card.title).textContent),
-      description: richParagraphs(document2, decodeHtml(document2, card.description)),
-      links: (card.links || []).map((l) => ({ label: clean4(decodeHtml(document2, l.label).textContent), url: l.url })),
+      eyebrow: clean4(decodeHtml2(document2, card.eyebrow).textContent),
+      title: clean4(decodeHtml2(document2, card.title).textContent),
+      description: richParagraphs(document2, decodeHtml2(document2, card.description)),
+      links: (card.links || []).map((l) => ({ label: clean4(decodeHtml2(document2, l.label).textContent), url: l.url })),
       imageFirst: idx % 2 === 0 ? imageFirst : !imageFirst
     }));
   }
@@ -528,11 +796,195 @@ var CustomImportScript = (() => {
     });
     return card.imageFirst ? [imageCell, text] : [text, imageCell];
   }
-  function parse4(element, { document: document2 }) {
+  function bannerConfig(banner) {
+    const cfg = readConfig3(banner, "banner");
+    return cfg && cfg.bannerType === "sideContent" ? cfg : null;
+  }
+  function bannerDescription(document2, container) {
+    const out = [];
+    const blocks = [...container.querySelectorAll("p, ul, ol, h1, h2, h3, h4, h5, h6")].filter((n) => !n.parentElement.closest("p, ul, ol, h1, h2, h3, h4, h5, h6"));
+    const sources = blocks.length ? blocks : clean4(container.textContent) ? [container] : [];
+    sources.forEach((src) => {
+      let tag = "p";
+      if (/^(UL|OL)$/.test(src.tagName)) tag = src.tagName.toLowerCase();
+      else if (/^H[1-6]$/.test(src.tagName)) tag = "h3";
+      const node = document2.createElement(tag);
+      node.innerHTML = src.innerHTML;
+      node.querySelectorAll("span, font").forEach((span) => span.replaceWith(...span.childNodes));
+      node.querySelectorAll("*").forEach((n) => {
+        [...n.attributes].forEach((attr) => {
+          if (!(n.tagName === "A" && attr.name === "href")) n.removeAttribute(attr.name);
+        });
+        if (n.tagName === "A") n.setAttribute("href", absUrl4(n.getAttribute("href")));
+      });
+      while (node.firstChild && node.firstChild.nodeName === "BR") node.firstChild.remove();
+      while (node.lastChild && node.lastChild.nodeName === "BR") node.lastChild.remove();
+      if (clean4(node.textContent)) out.push(node);
+    });
+    return out;
+  }
+  function bannerMedia(document2, banner, cfg) {
+    const video = banner.querySelector("video-js[data-video-id], video[data-video-id]");
+    const videoId = cfg.videoPlayer || video && video.getAttribute("data-video-id");
+    if (cfg.mediaType === "video" && videoId && cfg.videoAccountId) {
+      const media = [];
+      const posterEl = banner.querySelector("video[poster]");
+      if (posterEl && posterEl.getAttribute("poster")) {
+        const poster = document2.createElement("img");
+        poster.src = absUrl4(posterEl.getAttribute("poster"));
+        poster.alt = "";
+        media.push(poster);
+      }
+      const url = `https://players.brightcove.net/${cfg.videoAccountId}/default_default/index.html?videoId=${videoId}`;
+      const titleEl = banner.querySelector(".vjs-dock-title");
+      const p = document2.createElement("p");
+      const a = document2.createElement("a");
+      a.href = url;
+      a.textContent = clean4(titleEl && titleEl.textContent) || url;
+      p.append(a);
+      media.push(p);
+      return media;
+    }
+    let src = cfg.imagePath || "";
+    let alt = clean4(cfg.imageAltText);
+    if (!src) {
+      const img2 = banner.querySelector("img");
+      if (img2) {
+        src = img2.getAttribute("src") || "";
+        alt = clean4(img2.getAttribute("alt"));
+      }
+    }
+    if (!src) return "";
+    const img = document2.createElement("img");
+    img.src = absUrl4(src);
+    img.alt = alt;
+    return img;
+  }
+  function bannerRow(document2, banner, cfg) {
+    const text = [];
+    const title = clean4(decodeHtml2(document2, cfg.sideContentRightSideTitle).textContent);
+    if (title) {
+      const h2 = document2.createElement("h2");
+      h2.textContent = title;
+      text.push(h2);
+    }
+    text.push(...bannerDescription(document2, decodeHtml2(document2, cfg.sideContentRightSideDescription)));
+    (cfg.sideContentLinkList || []).forEach((item) => {
+      const label = clean4(decodeHtml2(document2, item.sideContentLinkTitle).textContent);
+      if (!item.sideContentLinkUrl && !label) return;
+      const p = document2.createElement("p");
+      if (item.sideContentLinkUrl) {
+        const a = document2.createElement("a");
+        a.href = absUrl4(item.sideContentLinkUrl);
+        a.textContent = label || absUrl4(item.sideContentLinkUrl);
+        p.append(a);
+      } else {
+        p.textContent = label;
+      }
+      text.push(p);
+    });
+    const media = bannerMedia(document2, banner, cfg);
+    const flip = cfg.sideContentRightLeftSideFlipOn === true || cfg.sideContentRightLeftSideFlipOn === "true";
+    return flip ? [media, text] : [text, media];
+  }
+  function parseSideContent(banner, document2) {
+    const rows = [];
+    const consumed = [];
+    let current = banner;
+    while (current) {
+      const cfg = bannerConfig(current);
+      if (!cfg) break;
+      rows.push(bannerRow(document2, current, cfg));
+      if (current !== banner) consumed.push(current);
+      let next = current.nextElementSibling;
+      while (next && next.tagName === "HR") next = null;
+      current = next && next.matches("div.banner") ? next : null;
+    }
+    if (!rows.length) return;
+    const block = WebImporter.Blocks.createBlock(document2, { name: "columns-alternating", cells: rows });
+    consumed.forEach((n) => n.remove());
+    banner.replaceWith(block);
+  }
+  function parseFeaturedTile(root, document2) {
+    const cfg = readConfig3(root, "featuredtile") || {};
+    const text = [];
+    const title = clean4(decodeHtml2(document2, cfg.title).textContent);
+    if (title) {
+      const h2 = document2.createElement("h2");
+      h2.textContent = title;
+      text.push(h2);
+    }
+    text.push(...bannerDescription(document2, decodeHtml2(document2, cfg.description)));
+    if (cfg.ctaLink) {
+      const p = document2.createElement("p");
+      const a = document2.createElement("a");
+      a.href = absUrl4(cfg.ctaLink);
+      a.textContent = clean4(cfg.ariaLabel) || title || absUrl4(cfg.ctaLink);
+      p.append(a);
+      text.push(p);
+    }
+    if (!text.length) return;
+    const media = bannerMedia(document2, root, {
+      mediaType: cfg.videoPlayer ? "video" : "image",
+      videoPlayer: cfg.videoPlayer,
+      videoAccountId: cfg.account,
+      imagePath: cfg.imagePath,
+      imageAltText: cfg.imageAltText
+    });
+    const row = cfg.featuredTileFlipAsset === "right" ? [text, media] : [media, text];
+    const block = WebImporter.Blocks.createBlock(document2, { name: "columns-alternating", cells: [row] });
+    root.replaceWith(block);
+  }
+  function parseContentBlock(root, document2) {
+    const cfg = readConfig3(root, "contentblock") || {};
+    const renderedTitle = root.querySelector("h1, h2, h3");
+    const img = root.querySelector("img");
+    const link = cfg.primaryLink || {};
+    const card = {
+      image: cfg.image && cfg.image.imageUrl || img && img.getAttribute("src"),
+      alt: cfg.image && cfg.image.imageAlt || img && img.getAttribute("alt") || "",
+      eyebrow: "",
+      title: clean4(decodeHtml2(document2, cfg.title).textContent) || clean4(renderedTitle && renderedTitle.textContent),
+      description: richParagraphs(document2, decodeHtml2(document2, cfg.description)),
+      links: link.url ? [{ label: clean4(link.label || link.ariaLabel), url: link.url }] : [],
+      imageFirst: true
+    };
+    if (!card.title && !card.description.length) return;
+    const block = WebImporter.Blocks.createBlock(document2, { name: "columns-alternating", cells: [buildRow(document2, card)] });
+    root.replaceWith(block);
+  }
+  function applyColorCards(document2, config, cards) {
+    const source = config && Array.isArray(config.featuredCards) ? config.featuredCards : [];
+    if (source.length !== cards.length || !source.every((c) => c.featuredCardType === "colorCards")) return;
+    cards.forEach((card, i) => {
+      card.description.push(...richParagraphs(document2, decodeHtml2(document2, source[i].subDescription)));
+      card.imageFirst = false;
+    });
+  }
+  function parse4(element, { document: document2, params }) {
+    const templateName = params && params.targets && params.targets.template && params.targets.template.name;
+    const contentBlock = element.closest("div.contentblock");
+    if (contentBlock) {
+      if (contentBlock.parentNode) parseContentBlock(contentBlock, document2);
+      return;
+    }
+    const tile = element.closest("div.featuredtile");
+    if (tile) {
+      if (tile.parentNode) parseFeaturedTile(tile, document2);
+      return;
+    }
+    const banner = element.closest("div.banner");
+    if (banner && bannerConfig(banner)) {
+      if (banner.parentNode) parseSideContent(banner, document2);
+      return;
+    }
     const root = element.closest("div.featuredcardlist") || element;
     if (!root.parentNode) return;
-    const cards = cardsFromConfig(document2, readConfig3(root, "featuredcardlist")) || cardsFromDom(document2, root);
+    const config = readConfig3(root, "featuredcardlist");
+    const fromConfig = cardsFromConfig(document2, config);
+    const cards = fromConfig || cardsFromDom(document2, root);
     if (!cards || !cards.length) return;
+    if (fromConfig && templateName === "service-design") applyColorCards(document2, config, cards);
     const cells = cards.map((card) => buildRow(document2, card));
     const block = WebImporter.Blocks.createBlock(document2, { name: "columns-alternating", cells });
     root.replaceWith(block);
@@ -553,7 +1005,7 @@ var CustomImportScript = (() => {
   function clean5(text) {
     return String(text || "").replace(/\s+/g, " ").trim();
   }
-  function decodeHtml2(document2, str) {
+  function decodeHtml3(document2, str) {
     const div = document2.createElement("div");
     if (!str) return div;
     div.innerHTML = String(str);
@@ -599,14 +1051,14 @@ var CustomImportScript = (() => {
   function slidesFromConfig2(document2, config) {
     if (!config || !Array.isArray(config.tiles) || !config.tiles.length) return null;
     return {
-      title: clean5(decodeHtml2(document2, config.title).textContent),
+      title: clean5(decodeHtml3(document2, config.title).textContent),
       slides: config.tiles.map((tile) => ({
         image: tile.imageUrl || "",
-        alt: tile.carouselNotDecorativeImage ? clean5(decodeHtml2(document2, tile.imageAlt || tile.title).textContent) : "",
-        eyebrow: clean5(decodeHtml2(document2, tile.eyebrow).textContent),
-        title: clean5(decodeHtml2(document2, tile.title).textContent),
-        description: richParagraphs2(document2, decodeHtml2(document2, tile.description)),
-        ctaLabel: clean5(decodeHtml2(document2, tile.ctaTitle).textContent),
+        alt: tile.carouselNotDecorativeImage ? clean5(decodeHtml3(document2, tile.imageAlt || tile.title).textContent) : "",
+        eyebrow: clean5(decodeHtml3(document2, tile.eyebrow).textContent),
+        title: clean5(decodeHtml3(document2, tile.title).textContent),
+        description: richParagraphs2(document2, decodeHtml3(document2, tile.description)),
+        ctaLabel: clean5(decodeHtml3(document2, tile.ctaTitle).textContent),
         ctaUrl: tile.ctaLink || ""
       }))
     };
@@ -676,7 +1128,20 @@ var CustomImportScript = (() => {
     const root = element.closest("div.carouselsingledouble") || element;
     const data = slidesFromConfig2(document2, readConfig4(root, "carouselsingledouble")) || slidesFromDom2(document2, element);
     if (!data || !data.slides.length) return;
-    const cells = data.slides.map((slide) => buildRow2(document2, slide));
+    if (data.slides.some((s) => !s.image || !s.title)) {
+      const rendered = slidesFromDom2(document2, root);
+      if (rendered && rendered.slides.length === data.slides.length) {
+        data.slides.forEach((slide, i) => {
+          const r = rendered.slides[i];
+          if (!slide.image && r.image && !/^data:/.test(r.image)) Object.assign(slide, { image: r.image, alt: r.alt });
+          if (!slide.title && r.title) Object.assign(slide, { title: r.title, eyebrow: slide.eyebrow || r.eyebrow });
+          if (!slide.description.length && r.description.length) slide.description = r.description;
+        });
+      }
+    }
+    const slides = data.slides.filter((s) => s.image || s.title || s.eyebrow || s.description.length);
+    if (!slides.length) return;
+    const cells = slides.map((slide) => buildRow2(document2, slide));
     const block = WebImporter.Blocks.createBlock(document2, { name: "carousel-split", cells });
     if (data.title) {
       const h2 = document2.createElement("h2");

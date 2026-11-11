@@ -9,10 +9,23 @@
   "contentPattern": {
     "description": "3 alternating image + text rows (eyebrow, H2, paragraph, CTA).",
     "structure": "One row per feature, 2 cells: an image-only cell and a text cell (eyebrow paragraph, H2, paragraph, CTA link). Swap the cell order on alternate rows",
-    "notes": "CTAs are <button>s in the source with no href in cleaned.html; target URLs must be resolved during import. Red words can be authored as emphasis."
+    "notes": "CTAs are <button>s in the source with no href in cleaned.html; target URLs must be resolved during import. Red words can be authored as emphasis. Video: a media cell holding only a Brightcove player link (players.brightcove.net), optionally with a poster image, renders a click-to-play player. Detected automatically; the video option is accepted but not required."
   },
-  "options": [],
+  "options": [
+    {
+      "class": "video",
+      "label": "Video"
+    }
+  ],
   "memberVariantIds": [],
-  "usage": "Zig-zag feature rows of an image beside text (eyebrow, heading, paragraph, CTA); swap the cell order per row to alternate the image side.",
+  "usage": {
+    "description": "Zig-zag feature rows of an image beside text (eyebrow, heading, paragraph, CTA); swap the cell order per row to alternate the image side.",
+    "pagesUsing": [
+      "/en-us/index",
+      "/en-us/services/capital-markets"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-10"
+  },
   "reuseGuidance": "Use for 2-cell image/text rows. Use columns for general multi-column layouts."
 }

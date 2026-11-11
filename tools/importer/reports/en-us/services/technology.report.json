@@ -1,0 +1,22 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/services/technology",
+  "path": "en-us/services/technology",
+  "timestamp": "2026-11-11T00:43:49.779Z",
+  "title": "Real estate technology solutions and tech consulting | JLL",
+  "template": "service-overview",
+  "blocks": [
+    "hero-split",
+    "cards-stats",
+    "cards-eyebrow",
+    "columns-alternating",
+    "columns-alternating",
+    "columns-alternating",
+    "columns-alternating",
+    "columns-alternating",
+    "columns-alternating",
+    "carousel-split",
+    "form"
+  ],
+  "importScript": "bc7db296e19a"
+}

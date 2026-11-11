@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/services/leasing-for-owners",
+  "path": "en-us/services/leasing-for-owners",
+  "timestamp": "2026-11-11T00:34:30.613Z",
+  "title": "Commercial property leasing - Leasing for owners | JLL",
+  "template": "service-landing",
+  "blocks": [
+    "hero-split",
+    "cards-stats",
+    "carousel-split",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "hero-photo-panel",
+    "columns-alternating",
+    "form"
+  ],
+  "importScript": "aa48fc10c5c3"
+}

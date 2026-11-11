@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/services/design/furniture",
+  "path": "en-us/services/design/furniture",
+  "timestamp": "2026-11-11T00:34:11.256Z",
+  "title": "Furniture solutions & Furniture as a Service (FaaS) model | JLL Design",
+  "template": "service-landing",
+  "blocks": [
+    "hero-split",
+    "accordion-divided",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "hero-photo-panel",
+    "hero-photo-panel",
+    "columns-alternating",
+    "columns-alternating",
+    "form"
+  ],
+  "importScript": "aa48fc10c5c3"
+}

@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/services/investing/banking/energy-and-infrastructure-advisory",
+  "path": "en-us/services/investing/banking/energy-and-infrastructure-advisory",
+  "timestamp": "2026-11-11T00:49:20.393Z",
+  "title": "Energy and infrastructure investment banking advisory | JLL",
+  "template": "service-detail",
+  "blocks": [
+    "hero-split",
+    "cards-stats",
+    "tabs",
+    "carousel-split",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "hero-photo-panel",
+    "form"
+  ],
+  "importScript": "2c316a8e605c"
+}

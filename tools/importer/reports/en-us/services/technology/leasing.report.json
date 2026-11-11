@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/services/technology/leasing",
+  "path": "en-us/services/technology/leasing",
+  "timestamp": "2026-11-11T00:35:27.504Z",
+  "title": "Leasing Technology Solutions | JLL",
+  "template": "service-landing",
+  "blocks": [
+    "hero-split",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "columns-alternating",
+    "columns-alternating",
+    "form"
+  ],
+  "importScript": "aa48fc10c5c3"
+}

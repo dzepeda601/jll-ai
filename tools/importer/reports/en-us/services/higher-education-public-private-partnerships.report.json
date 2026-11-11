@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/services/higher-education-public-private-partnerships",
+  "path": "en-us/services/higher-education-public-private-partnerships",
+  "timestamp": "2026-11-11T00:37:15.443Z",
+  "title": "Higher education public-private partnership services | JLL",
+  "template": "service-detail",
+  "blocks": [
+    "hero-split",
+    "cards-stats",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "hero-photo-panel",
+    "form"
+  ],
+  "importScript": "2c316a8e605c"
+}

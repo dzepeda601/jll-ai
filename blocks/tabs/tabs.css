@@ -256,3 +256,135 @@ main .section .tabs {
     font-size: var(--heading-font-size-m);
   }
 }
+
+/* ------------------------------------------------------------------
+   Option: underline (block class "tabs underline")
+   JLL "tabbedinformation", authored as rows (label | content). Source
+   computed styles at 1440px: tab labels 16/24 default text, 24px apart,
+   10px above a 1px #dce2e5 rule; the active tab is underlined in the
+   interaction blue. Panel: text 18/28 in the left half; an image (if
+   any) fills the right half, 40px apart. The block stays in the content
+   width (no full-bleed breakout); all rules are scoped to .tabs.underline.
+   ------------------------------------------------------------------ */
+
+main .section .tabs.underline {
+  width: auto;
+  max-width: none;
+  margin-inline: 0;
+  padding-block: var(--jll-space-8) 0;
+  color: var(--jll-text-default);
+}
+
+main .section .tabs.underline .tabs-wrapper {
+  max-width: none;
+}
+
+main .section .tabs.underline .tabs-list {
+  justify-content: flex-start;
+  gap: var(--jll-space-6);
+  max-width: none;
+  margin: 0 0 var(--jll-space-8);
+  padding: 0;
+  overflow-x: auto;
+  border-bottom: 1px solid var(--jll-stroke-subdued);
+}
+
+main .section .tabs.underline .tabs-list > button[role='tab'] {
+  flex-shrink: 0;
+  margin: 0 0 -1px;
+  padding: 0 0 var(--jll-space-2);
+  border-bottom: 2px solid transparent;
+  font-family: var(--jll-font-family);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: var(--jll-font-weight-normal);
+  color: var(--jll-text-default);
+  -webkit-text-fill-color: currentcolor;
+  opacity: 1;
+}
+
+main .section .tabs.underline .tabs-list > button[role='tab']:hover {
+  color: var(--jll-text-default);
+  border-bottom-color: var(--jll-stroke-default);
+}
+
+main .section .tabs.underline .tabs-list > button[role='tab'][aria-selected='true'] {
+  color: var(--jll-text-default);
+  -webkit-text-fill-color: currentcolor;
+  border-bottom-color: var(--jll-stroke-interaction);
+}
+
+main .section .tabs.underline .tabs-list > button[role='tab']:focus-visible {
+  outline: 3px solid var(--jll-stroke-interaction);
+  outline-offset: 2px;
+}
+
+main .section .tabs.underline .tabs-content {
+  margin: 0;
+  padding: 0;
+}
+
+.tabs.underline .tabs-panel > * {
+  margin: 0 0 var(--jll-space-4);
+}
+
+.tabs.underline .tabs-panel :is(h2, h3, h4) {
+  font-size: var(--jll-title-3-size);
+  line-height: var(--jll-title-3-line-height);
+  font-weight: var(--jll-font-weight-normal);
+}
+
+.tabs.underline .tabs-panel :is(p, li) {
+  font-size: var(--jll-body-size);
+  line-height: var(--jll-body-line-height);
+}
+
+.tabs.underline .tabs-panel ul {
+  padding-inline-start: var(--jll-space-6);
+}
+
+.tabs.underline .tabs-panel li + li {
+  margin-block-start: var(--jll-space-2);
+}
+
+.tabs.underline .tabs-panel p.button-container {
+  margin-block-start: var(--jll-space-6);
+}
+
+.tabs.underline .tabs-panel p:has(> picture) {
+  line-height: 0;
+}
+
+.tabs.underline .tabs-panel picture,
+.tabs.underline .tabs-panel picture img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--jll-radius-xl);
+  object-fit: cover;
+}
+
+@media (width >= 900px) {
+  main .section .tabs.underline {
+    padding-block-start: var(--jll-space-10);
+  }
+
+  /* text left, image right */
+  .tabs.underline .tabs-panel:has(picture) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-auto-rows: min-content;
+    column-gap: var(--jll-space-10);
+    align-items: start;
+  }
+
+  .tabs.underline .tabs-panel:has(picture) > * {
+    grid-column: 1;
+  }
+
+  .tabs.underline .tabs-panel:has(picture) > p:has(> picture) {
+    grid-column: 2;
+    grid-row: 1 / span 20;
+    margin: 0;
+  }
+}

@@ -1,0 +1,87 @@
+/* Cards stats – JLL "stats" tiles.
+   Source computed styles at 1440px: three 405px tiles 24px apart, sand fill
+   (#f9f2ec), 12px radius, 32px padding; value 48/48 medium with -1.5px
+   tracking; label 18/28 subdued.
+   Mobile: one tile per row. >= 600px: two across. >= 900px: all in one row. */
+
+.cards-stats > ul {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--jll-space-6);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cards-stats .cards-stats-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: var(--jll-space-8);
+  border-radius: var(--jll-radius-xl);
+  background-color: var(--jll-surface-sand);
+  color: var(--jll-text-default);
+}
+
+.cards-stats .cards-stats-card > * {
+  margin: 0;
+}
+
+.cards-stats .cards-stats-value {
+  font-size: var(--jll-title-1-size);
+  line-height: var(--jll-title-1-line-height);
+  font-weight: var(--jll-font-weight-medium);
+  letter-spacing: var(--jll-display-tracking);
+  overflow-wrap: anywhere;
+}
+
+.cards-stats .cards-stats-value strong {
+  font-weight: inherit;
+}
+
+.cards-stats .cards-stats-label {
+  font-size: var(--jll-body-size);
+  line-height: var(--jll-body-line-height);
+  color: var(--jll-text-subdued);
+}
+
+@media (width >= 600px) {
+  .cards-stats > ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (width >= 900px) {
+  .cards-stats > ul {
+    grid-template-columns: none;
+    grid-auto-columns: minmax(0, 1fr);
+    grid-auto-flow: column;
+  }
+
+  .cards-stats .cards-stats-value {
+    font-size: 48px;
+    line-height: 48px;
+  }
+}
+
+/* ------------------------------------------------------------------
+   Option: small (block class "cards-stats small")
+   Text tiles ("Meeting your needs"). Source computed styles at 1440px:
+   heading 30/36 medium, description 18/28 subdued directly below; a tile
+   may hold only the description. Scoped to .small.
+   ------------------------------------------------------------------ */
+
+.cards-stats.small .cards-stats-value,
+.cards-stats.small .cards-stats-value strong {
+  font-size: var(--jll-title-2-size);
+  line-height: var(--jll-title-2-line-height);
+  font-weight: var(--jll-font-weight-medium);
+  letter-spacing: normal;
+}
+
+@media (width >= 900px) {
+  .cards-stats.small .cards-stats-value {
+    font-size: var(--jll-title-2-size);
+    line-height: var(--jll-title-2-line-height);
+  }
+}

@@ -1,0 +1,138 @@
+/* Hero photo panel – JLL "jumppoint" / off-grid creative.
+   Source computed styles at 1440px: full-bleed 16:9 photo (21:9 from laptop),
+   a white 12px-radius panel 56px from the viewport edges pulled 64px up over
+   the photo, 56px padding; H2 30/36; link rows 16/24 with a 20px subdued
+   chevron, 32px apart. */
+
+main > .section > .hero-photo-panel-wrapper {
+  max-width: none;
+  padding: 0;
+}
+
+.hero-photo-panel {
+  color: var(--jll-text-default);
+}
+
+.hero-photo-panel .hero-photo-panel-image {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  line-height: 0;
+}
+
+.hero-photo-panel .hero-photo-panel-image picture {
+  display: contents;
+}
+
+.hero-photo-panel .hero-photo-panel-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  object-fit: cover;
+}
+
+.hero-photo-panel .hero-photo-panel-panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--jll-space-8);
+  margin: calc(-1 * var(--jll-space-8)) max(var(--jll-space-4), calc(var(--content-padding-inline) - var(--jll-space-8))) 0;
+  padding: var(--jll-space-8) var(--jll-space-6);
+  border-radius: var(--jll-radius-xl);
+  background-color: var(--jll-surface-default);
+}
+
+.hero-photo-panel.no-image .hero-photo-panel-panel {
+  margin-top: 0;
+}
+
+.hero-photo-panel .hero-photo-panel-cell {
+  min-width: 0;
+}
+
+.hero-photo-panel .hero-photo-panel-cell > :first-child {
+  margin-top: 0;
+}
+
+.hero-photo-panel .hero-photo-panel-cell > :last-child {
+  margin-bottom: 0;
+}
+
+.hero-photo-panel .hero-photo-panel-cell > :is(h2, h3) + * {
+  margin-top: var(--jll-space-8);
+}
+
+/* stacked link list */
+.hero-photo-panel ul.hero-photo-panel-links {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--jll-space-6);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hero-photo-panel a.hero-photo-panel-link:any-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--jll-space-2);
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--jll-text-default);
+  text-decoration: none;
+}
+
+.hero-photo-panel .hero-photo-panel-link-label {
+  min-width: 0;
+}
+
+.hero-photo-panel a.hero-photo-panel-link:hover .hero-photo-panel-link-label {
+  text-decoration: underline;
+}
+
+/* Material Symbols "chevron_right", 20px */
+.hero-photo-panel .hero-photo-panel-link-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  background-color: var(--jll-icon-subdued);
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960'%3E%3Cpath d='M517.85-480 330-667.85 372.15-710l230 230-230 230L330-292.15 517.85-480Z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+[dir='rtl'] .hero-photo-panel .hero-photo-panel-link-icon {
+  transform: scaleX(-1);
+}
+
+@media (width >= 600px) {
+  .hero-photo-panel .hero-photo-panel-panel {
+    margin-top: calc(-1 * var(--jll-space-12));
+    padding: var(--jll-space-10);
+  }
+
+  .hero-photo-panel ul.hero-photo-panel-links {
+    gap: var(--jll-space-8);
+  }
+}
+
+@media (width >= 900px) {
+  .hero-photo-panel .hero-photo-panel-image {
+    aspect-ratio: 21 / 9;
+  }
+
+  .hero-photo-panel .hero-photo-panel-panel {
+    margin-top: calc(-1 * var(--jll-space-16));
+    padding: 56px;
+  }
+
+  .hero-photo-panel .hero-photo-panel-panel.is-split {
+    flex-direction: row;
+    gap: var(--jll-space-10);
+  }
+
+  .hero-photo-panel .hero-photo-panel-panel.is-split > .hero-photo-panel-cell {
+    flex: 1 1 0;
+  }
+}

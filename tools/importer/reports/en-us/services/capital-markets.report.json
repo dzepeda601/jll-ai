@@ -1,0 +1,22 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/services/capital-markets",
+  "path": "en-us/services/capital-markets",
+  "timestamp": "2026-11-11T00:32:05.187Z",
+  "title": "Real estate capital markets services | JLL",
+  "template": "service-overview",
+  "blocks": [
+    "hero-split",
+    "cards-stats",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "hero-photo-panel",
+    "columns-alternating",
+    "carousel-split",
+    "form"
+  ],
+  "importScript": "d075fa42592c"
+}

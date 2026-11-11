@@ -735,6 +735,65 @@ main > .section.warm {
   padding: var(--space-3xl, var(--section-block-space)) 0;
 }
 
+/* section-metadata style=statement: one large light statement paragraph + CTA
+   (jll.com "fullwidthmessage" banner: 60/60 light text inset from the grid, CTA 40px below) */
+main > .section.statement > .default-content-wrapper > p:not(.button-container) {
+  margin: 0;
+  font-size: var(--jll-title-1-size);
+  line-height: var(--jll-title-1-line-height);
+  font-weight: var(--jll-font-weight-light);
+  letter-spacing: var(--jll-title-1-tracking);
+  text-wrap: pretty;
+}
+
+main > .section.statement > .default-content-wrapper > p.button-container {
+  margin-block-start: var(--jll-space-10);
+}
+
+@media (width >= 900px) {
+  main > .section.statement > .default-content-wrapper {
+    padding-inline: calc(var(--content-padding-inline) + var(--jll-space-16));
+  }
+
+  main > .section.statement > .default-content-wrapper > p:not(.button-container) {
+    font-size: var(--jll-display-size);
+    line-height: var(--jll-display-line-height);
+    letter-spacing: var(--jll-title-1-tracking);
+  }
+}
+
+/* section-metadata style=link-bar: in-page links in a row on a grey band (jll.com secondary navigation) */
+main > .section.link-bar {
+  margin: 0;
+  padding-block: var(--jll-space-6);
+  background-color: var(--jll-surface-subdued);
+}
+
+main > .section.link-bar > .default-content-wrapper > ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--jll-space-4) var(--jll-space-12);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+main > .section.link-bar > .default-content-wrapper > ul > li {
+  margin: 0;
+}
+
+main > .section.link-bar > .default-content-wrapper a:any-link {
+  font-size: var(--jll-body-small-size);
+  line-height: var(--jll-body-small-line-height);
+  color: var(--jll-text-subdued);
+  text-decoration: none;
+}
+
+main > .section.link-bar > .default-content-wrapper a:any-link:hover {
+  color: var(--jll-text-default);
+  text-decoration: underline;
+}
+
 /* gradient-text utility: apply to any heading or span for brand gradient text */
 .gradient-text {
   background: var(--gradient-brand);

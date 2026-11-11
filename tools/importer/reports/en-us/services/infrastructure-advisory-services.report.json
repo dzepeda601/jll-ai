@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/services/infrastructure-advisory-services",
+  "path": "en-us/services/infrastructure-advisory-services",
+  "timestamp": "2026-11-11T00:49:00.338Z",
+  "title": "Sustainable Infrastructure Services - Infrastructure Advisory | JLL",
+  "template": "service-detail",
+  "blocks": [
+    "hero-split",
+    "cards-stats",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "hero-photo-panel",
+    "form"
+  ],
+  "importScript": "2c316a8e605c"
+}

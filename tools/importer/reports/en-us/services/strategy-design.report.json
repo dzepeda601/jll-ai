@@ -1,0 +1,22 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/services/strategy-design",
+  "path": "en-us/services/strategy-design",
+  "timestamp": "2026-11-11T00:33:33.396Z",
+  "title": "Project strategy, design and delivery services | JLL",
+  "template": "service-overview",
+  "blocks": [
+    "hero-split",
+    "cards-stats",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "hero-photo-panel",
+    "columns-alternating",
+    "accordion-divided",
+    "carousel-split",
+    "form"
+  ],
+  "importScript": "d075fa42592c"
+}

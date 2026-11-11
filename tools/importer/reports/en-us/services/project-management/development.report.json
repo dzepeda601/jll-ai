@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/services/project-management/development",
+  "path": "en-us/services/project-management/development",
+  "timestamp": "2026-11-11T00:50:58.407Z",
+  "title": "Real estate development management and advisory | JLL",
+  "template": "service-detail",
+  "blocks": [
+    "hero-split",
+    "cards-stats",
+    "accordion-divided",
+    "tabs",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "hero-photo-panel",
+    "columns-alternating",
+    "form"
+  ],
+  "importScript": "2c316a8e605c"
+}

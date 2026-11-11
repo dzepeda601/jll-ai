@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/services/supply-chain",
+  "path": "en-us/services/supply-chain",
+  "timestamp": "2026-11-11T00:51:28.366Z",
+  "title": "Supply Chain and Logistics Solutions - Services I JLL",
+  "template": "service-detail",
+  "blocks": [
+    "hero-split",
+    "cards-stats",
+    "carousel-split",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "hero-photo-panel",
+    "columns-alternating",
+    "form"
+  ],
+  "importScript": "2c316a8e605c"
+}

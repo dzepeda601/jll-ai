@@ -1,0 +1,2 @@
+https://www.jll.com/en-us/services/design
+# https://www.jll.com/en-us/services/project-management/design -- 301 redirect to /en-us/services/design (same page; add a redirect instead of a duplicate document)

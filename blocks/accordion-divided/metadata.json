@@ -1,0 +1,27 @@
+{
+  "variantName": "accordion-divided",
+  "baseBlock": "accordion",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Accordion of full-width rows separated by thin rules; optionally shows the open item's image beside the list",
+    "layout": "Rows with a 20px title and a 16px chevron, 1px #dce2e5 rule between rows; rich-text answers 18/28. When items carry images: list and a square rounded image side by side from 900px, bar bullets."
+  },
+  "contentPattern": {
+    "description": "FAQ question rows with rich-text answers; or items with title, description, bulleted list and an image.",
+    "structure": "One row per item: cell 1 title (question); cell 2 content (paragraphs, lists, links, optional image).",
+    "notes": "Without images all items start closed and several can be open. With images the first item opens by default and one item is open at a time; the image of the open item shows beside the list from 900px and inside the item on small screens."
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": {
+    "description": "FAQ and expandable item lists, with an optional image per item.",
+    "pagesUsing": [
+      "/en-us/services/capital-markets",
+      "/en-us/services/facilities-management",
+      "/en-us/services/strategy-design"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-10"
+  },
+  "reuseGuidance": "Use for authored Q&A and expandable lists. Use faq for index-driven FAQ content and tabs for tabbed panels."
+}

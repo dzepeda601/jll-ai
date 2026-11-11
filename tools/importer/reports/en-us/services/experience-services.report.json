@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/services/experience-services",
+  "path": "en-us/services/experience-services",
+  "timestamp": "2026-11-11T00:32:16.668Z",
+  "title": "Experience management services - Strategy and design | JLL",
+  "template": "service-overview",
+  "blocks": [
+    "hero-split",
+    "cards-stats",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "hero-photo-panel",
+    "columns-alternating",
+    "carousel-split",
+    "form"
+  ],
+  "importScript": "d075fa42592c"
+}

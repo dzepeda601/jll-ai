@@ -175,7 +175,26 @@ export default function parse(element, { document }) {
   const data = slidesFromConfig(document, readConfig(root, 'carouselsingledouble')) || slidesFromDom(document, element);
   if (!data || !data.slides.length) return;
 
-  const cells = data.slides.map((slide) => buildRow(document, slide));
+  // "dynamic" tiles (service landing pages) may hold only a ctaLink in data-config: their
+  // image and text are rendered from the linked page, so take what is missing from the
+  // rendered slide at the same position
+  if (data.slides.some((s) => !s.image || !s.title)) {
+    const rendered = slidesFromDom(document, root);
+    if (rendered && rendered.slides.length === data.slides.length) {
+      data.slides.forEach((slide, i) => {
+        const r = rendered.slides[i];
+        if (!slide.image && r.image && !/^data:/.test(r.image)) Object.assign(slide, { image: r.image, alt: r.alt });
+        if (!slide.title && r.title) Object.assign(slide, { title: r.title, eyebrow: slide.eyebrow || r.eyebrow });
+        if (!slide.description.length && r.description.length) slide.description = r.description;
+      });
+    }
+  }
+
+  // a slide with only a CTA (a dynamic tile whose linked page did not resolve: the source shows
+  // a placeholder graphic) has nothing to show
+  const slides = data.slides.filter((s) => s.image || s.title || s.eyebrow || s.description.length);
+  if (!slides.length) return;
+  const cells = slides.map((slide) => buildRow(document, slide));
   const block = WebImporter.Blocks.createBlock(document, { name: 'carousel-split', cells });
 
   if (data.title) {

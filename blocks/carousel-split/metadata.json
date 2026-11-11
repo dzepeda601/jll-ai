@@ -12,7 +12,15 @@
   },
   "options": [],
   "memberVariantIds": [],
-  "usage": "News/feature slider: one slide at a time with media on one side and a text panel (eyebrow, heading, description, CTA) on the other.",
+  "usage": {
+    "description": "News/feature slider: one slide at a time with media on one side and a text panel (eyebrow, heading, description, CTA) on the other.",
+    "pagesUsing": [
+      "/en-us/index",
+      "/en-us/services/capital-markets"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-10"
+  },
   "reuseGuidance": "Use for sliders of split image/text slides. Use carousel-hero for full-bleed photo slides.",
   "labels": "Screen-reader labels can be overridden with page metadata keys carousel-label-role-description, carousel-label-previous, carousel-label-next."
 }

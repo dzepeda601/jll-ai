@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "url": "https://www.jll.com/en-us/services/leasing/green",
+  "path": "en-us/services/leasing/green",
+  "timestamp": "2026-11-11T00:34:50.812Z",
+  "title": "Green leasing services | JLL",
+  "template": "service-landing",
+  "blocks": [
+    "hero-split",
+    "cards-stats",
+    "carousel-split",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "cards-eyebrow",
+    "hero-photo-panel",
+    "form"
+  ],
+  "importScript": "aa48fc10c5c3"
+}
